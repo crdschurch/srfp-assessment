@@ -1,6 +1,6 @@
 import { CrdsDdkPage } from './app.po';
 
-describe('crds-ddk App', function() {
+describe('crds-styleguide App', function() {
   let page: CrdsDdkPage;
 
   beforeEach(() => {
