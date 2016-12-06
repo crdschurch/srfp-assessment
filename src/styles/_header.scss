@@ -1,0 +1,17 @@
+.megamenu {
+  .nav, .collapse, .dropup, .dropdown {
+    position: static;
+  }
+  .container {
+    position: relative;
+  }
+  .dropdown-menu {
+    left: auto;
+  }
+  .megamenu-content {
+    padding: 20px 30px;
+  }
+  .dropdown.megamenu-fw .dropdown-menu {
+    left: 0; right: 0;
+  }
+}
