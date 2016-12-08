@@ -6,12 +6,14 @@ import { CollapseModule } from "ng2-bootstrap/ng2-bootstrap";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown.directive';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BootstrapDropdownDirective
+    BootstrapDropdownDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
