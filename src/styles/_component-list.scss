@@ -1,0 +1,41 @@
+.search-bar {
+  margin-bottom: 3em;
+
+  .form-control {
+    border-radius: 25px;
+  }
+
+  .input-group-btn {
+    .btn {
+      border-bottom-right-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+  }
+}
+
+.media {
+  margin-bottom: 1em;
+
+  @media (min-width: $screen-xs) {
+    margin-bottom: 3em;
+  }
+}
+
+.media-image {
+  margin-bottom: .5em;
+
+  @media (min-width: $screen-xs) {
+    margin-bottom: 0;
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 1em;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-right: 3em;
+  }
+}
+
+.media-body {
+  width: auto;
+}

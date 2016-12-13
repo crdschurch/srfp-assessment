@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown.directive';
 import { FooterComponent } from './layout/footer/footer.component';
+import { LandingPageComponent } from './layout/landing-page/landing-page.component';
+import { ComponentListComponent } from './layout/component-list/component-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BootstrapDropdownDirective,
-    FooterComponent
+    FooterComponent,
+    LandingPageComponent,
+    ComponentListComponent
   ],
   imports: [
     BrowserModule,
