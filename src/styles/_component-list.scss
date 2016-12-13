@@ -13,7 +13,7 @@
   }
 }
 
-.media {
+.media:not(:last-child) {
   margin-bottom: 1em;
 
   @media (min-width: $screen-xs) {
