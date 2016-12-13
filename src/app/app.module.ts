@@ -10,9 +10,12 @@ import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown.dire
 import { FooterComponent } from './layout/footer/footer.component';
 import { LandingPageComponent } from './layout/landing-page/landing-page.component';
 import { ComponentListComponent } from './layout/component-list/component-list.component';
+import { ElementComponent } from './layout/element/element.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 const appRoutes: Routes = [
   { path: 'page', component: LandingPageComponent },
+  { path: 'link', component: ElementComponent },
   { path: '', component: LandingPageComponent }
 ];
 
@@ -23,7 +26,9 @@ const appRoutes: Routes = [
     BootstrapDropdownDirective,
     FooterComponent,
     LandingPageComponent,
-    ComponentListComponent
+    ComponentListComponent,
+    ElementComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
