@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CollapseModule } from "ng2-bootstrap/ng2-bootstrap";
@@ -9,6 +10,11 @@ import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown.dire
 import { FooterComponent } from './layout/footer/footer.component';
 import { LandingPageComponent } from './layout/landing-page/landing-page.component';
 import { ComponentListComponent } from './layout/component-list/component-list.component';
+
+const appRoutes: Routes = [
+  { path: 'page', component: LandingPageComponent },
+  { path: '', component: LandingPageComponent }
+];
 
 @NgModule({
   declarations: [
@@ -23,7 +29,11 @@ import { ComponentListComponent } from './layout/component-list/component-list.c
     BrowserModule,
     CollapseModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  exports: [
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
