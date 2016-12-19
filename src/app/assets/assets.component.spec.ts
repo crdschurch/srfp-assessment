@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { LandingPageComponent } from './landing-page.component';
+import { AssetsComponent } from './assets.component';
 
-describe('Component: LandingPage', () => {
+describe('Component: Assets', () => {
   it('should create an instance', () => {
-    let component = new LandingPageComponent();
+    let component = new AssetsComponent();
     expect(component).toBeTruthy();
   });
 });
