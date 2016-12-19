@@ -6,6 +6,8 @@ import { UiComponentsComponent } from './ui-components.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 
+import { CardsModule } from './cards/cards.module';
+
 const uiRoutes: Routes = [
   { path: 'ui-components', component: UiComponentsComponent}
 ]
@@ -13,8 +15,13 @@ const uiRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(uiRoutes)
+    RouterModule.forChild(uiRoutes),
+    CardsModule
   ],
-  declarations: [UiComponentsComponent, SearchBarComponent, ComponentListComponent]
+  declarations: [
+    UiComponentsComponent,
+    SearchBarComponent,
+    ComponentListComponent
+  ]
 })
 export class UiComponentsModule { }

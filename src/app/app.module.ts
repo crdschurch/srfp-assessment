@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { CollapseModule } from "ng2-bootstrap/ng2-bootstrap";
+import { CollapseModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown.directive';
 
 import { AppComponent } from './app.component';
@@ -16,8 +16,6 @@ import { AssetsModule } from './assets/assets.module';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { ElementComponent } from './layout/element/element.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent}
@@ -28,9 +26,7 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BootstrapDropdownDirective,
-    ElementComponent,
-    SidebarComponent
+    BootstrapDropdownDirective
   ],
   imports: [
     BrowserModule,

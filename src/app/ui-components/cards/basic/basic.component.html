@@ -1,0 +1,32 @@
+<div>
+  <h2>Basic</h2>
+  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.</p>
+</div>
+
+<div class="responsive-tabs" (click)="$event.preventDefault()">
+  <tabset>
+    <tab *ngFor="let tab of responsiveTabs"
+         [heading]="tab.title"
+         [active]="tab.active"
+         (select)="tab.active = true"
+         (deselect)="tab.active = false"
+         [customClass]="tab.customClass">
+      {{tab?.content}}
+    </tab>
+  </tabset>
+</div>
+
+<div class="code-tabs" (click)="$event.preventDefault()">
+  <tabset>
+    <tab *ngFor="let tab of codeTabs"
+         [heading]="tab.title"
+         [active]="tab.active"
+         (select)="tab.active = true"
+         (deselect)="tab.active = false"
+         [customClass]="tab.customClass">
+      <pre>
+        {{tab?.content}}
+      </pre>
+    </tab>
+  </tabset>
+</div>
