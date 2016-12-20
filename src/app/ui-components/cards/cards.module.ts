@@ -21,6 +21,9 @@ const cardsRoutes: Routes = [
     RouterModule.forChild(cardsRoutes),
     TabsModule
   ],
+  exports: [
+    CardsModule
+  ],
   declarations: [
     CardsComponent,
     SidebarNavComponent,

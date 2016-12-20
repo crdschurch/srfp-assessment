@@ -9,7 +9,13 @@ import { ComponentListComponent } from './component-list/component-list.componen
 import { CardsModule } from './cards/cards.module';
 
 const uiRoutes: Routes = [
-  { path: 'ui-components', component: UiComponentsComponent}
+  { path: 'ui-components',
+    component: UiComponentsComponent,
+    children: [
+      { path: '', redirectTo: 'cards', pathMatch: 'full'},
+      { path: 'cards', component: 'CardsComponent'}
+    ]
+  }
 ]
 
 @NgModule({
@@ -17,6 +23,9 @@ const uiRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(uiRoutes),
     CardsModule
+  ],
+  exports: [
+    UiComponentsComponent
   ],
   declarations: [
     UiComponentsComponent,
