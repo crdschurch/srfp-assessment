@@ -9,20 +9,16 @@ import { ComponentListComponent } from './component-list/component-list.componen
 import { CardsModule } from './cards/cards.module';
 
 const uiRoutes: Routes = [
-  { path: 'ui-components',
-    component: UiComponentsComponent,
-    children: [
-      { path: '', redirectTo: 'cards', pathMatch: 'full'},
-      { path: 'cards', component: 'CardsComponent'}
-    ]
+  {
+    path: 'ui-components',
+    component: UiComponentsComponent
   }
 ]
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(uiRoutes),
-    CardsModule
+    RouterModule.forChild(uiRoutes)
   ],
   exports: [
     UiComponentsComponent
