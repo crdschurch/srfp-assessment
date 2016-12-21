@@ -1,0 +1,235 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/">
+        <img src="//crossroads-media.s3.amazonaws.com/images/logo.svg" width="130" height="18.69" />
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" [collapse]="isMenuCollapsed">
+      <ul class="nav navbar-nav">
+        <li dropdown="for-designers">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">For Designers <span class="caret"></span></a>
+          <div class="dropdown-menu mega-menu_inner">
+            <div class="container">
+              <a routerLink="/designers" routerLinkActive="active">
+                <h3 class="mega-menu_title">Guide for Designers</h3>
+              </a>
+              <div class="mega-menu_list">
+                <h4>Core</h4>
+                <ul>
+                  <li><a routerLink="/cards" routerLinkActive="active">Animations</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Colors</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Containers</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Grid</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Icons</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Images</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Typography</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Atoms</h4>
+                <ul>
+                  <li><a routerLink="/cards" routerLinkActive="active">Buttons</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Dividers</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Forms</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Spacing</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Tables</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Molecules</h4>
+                <ul>
+                  <li><a routerLink="/cards" routerLinkActive="active">Cards</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Carousels</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Drawers</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Feedback</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Global Footer</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Global Header</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Jumbotrons</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Media Lists</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Modals</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Navs</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Promos</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Tooltips</a></li>
+                  <li><a routerLink="/cards" routerLinkActive="active">Wells</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li dropdown="for-developers">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Developers <span class="caret"></span></a>
+          <div class="dropdown-menu mega-menu_inner">
+            <div class="container">
+              <a routerLink="/developers" routerLinkActive="active">
+                <h3 class="mega-menu_title">Guide for Developers</h3>
+              </a>
+              <div class="mega-menu_list">
+                <h4>Core</h4>
+                <ul>
+                  <li><a href="#">Animations</a></li>
+                  <li><a href="#">Colors</a></li>
+                  <li><a href="#">Containers</a></li>
+                  <li><a href="#">Grid</a></li>
+                  <li><a href="#">Icons</a></li>
+                  <li><a href="#">Images</a></li>
+                  <li><a href="#">Typography</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Atoms</h4>
+                <ul>
+                  <li><a href="#">Buttons</a></li>
+                  <li><a href="#">Dividers</a></li>
+                  <li><a href="#">Forms</a></li>
+                  <li><a href="#">Spacing</a></li>
+                  <li><a href="#">Tables</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Molecules</h4>
+                <ul>
+                  <li><a href="#">Cards</a></li>
+                  <li><a href="#">Carousels</a></li>
+                  <li><a href="#">Drawers</a></li>
+                  <li><a href="#">Feedback</a></li>
+                  <li><a href="#">Global Footer</a></li>
+                  <li><a href="#">Global Header</a></li>
+                  <li><a href="#">Jumbotrons</a></li>
+                  <li><a href="#">Media Lists</a></li>
+                  <li><a href="#">Modals</a></li>
+                  <li><a href="#">Navs</a></li>
+                  <li><a href="#">Promos</a></li>
+                  <li><a href="#">Tooltips</a></li>
+                  <li><a href="#">Wells</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li dropdown="ui-components">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UI Components <span class="caret"></span></a>
+          <div class="dropdown-menu mega-menu_inner">
+            <div class="container">
+              <a routerLink="/ui" routerLinkActive="active">
+                <h3 class="mega-menu_title">Overview of UI Components</h3>
+              </a>
+              <div class="mega-menu_list">
+                <h4>Core</h4>
+                <ul>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Animations</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Colors</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Containers</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Grid</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Icons</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Images</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Typography</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Atoms</h4>
+                <ul>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Buttons</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Dividers</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Forms</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Spacing</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Tables</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Molecules</h4>
+                <ul>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Cards</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Carousels</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Drawers</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Feedback</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Global Footer</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Global Header</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Jumbotrons</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Media Lists</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Modals</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Navs</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Promos</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Tooltips</a></li>
+                  <li><a routerLink="/ui/cards" routerLinkActive="active">Wells</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li dropdown="assets">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assets <span class="caret"></span></a>
+          <div class="dropdown-menu mega-menu_inner">
+            <div class="container">
+              <a routerLink="/assets" routerLinkActive="active">
+                <h3 class="mega-menu_title">Assets</h3>
+              </a>
+              <div class="mega-menu_list">
+                <h4>Core</h4>
+                <ul>
+                  <li><a href="#">Animations</a></li>
+                  <li><a href="#">Colors</a></li>
+                  <li><a href="#">Containers</a></li>
+                  <li><a href="#">Grid</a></li>
+                  <li><a href="#">Icons</a></li>
+                  <li><a href="#">Images</a></li>
+                  <li><a href="#">Typography</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Atoms</h4>
+                <ul>
+                  <li><a href="#">Buttons</a></li>
+                  <li><a href="#">Dividers</a></li>
+                  <li><a href="#">Forms</a></li>
+                  <li><a href="#">Spacing</a></li>
+                  <li><a href="#">Tables</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list">
+                <h4>Molecules</h4>
+                <ul>
+                  <li><a href="#">Cards</a></li>
+                  <li><a href="#">Carousels</a></li>
+                  <li><a href="#">Drawers</a></li>
+                  <li><a href="#">Feedback</a></li>
+                  <li><a href="#">Global Footer</a></li>
+                  <li><a href="#">Global Header</a></li>
+                  <li><a href="#">Jumbotrons</a></li>
+                  <li><a href="#">Media Lists</a></li>
+                  <li><a href="#">Modals</a></li>
+                  <li><a href="#">Navs</a></li>
+                  <li><a href="#">Promos</a></li>
+                  <li><a href="#">Tooltips</a></li>
+                  <li><a href="#">Wells</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav pull-right">
+        <li><a href="https://github.com/crdschurch/crds-styleguide">View On Github &nbsp;<i class="fa fa-lg fa-github-alt"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

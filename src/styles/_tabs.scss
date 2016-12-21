@@ -1,0 +1,38 @@
+.tab-container {
+  .nav-link {
+    &.active {
+      background-color: #f5f5f5;
+
+      &:hover,
+      &:focus {
+        background-color: #f5f5f5;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken(#f5f5f5, 5);
+    }
+  }
+
+  pre {
+    border-top: none;
+    border-radius: 0;
+    line-height: 20px;
+    padding: 2em;
+  }
+}
+
+.responsive-tabs {
+  margin-bottom: 2em;
+
+  tab {
+    div {
+      padding: 1.857em;
+    }
+  }
+}
+
+.code-tabs {
+  margin-bottom: 4em;
+}
