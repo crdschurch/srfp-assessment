@@ -1,4 +1,9 @@
 .nav {
+  &.navbar-nav.pull-right {
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
   > li {
     position: static;
   }
