@@ -17,6 +17,7 @@ import { AssetsModule } from './assets/assets.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BootstrapDropdownService } from './directives/bootstrap-dropdown.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [
+    BootstrapDropdownService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
