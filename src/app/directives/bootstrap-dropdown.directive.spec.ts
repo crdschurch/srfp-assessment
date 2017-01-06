@@ -1,8 +1,10 @@
 /* tslint:disable:no-unused-variable */
 
 import { ElementRef } from '@angular/core';
-import { TestBed, async, beforeEachProviders } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 import { BootstrapDropdownDirective } from './bootstrap-dropdown.directive';
+import { BootstrapDropdownService } from './bootstrap-dropdown.service';
+
 
 class MockElementRef implements ElementRef {
   nativeElement = {};
@@ -10,13 +12,14 @@ class MockElementRef implements ElementRef {
 
 describe('Directive: BootstrapDropdown', () => {
 
-  beforeEachProviders(() => [
+  beforeEach(() => [
     ElementRef
   ]);
 
   it('should create an instance', () => {
     let ref = new MockElementRef();
-    let directive = new BootstrapDropdownDirective();
+    let service = new BootstrapDropdownService();
+    let directive = new BootstrapDropdownDirective(ref, service);
     expect(directive).toBeTruthy();
   });
 });

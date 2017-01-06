@@ -39,11 +39,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
-      },
-      {
-        test: /\.css$/,
         include: helpers.root('src', 'app'),
         loader: 'raw'
       },
@@ -57,7 +52,7 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
+      name: ['app', 'polyfills']
     }),
     
     new Dotenv({
@@ -71,6 +66,6 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'src/assets',
       to: 'assets',
-    }], { ignore: ['*.scss', 'mock-data/*'] })
+    }], { ignore: ['mock-data/*'] })
   ]
 };
