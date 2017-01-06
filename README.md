@@ -10,16 +10,15 @@ Assuming the `crds-styles` and `crds-styleguide` repos reside in the same local 
 
     $ cd crds-styleguide
     $ npm link ../crds-styles
+    $ npm install
 
 Once we officially publish this package, we'll leverage semantic-versioning to ensure new features are rolled out in a sensible manner. For more information on this approach, please review that project's [README](https://github.com/crdschurch/crds-styles/README.md).
 
 ## Build &amp; Deploy
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
+Run `npm build-dev` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## License
 
