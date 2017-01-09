@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UiComponentsComponent } from './ui-components.component';
-import { TypographyComponent } from './typography/typography.component';
+
 import { CardsComponent } from './cards/cards.component';
 import { ComponentListComponent } from './component-list/component-list.component';
+
+/* typography */
+import { TypographyComponent } from './typography/typography.component';
+import { TypefacesComponent } from './typography/typefaces/typefaces.component';
+import { HeadingsComponent } from './typography/headings/headings.component';
 
 const uiRoutes: Routes = [
   {
@@ -16,7 +21,22 @@ const uiRoutes: Routes = [
       },
       {
         path: 'typography',
-        component: TypographyComponent
+        component: TypographyComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'typefaces',
+            pathMatch: 'full'
+          },
+          {
+            path: 'typefaces',
+            component: TypefacesComponent
+          },
+          {
+            path: 'headings',
+            component: HeadingsComponent
+          }
+        ]
       },
       {
         path: 'cards',

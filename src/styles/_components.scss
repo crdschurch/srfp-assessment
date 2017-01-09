@@ -1,26 +1,12 @@
 .component {
+  @include make-row;
+
   aside {
     display: none;
 
     @media (min-width: $screen-sm) {
       display: inline-block;
       @include make-sm-column(3);
-    }
-
-    .sidebar {
-      .nav-header {
-        margin: 40px 0 10px;
-      }
-
-      ul {
-        list-style: none;
-        margin-top: 2em;
-        padding: 0;
-      }
-
-      li {
-        line-height: 22px;
-      }
     }
   }
   main {

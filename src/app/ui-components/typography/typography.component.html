@@ -1,110 +1,26 @@
-<div class="container component">
-  <div class="row">
+<div class="jumbotron">
+  <div class="container">
+    <h1>UI Components / Typography</h1>
+    <p>Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
     <aside>
-      <nav class="sidebar">
-        <h3 class="nav-header">Typography</h3>
-        <ul>
-          <li>
-            <a href="">Typefaces</a>
+      <nav>
+        <ul class="list-group">
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/ui/typography/typefaces">Typefaces</a>
           </li>
-          <li>
-            <a href="">Headings</a>
-          </li>
-          <li>
-            <a href="">Typesetting</a>
-          </li>
-          <li>
-            <a href="">Links</a>
-          </li>
-          <li>
-            <a href="">Address</a>
-          </li>
-          <li>
-            <a href="">Blockquote</a>
-          </li>
-          <li>
-            <a href="">Lists</a>
-          </li>
-          <li>
-            <a href="">Description Lists</a>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/ui/typography/headings">Headings</a>
           </li>
         </ul>
       </nav>
     </aside>
-
     <main>
-      <!--<h1 class="page-header">Typography</h1>
-
-      <div class="">
-        <h2>Typefaces</h2>
-
-        <div class="example">
-          <p class="tk-acumin-pro">Primary font: "acumin-pro", helvetica, arial, sans-serif</p>
-          <p class="tk-acumin-pro-extra-condensed">Secondary font: "acumin-pro-extra-condensed", sans-serif</p>
-        </div>
-      </div>
-
-      <div class="">
-        <h2>Headings</h2>
-
-        <div class="example">
-          <h2 class="crds-page-header">Page Heading</h2>
-          <h2 class="crds-page-header--no-underline">Page Heading without Underline</h2>
-          <h3 class="crds-section-header">Section Heading</h3>
-        </div>
-      </div>
-
-      <div class="">
-        <h2>Horizontal Rule</h2>
-
-        <div class="example">
-          <hr>
-        </div>
-      </div>
-
-      <div class="">
-        <h2>Paragraph</h2>
-
-        <div class="example">
-          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.</p>
-        </div>
-      </div>
-
-      <div class="">
-        <h2>Inline Elements</h2>
-
-        <div class="example">
-            <p>
-              <a href="#" class="crds-help-link">This link directs users to helpful pages.</a>
-            </p>
-
-            <p>
-              <a href="#">This is a generic link.</a>
-            </p>
-
-            <p>
-              <small>This is small text.</small>
-            </p>
-
-            <p class="crds-receipt-body-text">This text is used in the receipt body.</p>
-
-            <p class="crds-large-number">$123.45</p>
-        </div>
-      </div>
-
-      <div class="ddk-alerts">
-        <h2>Alerts</h2>
-
-        <div class="example">
-          <div class="crds-alert crds-alert-danger">
-            <p>This is a danger message.</p>
-          </div>
-
-          <div class="crds-alert crds-alert-danger">
-            <p>This is a danger message <a href="#">with a link</a>.</p>
-          </div>
-        </div>
-      </div>-->
+      <router-outlet></router-outlet>
     </main>
   </div>
 </div>

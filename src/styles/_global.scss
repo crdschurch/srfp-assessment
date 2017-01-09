@@ -3,3 +3,19 @@
     color: $gray;
   }
 }
+
+.selector {
+  margin-bottom: 3em;
+}
+
+.example {
+  margin: 0.5em 0;
+  &.typeface-example {
+    font-size: 160%;
+    line-height: 120%;
+  }
+}
+
+.annotation {
+  font-weight: 600;
+}
