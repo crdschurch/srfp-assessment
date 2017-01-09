@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UiComponentsComponent } from './ui-components.component';
+import { TypographyComponent } from './typography/typography.component';
 import { CardsComponent } from './cards/cards.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 
@@ -12,6 +13,10 @@ const uiRoutes: Routes = [
       {
         path: '',
         component: ComponentListComponent
+      },
+      {
+        path: 'typography',
+        component: TypographyComponent
       },
       {
         path: 'cards',
