@@ -19,6 +19,7 @@ import { VideoComponent } from './cards/video/video.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
+import { IconsComponent } from './typography/icons/icons.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { HeadingsComponent } from './typography/headings/headings.component';
     TypographyComponent,
     TypefacesComponent,
     HeadingsComponent,
+    IconsComponent,
 
     CardsComponent,
     SidebarNavComponent,
