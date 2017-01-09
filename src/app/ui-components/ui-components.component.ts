@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ddk-ui-components',
-  templateUrl: './ui-components.component.html'
+  template: '<router-outlet></router-outlet>'
 })
 export class UiComponentsComponent implements OnInit {
 
