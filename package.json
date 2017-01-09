@@ -5,7 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "serve": "npm run start",
-    "start": "webpack-dev-server --inline --open --progress",
+    "start": "webpack-dev-server --inline --open --progress --port 4200",
     "build-dev": "rimraf dist && webpack --config config/webpack.dev.js --progress --profile --bail",
     "build-int": "rimraf dist && webpack --config config/webpack.int.js --progress --profile --bail",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
