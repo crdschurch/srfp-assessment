@@ -10,6 +10,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
 import { IconsComponent } from './typography/icons/icons.component';
+import { BodyComponent } from './typography/body/body.component';
 
 const uiRoutes: Routes = [
   {
@@ -36,6 +37,10 @@ const uiRoutes: Routes = [
           {
             path: 'headings',
             component: HeadingsComponent
+          },
+          {
+            path: 'body',
+            component: BodyComponent
           },
           {
             path: 'icons',
