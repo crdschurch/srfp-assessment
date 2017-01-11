@@ -20,6 +20,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
 import { FormattingComponent } from './typography/formatting/formatting.component';
+import { AddressComponent } from './typography/address/address.component';
 import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
 
 
@@ -43,6 +44,7 @@ import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
     HeadingsComponent,
     JumbotronComponent,
     FormattingComponent,
+    AddressComponent,
 
     CardsComponent,
     SidebarNavComponent,

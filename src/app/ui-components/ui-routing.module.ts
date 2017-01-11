@@ -10,6 +10,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
 import { FormattingComponent } from './typography/formatting/formatting.component';
+import { AddressComponent } from './typography/address/address.component';
 
 const uiRoutes: Routes = [
   {
@@ -40,6 +41,10 @@ const uiRoutes: Routes = [
           {
             path: 'formatting',
             component: FormattingComponent
+          },
+          {
+            path: 'address',
+            component: AddressComponent
           }
         ]
       },
