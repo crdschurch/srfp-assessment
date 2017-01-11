@@ -19,7 +19,7 @@ import { VideoComponent } from './cards/video/video.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
-import { BodyComponent } from './typography/body/body.component';
+import { FormattingComponent } from './typography/formatting/formatting.component';
 import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
 
 
@@ -42,7 +42,7 @@ import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
     TypefacesComponent,
     HeadingsComponent,
     JumbotronComponent,
-    BodyComponent,
+    FormattingComponent,
 
     CardsComponent,
     SidebarNavComponent,

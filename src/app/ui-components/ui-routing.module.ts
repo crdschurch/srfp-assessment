@@ -9,7 +9,7 @@ import { ComponentListComponent } from './component-list/component-list.componen
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
-import { BodyComponent } from './typography/body/body.component';
+import { FormattingComponent } from './typography/formatting/formatting.component';
 
 const uiRoutes: Routes = [
   {
@@ -38,8 +38,8 @@ const uiRoutes: Routes = [
             component: HeadingsComponent
           },
           {
-            path: 'body',
-            component: BodyComponent
+            path: 'formatting',
+            component: FormattingComponent
           }
         ]
       },
