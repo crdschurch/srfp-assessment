@@ -12,6 +12,7 @@ import { HeadingsComponent } from './typography/headings/headings.component';
 import { FormattingComponent } from './typography/formatting/formatting.component';
 import { AddressComponent } from './typography/address/address.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
+import { ListsComponent } from './typography/lists/lists.component';
 
 const uiRoutes: Routes = [
   {
@@ -50,6 +51,10 @@ const uiRoutes: Routes = [
           {
             path: 'blockquote',
             component: BlockquoteComponent
+          },
+          {
+            path: 'lists',
+            component: ListsComponent
           }
         ]
       },

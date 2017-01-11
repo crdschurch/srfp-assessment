@@ -1,4 +1,7 @@
 aside > nav {
+  ul {
+    font-size: 100%;
+  }
   margin-top: 3em;
   .list-group-item {
     &.active,

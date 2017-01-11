@@ -23,6 +23,7 @@ import { FormattingComponent } from './typography/formatting/formatting.componen
 import { AddressComponent } from './typography/address/address.component';
 import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
+import { ListsComponent } from './typography/lists/lists.component';
 
 @NgModule({
   imports: [
@@ -46,6 +47,7 @@ import { BlockquoteComponent } from './typography/blockquote/blockquote.componen
     FormattingComponent,
     AddressComponent,
     BlockquoteComponent,
+    ListsComponent,
 
     CardsComponent,
     SidebarNavComponent,
