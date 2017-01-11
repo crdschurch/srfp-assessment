@@ -19,8 +19,9 @@ import { VideoComponent } from './cards/video/video.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
-import { IconsComponent } from './typography/icons/icons.component';
 import { BodyComponent } from './typography/body/body.component';
+import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
+
 
 @NgModule({
   imports: [
@@ -40,7 +41,7 @@ import { BodyComponent } from './typography/body/body.component';
     TypographyComponent,
     TypefacesComponent,
     HeadingsComponent,
-    IconsComponent,
+    JumbotronComponent,
     BodyComponent,
 
     CardsComponent,
