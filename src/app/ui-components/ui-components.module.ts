@@ -15,6 +15,16 @@ import { VariationsComponent } from './cards/variations/variations.component';
 import { NoImageComponent } from './cards/no-image/no-image.component';
 import { VideoComponent } from './cards/video/video.component';
 
+/* typography */
+import { TypographyComponent } from './typography/typography.component';
+import { TypefacesComponent } from './typography/typefaces/typefaces.component';
+import { HeadingsComponent } from './typography/headings/headings.component';
+import { FormattingComponent } from './typography/formatting/formatting.component';
+import { AddressComponent } from './typography/address/address.component';
+import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
+import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
+import { ListsComponent } from './typography/lists/lists.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -28,6 +38,17 @@ import { VideoComponent } from './cards/video/video.component';
     UiComponentsComponent,
     SearchBarComponent,
     ComponentListComponent,
+
+    /* typography */
+    TypographyComponent,
+    TypefacesComponent,
+    HeadingsComponent,
+    JumbotronComponent,
+    FormattingComponent,
+    AddressComponent,
+    BlockquoteComponent,
+    ListsComponent,
+
     CardsComponent,
     SidebarNavComponent,
     BasicComponent,

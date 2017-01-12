@@ -1,8 +1,13 @@
-@import '~crds-styles/assets/stylesheets/bootstrap';
+@import '~crds-styles/assets/stylesheets/main';
+
 @import 'variables';
+@import 'global';
+@import 'aside';
+@import 'typography';
 @import 'header';
 @import 'footer';
 @import 'cards';
-@import 'sidebar-nav';
 @import 'component-list';
 @import 'tabs';
+@import 'designers';
+@import 'components';

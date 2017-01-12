@@ -1,0 +1,48 @@
+.tbd {
+  a {
+    color: $gray;
+  }
+}
+
+.jumbotron {
+  h1 {
+    font-size: 260%;
+  }
+}
+
+.page-header {
+  h2, h3 {
+    @extend .font-family-base;
+    text-transform: none;
+  }
+  h2 {
+    font-size: 220%;
+    font-weight: 600;
+  }
+  h3 {
+    @extend .font-family-condensed;
+    font-size: 180%;
+    font-weight: 400;
+  }
+}
+
+.selector {
+  margin-bottom: 3em;
+  > code {
+    margin-bottom: 0.5em;
+  }
+  > .annotation {
+    margin-top: 0.5em;
+  }
+}
+
+.example {
+  &.typeface-example {
+    font-size: 160%;
+    line-height: 120%;
+  }
+}
+
+.annotation {
+  font-weight: 600;
+}
