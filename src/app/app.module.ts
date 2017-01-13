@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { CollapseModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { CollapseModule } from 'ng2-bootstrap';
 import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown.directive';
 
 import { AppComponent } from './app.component';

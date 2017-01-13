@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TabsModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { TabsModule } from 'ng2-bootstrap';
 
 import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
