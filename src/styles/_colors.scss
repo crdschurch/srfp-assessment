@@ -1,0 +1,67 @@
+.swatches {
+  .col {
+    @include make-sm-column(3);
+  }
+  .card {
+    border: 1px solid $cr-gray-light;
+    margin-bottom: 2em;
+  }
+  .details {
+    padding: 0.5em 1em 1em;
+    strong {
+      font-size: 120%;
+      display: block;
+    }
+    code {
+      display: inline-block;
+      margin-top: 0.3em;
+    }
+  }
+
+}
+
+.swatch {
+  height: 0;
+  padding-bottom: 40%;
+  width: 100%;
+  border-bottom: 1px solid $cr-white;
+
+
+  &.cr-gray {
+    background: $cr-gray;
+  }
+  &.cr-gray-alpha {
+    background: $cr-gray-alpha;
+  }
+  &.cr-gray-dark {
+    background: $cr-gray-dark;
+  }
+  &.cr-gray-darker {
+    background: $cr-gray-darker;
+  }
+  &.cr-gray-light {
+    background: $cr-gray-light;
+  }
+  &.cr-gray-lighter {
+    background: $cr-gray-lighter;
+  }
+  &.cr-blue {
+    background: $cr-blue;
+  }
+  &.cr-cyan {
+    background: $cr-cyan;
+  }
+  &.cr-cyan-lighter {
+    background: $cr-cyan-lighter;
+  }
+  &.cr-magenta {
+    background: $cr-magenta;
+  }
+  &.cr-white {
+    background: $cr-white;
+    border-color: $cr-gray-light;
+  }
+  &.cr-black {
+    background: $cr-black;
+  }
+}

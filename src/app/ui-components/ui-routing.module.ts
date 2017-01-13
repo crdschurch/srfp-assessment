@@ -14,6 +14,9 @@ import { AddressComponent } from './typography/address/address.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
 import { ListsComponent } from './typography/lists/lists.component';
 
+/* colors */
+import { ColorsComponent } from './colors/colors.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -22,6 +25,10 @@ const uiRoutes: Routes = [
       {
         path: '',
         component: ComponentListComponent
+      },
+      {
+        path: 'colors',
+        component: ColorsComponent
       },
       {
         path: 'typography',
