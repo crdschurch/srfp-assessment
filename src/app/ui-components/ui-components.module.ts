@@ -25,6 +25,10 @@ import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
 import { ListsComponent } from './typography/lists/lists.component';
 
+/* colors */
+import { ColorsComponent } from './colors/colors.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -48,6 +52,9 @@ import { ListsComponent } from './typography/lists/lists.component';
     AddressComponent,
     BlockquoteComponent,
     ListsComponent,
+
+    /* colors */
+    ColorsComponent,
 
     CardsComponent,
     SidebarNavComponent,
