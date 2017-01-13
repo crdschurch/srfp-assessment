@@ -17,6 +17,9 @@ import { ListsComponent } from './typography/lists/lists.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* buttons */
+import { ButtonsComponent } from './buttons/buttons.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -29,6 +32,10 @@ const uiRoutes: Routes = [
       {
         path: 'colors',
         component: ColorsComponent
+      },
+      {
+        path: 'buttons',
+        component: ButtonsComponent
       },
       {
         path: 'typography',

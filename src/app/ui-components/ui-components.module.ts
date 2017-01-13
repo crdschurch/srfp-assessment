@@ -28,6 +28,9 @@ import { ListsComponent } from './typography/lists/lists.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* buttons */
+import { ButtonsComponent } from './buttons/buttons.component';
+
 
 @NgModule({
   imports: [
@@ -55,6 +58,9 @@ import { ColorsComponent } from './colors/colors.component';
 
     /* colors */
     ColorsComponent,
+
+    /* buttons */
+    ButtonsComponent,
 
     CardsComponent,
     SidebarNavComponent,
