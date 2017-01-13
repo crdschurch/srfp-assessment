@@ -9,7 +9,7 @@ import { ComponentListComponent } from './component-list/component-list.componen
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
-import { FormattingComponent } from './typography/formatting/formatting.component';
+import { TypesettingComponent } from './typography/typesetting/typesetting.component';
 import { AddressComponent } from './typography/address/address.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
 import { ListsComponent } from './typography/lists/lists.component';
@@ -41,8 +41,8 @@ const uiRoutes: Routes = [
             component: HeadingsComponent
           },
           {
-            path: 'formatting',
-            component: FormattingComponent
+            path: 'typesetting',
+            component: TypesettingComponent
           },
           {
             path: 'address',

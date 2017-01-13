@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TabsModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { TabsModule } from 'ng2-bootstrap';
 
 import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
@@ -19,7 +19,7 @@ import { VideoComponent } from './cards/video/video.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
-import { FormattingComponent } from './typography/formatting/formatting.component';
+import { TypesettingComponent } from './typography/typesetting/typesetting.component';
 import { AddressComponent } from './typography/address/address.component';
 import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
@@ -44,7 +44,7 @@ import { ListsComponent } from './typography/lists/lists.component';
     TypefacesComponent,
     HeadingsComponent,
     JumbotronComponent,
-    FormattingComponent,
+    TypesettingComponent,
     AddressComponent,
     BlockquoteComponent,
     ListsComponent,
