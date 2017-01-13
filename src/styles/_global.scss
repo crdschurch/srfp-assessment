@@ -1,3 +1,43 @@
+aside > nav {
+  ul {
+    font-size: 100%;
+  }
+  margin-top: 3em;
+  .list-group-item {
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      background: $gray;
+      border-color: darken($gray, 10%);
+    }
+    > a:focus {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+}
+
+.component {
+  @include make-row;
+  aside {
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      @include make-sm-column(3);
+    }
+  }
+  main {
+    @include make-xs-column(12);
+
+    @media (min-width: $screen-sm) {
+      @include make-sm-column(9);
+    }
+
+    > div {
+      margin-bottom: 2em;
+    }
+  }
+}
+
 .tbd {
   a {
     color: $gray;
