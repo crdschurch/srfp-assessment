@@ -31,6 +31,11 @@ import { ColorsComponent } from './colors/colors.component';
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.component';
+import { ButtonStylesComponent } from './buttons/styles/styles.component';
+import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
+import { ButtonStatesComponent } from './buttons/states/states.component';
+import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+
 
 @NgModule({
   imports: [
@@ -62,6 +67,10 @@ import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.compone
     /* buttons */
     ButtonsComponent,
     ButtonsJumbotronComponent,
+    ButtonStylesComponent,
+    ButtonSizesComponent,
+    ButtonStatesComponent,
+    ButtonGroupsComponent,
 
     CardsComponent,
     SidebarNavComponent,
