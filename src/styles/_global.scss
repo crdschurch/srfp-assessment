@@ -31,10 +31,6 @@ aside > nav {
     @media (min-width: $screen-sm) {
       @include make-sm-column(9);
     }
-
-    > div {
-      margin-bottom: 2em;
-    }
   }
 }
 
@@ -85,4 +81,38 @@ aside > nav {
 
 .annotation {
   font-weight: 600;
+}
+
+.crds-example {
+  position: relative;
+  border: 1px solid;
+  margin-top: 1em;
+  margin-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  &, & + figure.highlight > pre {
+    border-color: $cr-gray-lighter;
+    padding: 1.25em;
+  }
+
+  & {
+    padding-top: 3.25em;
+    &:after {
+      content: 'Example';
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 90%;
+      position: absolute;
+      top: 1.25em;
+      left: 1.5em;
+    }
+  }
+
+  & + figure.highlight > pre {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 2em;
+  }
 }
