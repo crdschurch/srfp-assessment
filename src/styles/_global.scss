@@ -13,6 +13,19 @@ aside > nav {
   }
 }
 
+body.dark-theme {
+  transition: all 0.3s;
+  nav.navbar {
+    transition: all 0.3s;
+    @extend .navbar-inverse;
+  }
+
+  footer {
+    background-color: $navbar-inverse-bg;
+    border-color: $navbar-inverse-border;
+  }
+}
+
 .component {
   aside {
     @media (min-width: $screen-sm) {
