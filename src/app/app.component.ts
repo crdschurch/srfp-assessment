@@ -1,4 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewChecked } from '@angular/core';
+
+var Prism = require('prismjs');
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,13 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['../styles/application.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements AfterViewChecked {
   title = 'app works!';
+
+  ngAfterViewChecked() {
+    var els = document.getElementsByClassName('language-markup');
+    for(var i = 0; i < els.length; i++) {
+      Prism.highlightElement(els[i]);
+    }
+  }
 }
