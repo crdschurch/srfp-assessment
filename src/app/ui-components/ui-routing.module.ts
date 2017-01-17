@@ -27,6 +27,12 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
+import { FormTextInputComponent } from './forms/text-input/text-input.component';
+import { FormTextAreaComponent } from './forms/text-area/text-area.component';
+import { FormSelectComponent } from './forms/select/select.component';
+import { FormRadioComponent } from './forms/radio/radio.component';
+import { FormCheckboxComponent } from './forms/checkbox/checkbox.component';
+import { FormAlertsComponent } from './forms/alerts/alerts.component';
 
 const uiRoutes: Routes = [
   {
@@ -80,6 +86,30 @@ const uiRoutes: Routes = [
           {
             path: 'states',
             component: FormStatesComponent
+          },
+          {
+            path: 'text-input',
+            component: FormTextInputComponent
+          },
+          {
+            path: 'text-area',
+            component: FormTextAreaComponent
+          },
+          {
+            path: 'select',
+            component: FormSelectComponent
+          },
+          {
+            path: 'radio',
+            component: FormRadioComponent
+          },
+          {
+            path: 'checkbox',
+            component: FormCheckboxComponent
+          },
+          {
+            path: 'alerts',
+            component: FormAlertsComponent
           }
         ]
       },

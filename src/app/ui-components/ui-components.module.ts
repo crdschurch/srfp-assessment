@@ -40,6 +40,12 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
+import { FormTextInputComponent } from './forms/text-input/text-input.component';
+import { FormTextAreaComponent } from './forms/text-area/text-area.component';
+import { FormSelectComponent } from './forms/select/select.component';
+import { FormRadioComponent } from './forms/radio/radio.component';
+import { FormCheckboxComponent } from './forms/checkbox/checkbox.component';
+import { FormAlertsComponent } from './forms/alerts/alerts.component';
 
 @NgModule({
   imports: [
@@ -80,6 +86,12 @@ import { FormStatesComponent } from './forms/form-states/form-states.component';
     FormsJumbotronComponent,
     FormControlsComponent,
     FormStatesComponent,
+    FormTextInputComponent,
+    FormTextAreaComponent,
+    FormSelectComponent,
+    FormRadioComponent,
+    FormCheckboxComponent,
+    FormAlertsComponent,
 
     CardsComponent,
     SidebarNavComponent,
