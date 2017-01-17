@@ -35,6 +35,11 @@ import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
+/* forms */
+import { FormsComponent } from './forms/forms.component';
+import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
+import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormStatesComponent } from './forms/form-states/form-states.component';
 
 @NgModule({
   imports: [
@@ -69,6 +74,12 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
     ButtonStylesComponent,
     ButtonSizesComponent,
     ButtonGroupsComponent,
+
+    /* forms */
+    FormsComponent,
+    FormsJumbotronComponent,
+    FormControlsComponent,
+    FormStatesComponent,
 
     CardsComponent,
     SidebarNavComponent,

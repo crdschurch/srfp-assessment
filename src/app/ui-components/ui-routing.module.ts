@@ -23,6 +23,11 @@ import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
+/* forms */
+import { FormsComponent } from './forms/forms.component';
+import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormStatesComponent } from './forms/form-states/form-states.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -56,6 +61,25 @@ const uiRoutes: Routes = [
           {
             path: 'groups',
             component: ButtonGroupsComponent
+          }
+        ]
+      },
+      {
+        path: 'forms',
+        component: FormsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'controls',
+            pathMatch: 'full'
+          },
+          {
+            path: 'controls',
+            component: FormControlsComponent
+          },
+          {
+            path: 'states',
+            component: FormStatesComponent
           }
         ]
       },
