@@ -25,7 +25,7 @@ aside > nav {
       @include make-sm-column(3);
     }
   }
-  main {
+  > div {
     @include make-xs-column(12);
 
     @media (min-width: $screen-sm) {
