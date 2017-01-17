@@ -33,7 +33,6 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
-import { ButtonStatesComponent } from './buttons/states/states.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
 
@@ -69,7 +68,6 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
     ButtonsJumbotronComponent,
     ButtonStylesComponent,
     ButtonSizesComponent,
-    ButtonStatesComponent,
     ButtonGroupsComponent,
 
     CardsComponent,

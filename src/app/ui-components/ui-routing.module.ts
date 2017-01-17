@@ -21,7 +21,6 @@ import { ColorsComponent } from './colors/colors.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
-import { ButtonStatesComponent } from './buttons/states/states.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
 const uiRoutes: Routes = [
@@ -53,10 +52,6 @@ const uiRoutes: Routes = [
           {
             path: 'sizes',
             component: ButtonSizesComponent
-          },
-          {
-            path: 'states',
-            component: ButtonStatesComponent
           },
           {
             path: 'groups',
