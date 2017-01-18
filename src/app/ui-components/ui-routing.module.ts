@@ -28,6 +28,7 @@ import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormAlertsComponent } from './forms/alerts/alerts.component';
+import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 const uiRoutes: Routes = [
   {
@@ -85,6 +86,10 @@ const uiRoutes: Routes = [
           {
             path: 'alerts',
             component: FormAlertsComponent
+          },
+          {
+            path: 'groups',
+            component: FormGroupsComponent
           }
         ]
       },
