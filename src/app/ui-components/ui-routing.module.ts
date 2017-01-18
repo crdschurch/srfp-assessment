@@ -88,26 +88,6 @@ const uiRoutes: Routes = [
             component: FormStatesComponent
           },
           {
-            path: 'text-input',
-            component: FormTextInputComponent
-          },
-          {
-            path: 'text-area',
-            component: FormTextAreaComponent
-          },
-          {
-            path: 'select',
-            component: FormSelectComponent
-          },
-          {
-            path: 'radio',
-            component: FormRadioComponent
-          },
-          {
-            path: 'checkbox',
-            component: FormCheckboxComponent
-          },
-          {
             path: 'alerts',
             component: FormAlertsComponent
           }
