@@ -18,10 +18,16 @@ export class AppComponent implements AfterViewChecked {
         this.buildExample(examples[i]);
       }
     }
+
+    let preformatted = document.getElementsByClassName('language-markup');
+    for(var i = 0; i < preformatted.length; i++) {
+      if(!preformatted[i].getAttribute('data-processed')) {
+        this.addSyntaxHighlighting(preformatted[i]);
+      }
+    }
   }
 
   private buildExample(el) {
-    if(el.getAttribute('data-processed')) return;
     el.setAttribute('data-processed', 'true');
 
     var html = el.innerHTML.replace(/^\n+|\n+$/g, '');
@@ -33,10 +39,14 @@ export class AppComponent implements AfterViewChecked {
         figure.classList.add('highlight');
         figure.appendChild(pre);
     this.insertAfter(figure, el);
-    Prism.highlightElement(pre);
   }
 
   private insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+
+  private addSyntaxHighlighting(el) {
+    el.setAttribute('data-processed', 'true');
+    Prism.highlightElement(el);
   }
 }

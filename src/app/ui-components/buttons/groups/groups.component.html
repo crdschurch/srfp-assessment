@@ -50,7 +50,7 @@
   <h2>Flexbox Button Group - Vertical</h2>
 </div>
 
-<div class="crds-example">
+<div class="crds-example" data-processed="true">
   <div class="btn-group btn-group-block">
     <button type="button"
             class="btn btn-option btn-flex btn-outline"
@@ -129,11 +129,91 @@
       </div>
   </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;div class="btn-group btn-group-block">
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectButton()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Payment Option:
+      &lt;/div>
+      &lt;div>$123.00&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectButton()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Payment Option:
+      &lt;/div>
+      &lt;div>$123.00&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectButton()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Payment Option:
+      &lt;/div>
+      &lt;div>$123.00&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectCustom()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Custom Option:
+      &lt;/div>
+      &lt;div>&lt;/div>
+    &lt;/div>
+  &lt;/button>
+
+  &lt;div class="custom-input" *ngIf="customInputSelected">
+      &lt;span class="custom-input__icon">&lt;i class="fa fa-caret-right" aria-hidden="true">&lt;/i>&lt;/span>
+
+      &lt;form class="custom-input__input"
+            action="/">
+        &lt;div class="form-group">
+          &lt;label class="sr-only" for="custom-input">Custom Input&lt;/label>
+          &lt;div class="input-group">
+            &lt;span class="input-group-addon">$&lt;/span>
+            &lt;input type="text"
+                  class="form-control"
+                  placeholder="Enter Custom Input"
+                  id="custom-input"
+                  maxlength="9">
+          &lt;/div>
+        &lt;/div>
+      &lt;/form>
+    &lt;/div>
+&lt;/div></pre>
+</figure>
 
 <br>
 <p>To use this element with the dark theme, add the class <code>dark-theme</code> to the wrapping parent element.</p>
 
-<div class="crds-example dark-theme">
+<div class="crds-example dark-theme" data-processed="true">
   <div class="btn-group btn-group-block">
     <button type="button"
             class="btn btn-option btn-flex btn-outline"
@@ -212,6 +292,86 @@
       </div>
   </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;div class="btn-group btn-group-block">
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectButton()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Payment Option:
+      &lt;/div>
+      &lt;div>$123.00&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectButton()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Payment Option:
+      &lt;/div>
+      &lt;div>$123.00&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectButton()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Payment Option:
+      &lt;/div>
+      &lt;div>$123.00&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectCustom()">
+    &lt;div class="row">
+      &lt;div>
+        &lt;span class="btn-circle__icon">
+          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+        &lt;/span>
+        Custom Option:
+      &lt;/div>
+      &lt;div>&lt;/div>
+    &lt;/div>
+  &lt;/button>
+
+  &lt;div class="custom-input" *ngIf="customInputSelected">
+      &lt;span class="custom-input__icon">&lt;i class="fa fa-caret-right" aria-hidden="true">&lt;/i>&lt;/span>
+
+      &lt;form class="custom-input__input"
+            action="/">
+        &lt;div class="form-group">
+          &lt;label class="sr-only" for="custom-input">Custom Input&lt;/label>
+          &lt;div class="input-group">
+            &lt;span class="input-group-addon">$&lt;/span>
+            &lt;input type="text"
+                  class="form-control"
+                  placeholder="Enter Custom Input"
+                  id="custom-input"
+                  maxlength="9">
+          &lt;/div>
+        &lt;/div>
+      &lt;/form>
+    &lt;/div>
+&lt;/div></pre>
+</figure>
 
 <div class="page-header">
   <h2>Toggle Button Group</h2>

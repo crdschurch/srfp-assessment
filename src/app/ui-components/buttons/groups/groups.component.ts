@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 })
 export class ButtonGroupsComponent {
   public customInputSelected: boolean = false;
+  something: String = 'sssss';
 
   public selectButton() {
     this.customInputSelected = false;
