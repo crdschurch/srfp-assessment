@@ -17,6 +17,12 @@ import { ListsComponent } from './typography/lists/lists.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* buttons */
+import { ButtonsComponent } from './buttons/buttons.component';
+import { ButtonStylesComponent } from './buttons/styles/styles.component';
+import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
+import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -29,6 +35,29 @@ const uiRoutes: Routes = [
       {
         path: 'colors',
         component: ColorsComponent
+      },
+      {
+        path: 'buttons',
+        component: ButtonsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'styles',
+            pathMatch: 'full'
+          },
+          {
+            path: 'styles',
+            component: ButtonStylesComponent
+          },
+          {
+            path: 'sizes',
+            component: ButtonSizesComponent
+          },
+          {
+            path: 'groups',
+            component: ButtonGroupsComponent
+          }
+        ]
       },
       {
         path: 'typography',

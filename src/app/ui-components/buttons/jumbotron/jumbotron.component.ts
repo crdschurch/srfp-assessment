@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ddk-typography-jumbotron',
+  selector: 'ddk-buttons-jumbotron',
   templateUrl: './jumbotron.component.html'
 })
-export class TypographyJumbotronComponent {}
+export class ButtonsJumbotronComponent {}

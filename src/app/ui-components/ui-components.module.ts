@@ -21,12 +21,19 @@ import { TypefacesComponent } from './typography/typefaces/typefaces.component';
 import { HeadingsComponent } from './typography/headings/headings.component';
 import { TypesettingComponent } from './typography/typesetting/typesetting.component';
 import { AddressComponent } from './typography/address/address.component';
-import { JumbotronComponent } from './typography/jumbotron/jumbotron.component';
+import { TypographyJumbotronComponent } from './typography/jumbotron/jumbotron.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
 import { ListsComponent } from './typography/lists/lists.component';
 
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
+
+/* buttons */
+import { ButtonsComponent } from './buttons/buttons.component';
+import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.component';
+import { ButtonStylesComponent } from './buttons/styles/styles.component';
+import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
+import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
 
 @NgModule({
@@ -47,7 +54,7 @@ import { ColorsComponent } from './colors/colors.component';
     TypographyComponent,
     TypefacesComponent,
     HeadingsComponent,
-    JumbotronComponent,
+    TypographyJumbotronComponent,
     TypesettingComponent,
     AddressComponent,
     BlockquoteComponent,
@@ -55,6 +62,13 @@ import { ColorsComponent } from './colors/colors.component';
 
     /* colors */
     ColorsComponent,
+
+    /* buttons */
+    ButtonsComponent,
+    ButtonsJumbotronComponent,
+    ButtonStylesComponent,
+    ButtonSizesComponent,
+    ButtonGroupsComponent,
 
     CardsComponent,
     SidebarNavComponent,
