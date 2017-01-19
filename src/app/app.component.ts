@@ -27,24 +27,6 @@ export class AppComponent implements AfterViewChecked {
     }
   }
 
-  private buildExample(el) {
-    el.setAttribute('data-processed', 'true');
-
-    var html = el.innerHTML.replace(/^\n+|\n+$/g, '');
-    var node = document.createTextNode(html);
-    var pre = document.createElement('pre');
-        pre.classList.add('language-markup');
-        pre.appendChild(node);
-    var figure = document.createElement('figure');
-        figure.classList.add('highlight');
-        figure.appendChild(pre);
-    this.insertAfter(figure, el);
-  }
-
-  private insertAfter(newNode, referenceNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  }
-
   private addSyntaxHighlighting(el) {
     el.setAttribute('data-processed', 'true');
     Prism.highlightElement(el);
