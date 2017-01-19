@@ -53,6 +53,16 @@ aside > nav {
   }
 }
 
+.page-subheader {
+  margin: 40px 0 20px;
+  border-bottom: 1px solid $gray;
+
+  h3 {
+    @extend .font-family-condensed;
+    font-size: 180%;
+  }
+}
+
 .selector {
   margin-bottom: 3em;
   > code {
