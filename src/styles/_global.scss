@@ -1,7 +1,4 @@
 aside > nav {
-  ul {
-    font-size: 100%;
-  }
   margin-top: 3em;
   .list-group-item {
     &.active,
@@ -37,12 +34,6 @@ aside > nav {
 .tbd {
   a {
     color: $gray;
-  }
-}
-
-.jumbotron {
-  h1 {
-    font-size: 260%;
   }
 }
 
