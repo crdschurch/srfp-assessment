@@ -30,9 +30,6 @@
   &.cr-gray {
     background: $cr-gray;
   }
-  &.cr-gray-alpha {
-    background: $cr-gray-alpha;
-  }
   &.cr-gray-dark {
     background: $cr-gray-dark;
   }
@@ -66,5 +63,8 @@
   }
   &.cr-black {
     background: $cr-black;
+  }
+  &.cr-black-alpha {
+    background: $cr-black-alpha;
   }
 }
