@@ -68,7 +68,7 @@ module.exports = {
       to: 'assets',
     }, {
       from: './apache_site.conf',
-      to: 'apache_site.conf',
+      to: 'apache_site.conf'
     }], { ignore: ['mock-data/*'] })
   ]
 };
