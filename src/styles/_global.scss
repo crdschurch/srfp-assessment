@@ -1,7 +1,4 @@
 aside > nav {
-  ul {
-    font-size: 100%;
-  }
   margin-top: 3em;
   .list-group-item {
     &.active,
@@ -40,12 +37,6 @@ aside > nav {
   }
 }
 
-.jumbotron {
-  h1 {
-    font-size: 260%;
-  }
-}
-
 .page-header {
   h2, h3 {
     @extend .font-family-base;
@@ -59,6 +50,16 @@ aside > nav {
     @extend .font-family-condensed;
     font-size: 180%;
     font-weight: 400;
+  }
+}
+
+.page-subheader {
+  margin: 40px 0 20px;
+  border-bottom: 1px solid $gray;
+
+  h3 {
+    @extend .font-family-condensed;
+    font-size: 180%;
   }
 }
 
@@ -76,6 +77,7 @@ aside > nav {
   &.typeface-example {
     font-size: 160%;
     line-height: 120%;
+    word-wrap: break-word;
   }
 }
 
