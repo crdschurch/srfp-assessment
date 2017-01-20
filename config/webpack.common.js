@@ -54,7 +54,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'polyfills']
     }),
-    
+
     new Dotenv({
       systemvars: true
     }),
@@ -66,6 +66,9 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'src/assets',
       to: 'assets',
+    }, {
+      from: './apache_site.conf',
+      to: 'apache_site.conf',
     }], { ignore: ['mock-data/*'] })
   ]
 };
