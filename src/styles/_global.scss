@@ -1,5 +1,4 @@
 aside > nav {
-  margin-top: 3em;
   .list-group-item {
     &.active,
     &.active:hover,
@@ -15,7 +14,6 @@ aside > nav {
 }
 
 .component {
-  @include make-row;
   aside {
     @media (min-width: $screen-sm) {
       display: inline-block;
@@ -38,6 +36,12 @@ aside > nav {
 }
 
 .page-header {
+  &:first-child {
+    &, h2 {
+      margin-top: 0;
+    }
+  }
+
   h2, h3 {
     @extend .font-family-base;
     text-transform: none;
@@ -54,8 +58,7 @@ aside > nav {
 }
 
 .page-subheader {
-  margin: 40px 0 20px;
-  border-bottom: 1px solid $gray;
+  margin: 3em 0 1em;
 
   h3 {
     @extend .font-family-condensed;
@@ -71,7 +74,11 @@ aside > nav {
   > .annotation {
     margin-top: 0.5em;
   }
+  p > code {
+    margin-bottom: 0;
+  }
 }
+
 
 .example {
   &.typeface-example {
@@ -83,6 +90,10 @@ aside > nav {
 
 .annotation {
   font-weight: 600;
+}
+
+.jumbotron {
+  margin-bottom: 3em;
 }
 
 .crds-example {
