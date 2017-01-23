@@ -79,15 +79,6 @@ aside > nav {
   }
 }
 
-
-.example {
-  &.typeface-example {
-    font-size: 160%;
-    line-height: 120%;
-    word-wrap: break-word;
-  }
-}
-
 .annotation {
   font-weight: 600;
 }
@@ -119,7 +110,12 @@ aside > nav {
       position: absolute;
       top: 1.25em;
       left: 1.5em;
+      color: $gray-light;
     }
+  }
+
+  &[data-label]:after {
+    content: attr(data-label);
   }
 
   & + figure.highlight > pre {
@@ -128,5 +124,19 @@ aside > nav {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     padding-left: 2em;
+  }
+
+  .typeface-example & {
+    border-radius: 5px;
+    font-size: 160%;
+    word-wrap: break-word;
+    &::after {
+      @extend .font-family-base-bold;
+      font-style: normal;
+      font-size: 56%;
+      position: absolute;
+      top: 2.25em;
+      left: 2.5em;
+    }
   }
 }
