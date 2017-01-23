@@ -5,7 +5,6 @@ import { TestBed, async } from '@angular/core/testing';
 import { BootstrapDropdownDirective } from './bootstrap-dropdown.directive';
 import { BootstrapDropdownService } from './bootstrap-dropdown.service';
 
-
 class MockElementRef implements ElementRef {
   nativeElement = {};
 }
