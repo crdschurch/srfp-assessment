@@ -2,6 +2,7 @@
   .col {
     @include make-sm-column(3);
   }
+
   .card {
     border: 1px solid $cr-gray-light;
     margin-bottom: 2em;
@@ -16,7 +17,14 @@
       margin-top: 0.3em;
     }
   }
-
+  footer {
+    color: $cr-gray;
+    background: lighten($cr-gray-lighter, 5);
+    font-size: 80%;
+    font-weight: bold;
+    padding: 1em 1.5em;
+    min-height: 45px;
+  }
 }
 
 .swatch {
@@ -28,9 +36,6 @@
 
   &.cr-gray {
     background: $cr-gray;
-  }
-  &.cr-gray-alpha {
-    background: $cr-gray-alpha;
   }
   &.cr-gray-dark {
     background: $cr-gray-dark;
@@ -56,8 +61,14 @@
   &.cr-teal {
     background: $cr-teal;
   }
+  &.cr-green {
+    background: $cr-green;
+  }
   &.cr-magenta {
     background: $cr-magenta;
+  }
+  &.cr-orange {
+    background: $cr-orange;
   }
   &.cr-white {
     background: $cr-white;
@@ -65,5 +76,8 @@
   }
   &.cr-black {
     background: $cr-black;
+  }
+  &.cr-black-alpha {
+    background: $cr-black-alpha;
   }
 }
