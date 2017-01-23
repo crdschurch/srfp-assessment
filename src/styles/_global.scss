@@ -13,16 +13,10 @@ aside > nav {
   }
 }
 
-body.dark-theme {
+body.crds-dark-theme {
   transition: all 0.3s;
-  nav.navbar {
-    transition: all 0.3s;
-    @extend .navbar-inverse;
-  }
-
-  footer {
-    background-color: $navbar-inverse-bg;
-    border-color: $navbar-inverse-border;
+  .crds-example {
+    @extend .dark-theme;
   }
 }
 

@@ -9,13 +9,12 @@ export class ThemeToggleSwitch {
 
   private body;
   private state: String = 'off';
-  private selector: String = 'dark-theme';
+  private selector: String = 'crds-dark-theme';
 
   @Output() stateChange = new EventEmitter<any>();
 
   constructor() {
     this.body = document.getElementsByTagName('body')[0];
-    console.log(this.selector);
   }
 
   onSwitch() {
