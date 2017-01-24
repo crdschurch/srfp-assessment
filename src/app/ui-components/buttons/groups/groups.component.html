@@ -3,29 +3,50 @@
 </div>
 
 <div class="page-subheader">
-  <h3>Horizontal Button Group</h3>
+  <h3>Button Group</h3>
 </div>
 
-<div class="crds-example">
+<div class="crds-example" data-processed="true">
   <div class="btn-group">
-    <button class="btn btn-option btn-outline">Option</button>
-    <button class="btn btn-option btn-outline">Option</button>
+    <button *ngFor="let button of buttons"
+            type="button"
+            class="btn btn-option btn-outline"
+            [class.active]="button === selectedButton"
+            (click)="onSelect(button)">{{ button.label }}</button>
   </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+  &lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-option btn-outline"&gt;...&lt;/button&gt;
+    &lt;button type="button" class="btn btn-option btn-outline"&gt;...&lt;/button&gt;
+    &lt;button type="button" class="btn btn-option btn-outline"&gt;...&lt;/button&gt;
+    &lt;button type="button" class="btn btn-option btn-outline"&gt;...&lt;/button&gt;
+  &lt;/div&gt;</pre>
+</figure>
 
 <div class="page-subheader">
   <h3>Flexbox Button Group - Horizontal</h3>
 </div>
 
-<div class="crds-example">
+<div class="crds-example" data-processed="true">
   <div class="btn-group btn-group-row">
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
+    <button *ngFor="let button of buttons"
+            type="button"
+            class="btn btn-option btn-flex btn-outline"
+            [class.active]="button === selectedButton"
+            (click)="onSelect(button)">{{ button.label }}</button>
   </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+  &lt;div class="btn-group btn-group-row"&gt;
+    &lt;button type="button" class="btn btn-option btn-flex btn-outline"&gt;...&lt;/button&gt;
+    &lt;button type="button" class="btn btn-option btn-flex btn-outline"&gt;...&lt;/button&gt;
+    &lt;button type="button" class="btn btn-option btn-flex btn-outline"&gt;...&lt;/button&gt;
+    &lt;button type="button" class="btn btn-option btn-flex btn-outline"&gt;...&lt;/button&gt;
+  &lt;/div&gt;</pre>
+</figure>
 
 <div class="page-subheader">
   <h3>Flexbox Button Group - Vertical</h3>
@@ -191,8 +212,8 @@
 &lt;/div></pre>
 </figure>
 
-<div class="page-subheader">
-  <h3>Toggle Button Group</h3>
+<div class="page-header">
+  <h2>Toggle Button Group</h2>
 </div>
 
 <div class="crds-example">
