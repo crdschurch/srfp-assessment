@@ -1,1 +1,4 @@
-export class Button { label: string; }
+export class Button {
+  id: string;
+  label: string;
+}

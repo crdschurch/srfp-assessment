@@ -11,7 +11,8 @@
     <button *ngFor="let button of buttons"
             type="button"
             class="btn btn-option btn-outline"
-            [class.active]="button === selectedButton"
+            id="{{ button.id }}"
+            [ngClass]="{'active': isActive(button) }"
             (click)="onSelect(button)">{{ button.label }}</button>
   </div>
 </div>
@@ -31,10 +32,11 @@
 
 <div class="crds-example" data-processed="true">
   <div class="btn-group btn-group-row">
-    <button *ngFor="let button of buttons"
+    <button *ngFor="let button of buttons2"
             type="button"
             class="btn btn-option btn-flex btn-outline"
-            [class.active]="button === selectedButton"
+            id="{{ button.id }}"
+            [ngClass]="{'active': isActive(button) }"
             (click)="onSelect(button)">{{ button.label }}</button>
   </div>
 </div>
