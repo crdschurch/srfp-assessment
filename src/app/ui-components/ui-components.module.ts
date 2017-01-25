@@ -24,6 +24,7 @@ import { AddressComponent } from './typography/address/address.component';
 import { TypographyJumbotronComponent } from './typography/jumbotron/jumbotron.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
 import { ListsComponent } from './typography/lists/lists.component';
+import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
@@ -66,6 +67,7 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     AddressComponent,
     BlockquoteComponent,
     ListsComponent,
+    WebFontsComponent,
 
     /* colors */
     ColorsComponent,

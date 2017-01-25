@@ -13,6 +13,7 @@ import { TypesettingComponent } from './typography/typesetting/typesetting.compo
 import { AddressComponent } from './typography/address/address.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
 import { ListsComponent } from './typography/lists/lists.component';
+import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
@@ -105,6 +106,10 @@ const uiRoutes: Routes = [
           {
             path: 'typefaces',
             component: TypefacesComponent
+          },
+          {
+            path: 'web-fonts',
+            component: WebFontsComponent
           },
           {
             path: 'headings',
