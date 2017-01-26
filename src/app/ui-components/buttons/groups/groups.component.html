@@ -2,14 +2,24 @@
   <h2>Groups</h2>
 </div>
 
+<div class="alert alert-info">
+  <p>For a button to have an active state, the class <code>active</code> must be added to the selector. This can be done using either <strong><a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#class-binding" target="_blank">class binding</a></strong>, .e.g. <code>&#91;class.active&#93;="isActive"</code>, or with the <strong><a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngClass" target="_blank">NgClass directive</a></strong>, e.g. <code>&#91;ngClass&#93;="&#123;'active'&#125;"</code>.</p>
+</div>
+
+<div class="alert alert-warning">
+  <p>For demonstration purposes, the <code>active</code> class has been applied to the first button within each button group to show what active state buttons will look like.</p>
+</div>
+
 <div class="page-subheader">
-  <h3>Horizontal Button Group</h3>
+  <h3>Button Group</h3>
 </div>
 
 <div class="crds-example">
   <div class="btn-group">
-    <button class="btn btn-option btn-outline">Option</button>
-    <button class="btn btn-option btn-outline">Option</button>
+    <button type="button" class="btn btn-option btn-outline active">Option 1</button>
+    <button type="button" class="btn btn-option btn-outline">Option 2</button>
+    <button type="button" class="btn btn-option btn-outline">Option 3</button>
+    <button type="button" class="btn btn-option btn-outline">Option 4</button>
   </div>
 </div>
 
@@ -34,11 +44,10 @@
 
 <div class="crds-example">
   <div class="btn-group btn-group-row">
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
-    <button class="btn btn-option btn-flex btn-outline">Option</button>
+    <button type="button" class="btn btn-option btn-flex btn-outline active">Option 1</button>
+    <button type="button" class="btn btn-option btn-flex btn-outline">Option 2</button>
+    <button type="button" class="btn btn-option btn-flex btn-outline">Option 3</button>
+    <button type="button" class="btn btn-option btn-flex btn-outline">Option 4</button>
   </div>
 </div>
 
@@ -49,7 +58,7 @@
 <div class="crds-example" data-processed="true">
   <div class="btn-group btn-group-block">
     <button type="button"
-            class="btn btn-option btn-flex btn-outline"
+            class="btn btn-option btn-flex btn-outline active"
             (click)="selectButton()">
       <div class="row">
         <div>
@@ -127,92 +136,92 @@
 </div>
 <figure class="highlight">
   <pre class="language-markup">
-&lt;div class="btn-group btn-group-block">
-  &lt;button type="button"
-          class="btn btn-option btn-flex btn-outline"
-          (click)="selectButton()">
-    &lt;div class="row">
-      &lt;div>
-        &lt;span class="btn-circle__icon">
-          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
-          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
-        &lt;/span>
-        Payment Option:
-      &lt;/div>
-      &lt;div>$123.00&lt;/div>
-    &lt;/div>
-  &lt;/button>
-  &lt;button type="button"
-          class="btn btn-option btn-flex btn-outline"
-          (click)="selectButton()">
-    &lt;div class="row">
-      &lt;div>
-        &lt;span class="btn-circle__icon">
-          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
-          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
-        &lt;/span>
-        Payment Option:
-      &lt;/div>
-      &lt;div>$123.00&lt;/div>
-    &lt;/div>
-  &lt;/button>
-  &lt;button type="button"
-          class="btn btn-option btn-flex btn-outline"
-          (click)="selectButton()">
-    &lt;div class="row">
-      &lt;div>
-        &lt;span class="btn-circle__icon">
-          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
-          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
-        &lt;/span>
-        Payment Option:
-      &lt;/div>
-      &lt;div>$123.00&lt;/div>
-    &lt;/div>
-  &lt;/button>
-  &lt;button type="button"
-          class="btn btn-option btn-flex btn-outline"
-          (click)="selectCustom()">
-    &lt;div class="row">
-      &lt;div>
-        &lt;span class="btn-circle__icon">
-          &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
-          &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
-        &lt;/span>
-        Custom Option:
-      &lt;/div>
-      &lt;div>&lt;/div>
-    &lt;/div>
-  &lt;/button>
-
-  &lt;div class="custom-input" *ngIf="customInputSelected">
-      &lt;span class="custom-input__icon">&lt;i class="fa fa-caret-right" aria-hidden="true">&lt;/i>&lt;/span>
-
-      &lt;form class="custom-input__input"
-            action="/">
-        &lt;div class="form-group">
-          &lt;label class="sr-only" for="custom-input">Custom Input&lt;/label>
-          &lt;div class="input-group">
-            &lt;span class="input-group-addon">$&lt;/span>
-            &lt;input type="text"
-                  class="form-control"
-                  placeholder="Enter Custom Input"
-                  id="custom-input"
-                  maxlength="9">
-          &lt;/div>
+  &lt;div class="btn-group btn-group-block">
+    &lt;button type="button"
+            class="btn btn-option btn-flex btn-outline"
+            (click)="selectButton()">
+      &lt;div class="row">
+        &lt;div>
+          &lt;span class="btn-circle__icon">
+            &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+            &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+          &lt;/span>
+          Payment Option:
         &lt;/div>
-      &lt;/form>
-    &lt;/div>
-&lt;/div></pre>
+        &lt;div>$123.00&lt;/div>
+      &lt;/div>
+    &lt;/button>
+    &lt;button type="button"
+            class="btn btn-option btn-flex btn-outline"
+            (click)="selectButton()">
+      &lt;div class="row">
+        &lt;div>
+          &lt;span class="btn-circle__icon">
+            &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+            &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+          &lt;/span>
+          Payment Option:
+        &lt;/div>
+        &lt;div>$123.00&lt;/div>
+      &lt;/div>
+    &lt;/button>
+    &lt;button type="button"
+            class="btn btn-option btn-flex btn-outline"
+            (click)="selectButton()">
+      &lt;div class="row">
+        &lt;div>
+          &lt;span class="btn-circle__icon">
+            &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+            &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+          &lt;/span>
+          Payment Option:
+        &lt;/div>
+        &lt;div>$123.00&lt;/div>
+      &lt;/div>
+    &lt;/button>
+    &lt;button type="button"
+            class="btn btn-option btn-flex btn-outline"
+            (click)="selectCustom()">
+      &lt;div class="row">
+        &lt;div>
+          &lt;span class="btn-circle__icon">
+            &lt;i aria-hidden="true" class="fa fa-circle-thin fa-2x">&lt;/i>
+            &lt;i aria-hidden="true" class="fa fa-check-circle fa-2x">&lt;/i>
+          &lt;/span>
+          Custom Option:
+        &lt;/div>
+        &lt;div>&lt;/div>
+      &lt;/div>
+    &lt;/button>
+
+    &lt;div class="custom-input" *ngIf="customInputSelected">
+        &lt;span class="custom-input__icon">&lt;i class="fa fa-caret-right" aria-hidden="true">&lt;/i>&lt;/span>
+
+        &lt;form class="custom-input__input"
+              action="/">
+          &lt;div class="form-group">
+            &lt;label class="sr-only" for="custom-input">Custom Input&lt;/label>
+            &lt;div class="input-group">
+              &lt;span class="input-group-addon">$&lt;/span>
+              &lt;input type="text"
+                    class="form-control"
+                    placeholder="Enter Custom Input"
+                    id="custom-input"
+                    maxlength="9">
+            &lt;/div>
+          &lt;/div>
+        &lt;/form>
+      &lt;/div>
+  &lt;/div></pre>
 </figure>
 
-<div class="page-subheader">
-  <h3>Toggle Button Group</h3>
+<div class="page-header">
+  <h2>Toggle Button Group</h2>
 </div>
 
 <div class="crds-example">
   <div class="btn-group btn-group-toggle btn-group-teal">
-    <button class="btn btn-option">Option</button>
+    <button class="btn btn-option active">Option</button>
     <button class="btn btn-option">Option</button>
   </div>
 </div>
