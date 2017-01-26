@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TabsModule } from 'ng2-bootstrap';
+// Adding /datepicker (as recommended) creates an error for all <datepicker> tags.
+import { DatepickerModule } from 'ng2-bootstrap';
 
 import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
@@ -48,7 +50,9 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
   imports: [
     CommonModule,
     UiRoutingModule,
-    TabsModule
+    TabsModule,
+    // Removing .forRoot() creates bug: No provider for DatepickerConfig!
+    DatepickerModule.forRoot()
   ],
   exports: [
     UiComponentsComponent
