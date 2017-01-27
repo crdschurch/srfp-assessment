@@ -36,6 +36,11 @@ import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
+/* tables */
+import { TablesComponent } from './tables/tables.component';
+import { TablesJumbotronComponent } from './tables/jumbotron/jumbotron.component';
+import { TablesStyledComponent } from './tables/styled/styled.component';
+
 
 @NgModule({
   imports: [
@@ -71,6 +76,11 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
     ButtonStylesComponent,
     ButtonSizesComponent,
     ButtonGroupsComponent,
+
+    /* tables */
+    TablesComponent,
+    TablesJumbotronComponent,
+    TablesStyledComponent,
 
     CardsComponent,
     SidebarNavComponent,

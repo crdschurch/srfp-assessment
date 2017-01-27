@@ -24,6 +24,10 @@ import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
+/* tables */
+import { TablesComponent } from './tables/tables.component';
+import { TablesStyledComponent } from './tables/styled/styled.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -96,6 +100,21 @@ const uiRoutes: Routes = [
           {
             path: 'lists',
             component: ListsComponent
+          }
+        ]
+      },
+      {
+        path: 'tables',
+        component: TablesComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'styled',
+            pathMatch: 'full'
+          },
+          {
+            path: 'styled',
+            component: TablesStyledComponent
           }
         ]
       },
