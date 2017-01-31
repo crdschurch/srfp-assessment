@@ -32,12 +32,13 @@ const VERT_BUTTONS = [
 })
 
 export class ButtonGroupsComponent {
-  public customInputSelected: boolean = false;
   buttons = BUTTONS;
   no_outline_buttons = NO_OUTLINE_BUTTONS;
   flex_buttons = FLEX_BUTTONS;
   vert_buttons = VERT_BUTTONS;
   selectedButton;
+  public customInputSelected: boolean = false;
+  public radioModel: string = 'option_a';
 
   onSelect(button): void {
     this.selectedButton = button;

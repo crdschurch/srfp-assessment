@@ -166,12 +166,12 @@
   &lt;div class="custom-input">
       &lt;form class="custom-input__input" action="/">
         &lt;div class="form-group">
-          &lt;label class="sr-only" for="custom-input">Custom Input&lt;/label>
+          &lt;label class="sr-only" for="custom-input">...&lt;/label>
           &lt;div class="input-group">
             &lt;span class="input-group-addon">$&lt;/span>
             &lt;input type="text"
                   class="form-control"
-                  placeholder="Enter Custom Input"
+                  placeholder="..."
                   id="custom-input"
                   maxlength="9">
           &lt;/div>
@@ -187,7 +187,11 @@
 
 <div class="crds-example">
   <div class="btn-group btn-group-toggle btn-group-teal">
-    <button class="btn btn-option">Option</button>
-    <button class="btn btn-option">Option</button>
+    <label class="btn btn-option"
+          [(ngModel)]="radioModel"
+          btnRadio="option_a">Option A</label>
+    <label class="btn btn-option"
+          [(ngModel)]="radioModel"
+          btnRadio="option_b">Option B</label>
   </div>
 </div>

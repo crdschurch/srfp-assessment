@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TabsModule } from 'ng2-bootstrap';
+import { TabsModule, ButtonsModule } from 'ng2-bootstrap';
 
 import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
@@ -41,7 +41,8 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
   imports: [
     CommonModule,
     UiRoutingModule,
-    TabsModule
+    TabsModule,
+    ButtonsModule,
   ],
   exports: [
     UiComponentsComponent
