@@ -3,11 +3,11 @@
 </div>
 
 <div class="alert alert-info">
-  <p>For a button to have an active state, the class <code>active</code> must be added to the selector. This can be done using either <strong><a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#class-binding" target="_blank">class binding</a></strong>, .e.g. <code>&#91;class.active&#93;="isActive"</code>, or with the <strong><a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngClass" target="_blank">NgClass directive</a></strong>, e.g. <code>&#91;ngClass&#93;="&#123;'active'&#125;"</code>.</p>
+  <p>For a button to have an active state, the class <code>active</code> must be added to the selector. This can be done using either <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#class-binding" target="_blank" class="alert-link">class binding</a>, .e.g. <code>&#91;class.active&#93;="isActive"</code>, or with the <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngClass" target="_blank" class="alert-link">NgClass directive</a>, e.g. <code>&#91;ngClass&#93;="&#123;'active'&#125;"</code>.</p>
 </div>
 
 <div class="alert alert-warning">
-  <p>For demonstration purposes, the <code>active</code> class has been applied to the first button within each button group to show what active state buttons will look like.</p>
+  <p>For demonstration purposes, the <code>active</code> class has been applied to the first button within each block of example code.</p>
 </div>
 
 <div class="page-subheader">
@@ -185,7 +185,9 @@
   <h2>Toggle Button Group</h2>
 </div>
 
-<div class="crds-example">
+<div class="alert alert-info" role="alert">This button group component requires the inclusion of <a href="https://github.com/valor-software/ng2-bootstrap" target="_blank" class="alert-link">NG-2 Bootstrap</a> - an external resource used to create Bootstrap-like elements in Angular 2 applications. Please refer to <a href="http://valor-software.com/ng2-bootstrap/#/buttons#radio" target="_blank" class="alert-link">this documentation</a> when customizing this component.</div>
+
+<div class="crds-example" data-processed="true">
   <div class="btn-group btn-group-toggle btn-group-teal">
     <label class="btn btn-option"
           [(ngModel)]="radioModel"
@@ -195,3 +197,14 @@
           btnRadio="option_b">Option B</label>
   </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;div class="btn-group btn-group-toggle btn-group-teal">
+  &lt;label class="btn btn-option"
+        &#91;(ngModel)]="radioModel"
+        btnRadio="option_a">Option A&lt;/label>
+  &lt;label class="btn btn-option"
+        &#91;(ngModel)]="radioModel"
+        btnRadio="option_b">Option B&lt;/label>
+&lt;/div></pre>
+</figure>
