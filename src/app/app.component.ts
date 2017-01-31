@@ -27,7 +27,13 @@ export class AppComponent implements AfterViewChecked {
     }
   }
 
+  private addSyntaxHighlighting(el) {
+    el.setAttribute('data-processed', 'true');
+    Prism.highlightElement(el);
+  }
+
   private buildExample(el) {
+    if(el.getAttribute('data-processed')) return;
     el.setAttribute('data-processed', 'true');
 
     var html = el.innerHTML.replace(/^\n+|\n+$/g, '');
@@ -39,14 +45,10 @@ export class AppComponent implements AfterViewChecked {
         figure.classList.add('highlight');
         figure.appendChild(pre);
     this.insertAfter(figure, el);
+    Prism.highlightElement(pre);
   }
 
   private insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  }
-
-  private addSyntaxHighlighting(el) {
-    el.setAttribute('data-processed', 'true');
-    Prism.highlightElement(el);
   }
 }
