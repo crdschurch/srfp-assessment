@@ -28,6 +28,14 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 import { TablesComponent } from './tables/tables.component';
 import { TablesStyledComponent } from './tables/styled/styled.component';
 
+/* forms */
+import { FormsComponent } from './forms/forms.component';
+import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormStatesComponent } from './forms/form-states/form-states.component';
+import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { FormAlertsComponent } from './forms/alerts/alerts.component';
+import { FormGroupsComponent } from './forms/form-groups/groups.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -61,6 +69,37 @@ const uiRoutes: Routes = [
           {
             path: 'groups',
             component: ButtonGroupsComponent
+          }
+        ]
+      },
+      {
+        path: 'forms',
+        component: FormsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'controls',
+            pathMatch: 'full'
+          },
+          {
+            path: 'controls',
+            component: FormControlsComponent
+          },
+          {
+            path: 'states',
+            component: FormStatesComponent
+          },
+          {
+            path: 'datepicker',
+            component: FormDatepickerComponent
+          },
+          {
+            path: 'alerts',
+            component: FormAlertsComponent
+          },
+          {
+            path: 'groups',
+            component: FormGroupsComponent
           }
         ]
       },

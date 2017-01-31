@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TabsModule } from 'ng2-bootstrap';
+import { TabsModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
@@ -41,12 +41,21 @@ import { TablesComponent } from './tables/tables.component';
 import { TablesJumbotronComponent } from './tables/jumbotron/jumbotron.component';
 import { TablesStyledComponent } from './tables/styled/styled.component';
 
+/* forms */
+import { FormsComponent } from './forms/forms.component';
+import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
+import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormStatesComponent } from './forms/form-states/form-states.component';
+import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { FormAlertsComponent } from './forms/alerts/alerts.component';
+import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 @NgModule({
   imports: [
     CommonModule,
     UiRoutingModule,
-    TabsModule
+    TabsModule,
+    DatepickerModule
   ],
   exports: [
     UiComponentsComponent
@@ -81,6 +90,15 @@ import { TablesStyledComponent } from './tables/styled/styled.component';
     TablesComponent,
     TablesJumbotronComponent,
     TablesStyledComponent,
+
+    /* forms */
+    FormsComponent,
+    FormsJumbotronComponent,
+    FormControlsComponent,
+    FormStatesComponent,
+    FormDatepickerComponent,
+    FormAlertsComponent,
+    FormGroupsComponent,
 
     CardsComponent,
     SidebarNavComponent,

@@ -1,0 +1,10 @@
+input,
+textarea {
+  &.form-control {
+    &.focus-example {
+      background: $cr-white;
+      border: 2px solid $cr-cyan-light;
+      box-shadow: none;
+    }
+  }
+}
