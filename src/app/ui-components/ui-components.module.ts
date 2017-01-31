@@ -29,6 +29,9 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* alerts */
+import { AlertsComponent } from './alerts/alerts.component';
+
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.component';
@@ -41,7 +44,6 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
-import { FormAlertsComponent } from './forms/alerts/alerts.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 @NgModule({
@@ -72,6 +74,9 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     /* colors */
     ColorsComponent,
 
+    /* alerts */
+    AlertsComponent,
+
     /* buttons */
     ButtonsComponent,
     ButtonsJumbotronComponent,
@@ -84,7 +89,6 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     FormsJumbotronComponent,
     FormControlsComponent,
     FormStatesComponent,
-    FormAlertsComponent,
     FormGroupsComponent,
 
     CardsComponent,
