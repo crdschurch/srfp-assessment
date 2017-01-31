@@ -5,7 +5,9 @@
 <div class="alert alert-info" role="alert">The <code>&lt;datepicker&gt;</code> element requires the inclusion of <strong><a href="https://github.com/valor-software/ng2-bootstrap" target="_blank">NG-2 Bootstrap</a></strong> - an external resource used to create Bootstrap-like elements in Angular 2 applications. Please refer to <strong><a href="http://valor-software.com/ng2-bootstrap/#/datepicker" target="_blank">this documentation</a></strong> when customizing this component.</div>
 
 <div class="crds-example" data-processed="true">
-  <datepicker [showWeeks]="false"></datepicker>
+  <!--<datepicker></datepicker>-->
+
+    <datepicker [(ngModel)]="dt" [showWeeks]="false"></datepicker>
 </div>
 <figure class="highlight">
   <pre class="language-markup">

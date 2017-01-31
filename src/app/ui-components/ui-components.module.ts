@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TabsModule } from 'ng2-bootstrap';
-import { DatepickerModule } from 'ng2-bootstrap';
+import { TabsModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
@@ -51,7 +50,7 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     CommonModule,
     UiRoutingModule,
     TabsModule,
-    DatepickerModule.forRoot()
+    DatepickerModule
   ],
   exports: [
     UiComponentsComponent
