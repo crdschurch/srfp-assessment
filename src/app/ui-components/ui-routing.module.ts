@@ -31,6 +31,8 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
+import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { FormAlertsComponent } from './forms/alerts/alerts.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 const uiRoutes: Routes = [
@@ -89,6 +91,14 @@ const uiRoutes: Routes = [
           {
             path: 'states',
             component: FormStatesComponent
+          },
+          {
+            path: 'datepicker',
+            component: FormDatepickerComponent
+          },
+          {
+            path: 'alerts',
+            component: FormAlertsComponent
           },
           {
             path: 'groups',
