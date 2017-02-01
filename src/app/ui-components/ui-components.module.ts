@@ -46,7 +46,6 @@ import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
-import { FormAlertsComponent } from './forms/alerts/alerts.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 @NgModule({
@@ -96,7 +95,6 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     FormControlsComponent,
     FormStatesComponent,
     FormDatepickerComponent,
-    FormAlertsComponent,
     FormGroupsComponent,
 
     CardsComponent,
