@@ -18,6 +18,9 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* alerts */
+import { AlertsComponent } from './alerts/alerts.component';
+
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
@@ -67,6 +70,10 @@ const uiRoutes: Routes = [
             component: ButtonGroupsComponent
           }
         ]
+      },
+      {
+        path: 'alerts',
+        component: AlertsComponent
       },
       {
         path: 'forms',

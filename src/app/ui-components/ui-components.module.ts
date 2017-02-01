@@ -30,6 +30,9 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* alerts */
+import { AlertsComponent } from './alerts/alerts.component';
+
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.component';
@@ -76,6 +79,9 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
     /* colors */
     ColorsComponent,
+
+    /* alerts */
+    AlertsComponent,
 
     /* buttons */
     ButtonsComponent,
