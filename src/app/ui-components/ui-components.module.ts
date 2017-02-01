@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { TabsModule, ButtonsModule } from 'ng2-bootstrap';
 
@@ -47,9 +48,10 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     UiRoutingModule,
     TabsModule,
-    ButtonsModule,
+    ButtonsModule.forRoot()
   ],
   exports: [
     UiComponentsComponent
