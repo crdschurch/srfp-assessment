@@ -43,7 +43,6 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 /* tables */
 import { TablesComponent } from './tables/tables.component';
 import { TablesJumbotronComponent } from './tables/jumbotron/jumbotron.component';
-import { TablesStyledComponent } from './tables/styled/styled.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
@@ -97,7 +96,6 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     /* tables */
     TablesComponent,
     TablesJumbotronComponent,
-    TablesStyledComponent,
 
     /* forms */
     FormsComponent,

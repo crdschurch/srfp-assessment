@@ -29,7 +29,6 @@ import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
 /* tables */
 import { TablesComponent } from './tables/tables.component';
-import { TablesStyledComponent } from './tables/styled/styled.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
@@ -146,18 +145,7 @@ const uiRoutes: Routes = [
       },
       {
         path: 'tables',
-        component: TablesComponent,
-        children: [
-          {
-            path: '',
-            redirectTo: 'styled',
-            pathMatch: 'full'
-          },
-          {
-            path: 'styled',
-            component: TablesStyledComponent
-          }
-        ]
+        component: TablesComponent
       },
       {
         path: 'cards',
