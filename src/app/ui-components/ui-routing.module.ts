@@ -18,6 +18,9 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* alerts */
+import { AlertsComponent } from './alerts/alerts.component';
+
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
@@ -33,7 +36,6 @@ import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
-import { FormAlertsComponent } from './forms/alerts/alerts.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 const uiRoutes: Routes = [
@@ -73,6 +75,10 @@ const uiRoutes: Routes = [
         ]
       },
       {
+        path: 'alerts',
+        component: AlertsComponent
+      },
+      {
         path: 'forms',
         component: FormsComponent,
         children: [
@@ -92,10 +98,6 @@ const uiRoutes: Routes = [
           {
             path: 'datepicker',
             component: FormDatepickerComponent
-          },
-          {
-            path: 'alerts',
-            component: FormAlertsComponent
           },
           {
             path: 'groups',
