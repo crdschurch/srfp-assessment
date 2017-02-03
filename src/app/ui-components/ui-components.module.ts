@@ -30,6 +30,9 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
 
+/* utility classes */
+import { UtilitiesComponent } from './utility-classes/utilities.component';
+
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
 
@@ -78,6 +81,9 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
     /* colors */
     ColorsComponent,
+
+    /* utility classes */
+    UtilitiesComponent,
 
     /* alerts */
     AlertsComponent,
