@@ -27,6 +27,9 @@ import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
+/* tables */
+import { TablesComponent } from './tables/tables.component';
+
 /* forms */
 import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
@@ -139,6 +142,10 @@ const uiRoutes: Routes = [
             component: ListsComponent
           }
         ]
+      },
+      {
+        path: 'tables',
+        component: TablesComponent
       },
       {
         path: 'cards',
