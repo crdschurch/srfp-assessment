@@ -6,10 +6,6 @@
   <p>For a button to have an active state, the class <code>active</code> must be added to the selector. This can be done using either <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#class-binding" target="_blank" class="alert-link">class binding</a>, .e.g. <code>&#91;class.active&#93;="isActive"</code>, or with the <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngClass" target="_blank" class="alert-link">NgClass directive</a>, e.g. <code>&#91;ngClass&#93;="&#123;'active'&#125;"</code>.</p>
 </div>
 
-<div class="alert alert-warning">
-  <p>For demonstration purposes, the <code>active</code> class has been applied to the first button within each block of example code.</p>
-</div>
-
 <div class="page-subheader">
   <h3>Button Group</h3>
 </div>
@@ -26,7 +22,7 @@
 <figure class="highlight">
   <pre class="language-markup">
 &lt;div class="btn-group">
-  &lt;button type="button" class="btn btn-option btn-outline active">Option 1&lt;/button>
+  &lt;button type="button" class="btn btn-option btn-outline">Option 1&lt;/button>
   &lt;button type="button" class="btn btn-option btn-outline">Option 2&lt;/button>
   &lt;button type="button" class="btn btn-option btn-outline">Option 3&lt;/button>
   &lt;button type="button" class="btn btn-option btn-outline">Option 4&lt;/button>
@@ -51,7 +47,7 @@
 <figure class="highlight">
   <pre class="language-markup">
 &lt;div class="btn-group">
-  &lt;button type="button" class="btn btn-option btn-no-outline active">Option 1&lt;/button>
+  &lt;button type="button" class="btn btn-option btn-no-outline">Option 1&lt;/button>
   &lt;button type="button" class="btn btn-option btn-no-outline">Option 2&lt;/button>
   &lt;button type="button" class="btn btn-option btn-no-outline">Option 3&lt;/button>
   &lt;button type="button" class="btn btn-option btn-no-outline">Option 4&lt;/button>
@@ -74,7 +70,7 @@
 <figure class="highlight">
   <pre class="language-markup">
 &lt;div class="btn-group">
-  &lt;button type="button" class="btn btn-option btn-flex btn-outline active">Option 1&lt;/button>
+  &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 1&lt;/button>
   &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 2&lt;/button>
   &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 3&lt;/button>
   &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 4&lt;/button>
@@ -131,7 +127,7 @@
   <pre class="language-markup">
 &lt;div class="btn-group btn-group-block">
   &lt;button type="button"
-          class="btn btn-option btn-flex btn-outline active"
+          class="btn btn-option btn-flex btn-outline"
           (click)="onSelect(button)">
     &lt;div class="row">
       &lt;div>...&lt;/div>
