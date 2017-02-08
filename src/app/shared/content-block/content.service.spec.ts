@@ -4,7 +4,7 @@ import { TestBed, async, inject } from '@angular/core/testing';
 import { MockBackend } from '@angular/http/testing';
 import { BaseRequestOptions, Http, HttpModule, Response, ResponseOptions, RequestOptions, Headers } from '@angular/http';
 import { ContentService } from './content.service';
-import { ContentBlock } from '../models/content-block';
+import { ContentBlock } from './content-block';
 
 describe('Service: Content', () => {
 

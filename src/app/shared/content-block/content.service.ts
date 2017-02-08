@@ -9,9 +9,7 @@ export class ContentService {
 
   contentBlocks: Array<any> = new Array();
 
-  constructor(private http: Http) {
-    this.loadData();
-  }
+  constructor(private http: Http) {}
 
   loadData(categories = Array('common')) {
     this.getContentBlocks(categories).subscribe(contentBlocks => {

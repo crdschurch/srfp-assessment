@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation, AfterViewChecked } from '@angular/core';
-import { ContentService } from './services/content.service';
 
 var Prism = require('prismjs');
 
@@ -10,8 +9,6 @@ var Prism = require('prismjs');
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewChecked {
-
-  constructor(protected content: ContentService) {}
 
   ngAfterViewChecked() {
     let examples = document.getElementsByClassName('crds-example');

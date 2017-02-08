@@ -9,6 +9,7 @@ import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown/boot
 import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootstrap-dropdown.service';
 import { ThemeToggleSwitch } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 
+import { ContentBlockModule } from './shared/content-block/content-block.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DesignersModule } from './designers/designers.module';
@@ -19,8 +20,6 @@ import { AssetsModule } from './assets/assets.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-import { ContentService } from './services/content.service';
 
 @NgModule({
   declarations: [
@@ -40,14 +39,14 @@ import { ContentService } from './services/content.service';
     DevelopersModule,
     UiComponentsModule,
     AssetsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ContentBlockModule
   ],
   exports: [
     RouterModule
   ],
   providers: [
-    BootstrapDropdownService,
-    ContentService
+    BootstrapDropdownService
   ],
   bootstrap: [AppComponent]
 })
