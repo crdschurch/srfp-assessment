@@ -20,6 +20,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { ContentService } from './services/content.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RouterModule
   ],
   providers: [
-    BootstrapDropdownService
+    BootstrapDropdownService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })
