@@ -10,6 +10,6 @@ import { ContentService } from './content.service';
 })
 export class ContentBlockModule {
   constructor(protected content: ContentService) {
-    this.content.loadData();
+    this.content.loadData(Array('ddk'));
   }
 }
