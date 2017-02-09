@@ -29,6 +29,8 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
+import { SwatchesComponent } from './colors/swatches/swatches.component';
+import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -39,6 +41,10 @@ import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.compone
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+
+/* tables */
+import { TablesComponent } from './tables/tables.component';
+import { TablesJumbotronComponent } from './tables/jumbotron/jumbotron.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
@@ -78,6 +84,8 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
     /* colors */
     ColorsComponent,
+    SwatchesComponent,
+    ColorOverridesComponent,
 
     /* alerts */
     AlertsComponent,
@@ -88,6 +96,10 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     ButtonStylesComponent,
     ButtonSizesComponent,
     ButtonGroupsComponent,
+
+    /* tables */
+    TablesComponent,
+    TablesJumbotronComponent,
 
     /* forms */
     FormsComponent,
