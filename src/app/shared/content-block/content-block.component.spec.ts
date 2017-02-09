@@ -1,6 +1,7 @@
 /* tslint:disable:no-unused-variable */
-
 import { TestBed, async } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
+
 import { ContentBlockComponent } from './content-block.component';
 import { ContentService } from './content.service';
 
@@ -11,6 +12,12 @@ describe('Directive: ContentBlock', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      declarations: [
+        ContentBlockComponent
+      ],
+      imports: [
+        HttpModule
+      ],
       providers: [
         ContentService
       ]

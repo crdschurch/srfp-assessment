@@ -3,13 +3,13 @@ import { ContentService } from './content.service';
 
 @Component({
   selector: 'content-block',
-  template: '<span [innerHtml]="content.getContent(key)"></span>'
+  template: '<span [innerHtml]="content.getContent(id)"></span>'
 })
 export class ContentBlockComponent {
 
   private output: String;
 
-  @Input('id') key: string;
+  @Input() id: string;
 
   constructor(private content: ContentService) {}
 
