@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ContentBlockModule } from '../shared/content-block/content-block.module';
 import { DevelopersComponent } from './developers.component';
 
 const devRoutes: Routes = [
@@ -11,8 +12,11 @@ const devRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(devRoutes)
+    RouterModule.forChild(devRoutes),
+    ContentBlockModule
   ],
-  declarations: [DevelopersComponent]
+  declarations: [
+    DevelopersComponent
+  ]
 })
 export class DevelopersModule { }

@@ -7,8 +7,9 @@ import { HttpModule } from '@angular/http';
 import { CollapseModule } from 'ng2-bootstrap';
 import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown/bootstrap-dropdown.directive';
 import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootstrap-dropdown.service';
-import { ThemeToggleSwitch } from './directives/theme-toggle-switch/theme-toggle-switch.component';
+import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 
+import { ContentBlockModule } from './shared/content-block/content-block.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DesignersModule } from './designers/designers.module';
@@ -27,7 +28,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     DashboardComponent,
     BootstrapDropdownDirective,
-    ThemeToggleSwitch
+    ThemeToggleSwitchComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DevelopersModule,
     UiComponentsModule,
     AssetsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ContentBlockModule
   ],
   exports: [
     RouterModule
