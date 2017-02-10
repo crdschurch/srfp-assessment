@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, AfterViewChecked } from '@angular/core';
 
-var Prism = require('prismjs');
+let Prism = require('prismjs');
 
 @Component({
   selector: 'app-root',
@@ -9,20 +9,19 @@ var Prism = require('prismjs');
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewChecked {
-  title = 'app works!';
 
   ngAfterViewChecked() {
     let examples = document.getElementsByClassName('crds-example');
-    for(var i = 0; i < examples.length; i++) {
-      if(!examples[i].getAttribute('data-processed')) {
+    for (let i = 0; i < examples.length; i++) {
+      if (!examples[i].getAttribute('data-processed')) {
         this.buildExample(examples[i]);
       }
     }
 
     let preformatted = document.getElementsByClassName('language-markup');
-    for(var i = 0; i < preformatted.length; i++) {
-      if(!preformatted[i].getAttribute('data-processed')) {
-        this.addSyntaxHighlighting(preformatted[i]);
+    for (let j = 0; j < preformatted.length; j++) {
+      if (!preformatted[j].getAttribute('data-processed')) {
+        this.addSyntaxHighlighting(preformatted[j]);
       }
     }
   }
@@ -33,15 +32,17 @@ export class AppComponent implements AfterViewChecked {
   }
 
   private buildExample(el) {
-    if(el.getAttribute('data-processed')) return;
+    if (el.getAttribute('data-processed')) {
+      return;
+    }
     el.setAttribute('data-processed', 'true');
 
-    var html = el.innerHTML.replace(/^\n+|\n+$/g, '');
-    var node = document.createTextNode(html);
-    var pre = document.createElement('pre');
+    let html = el.innerHTML.replace(/^\n+|\n+$/g, '');
+    let node = document.createTextNode(html);
+    let pre = document.createElement('pre');
         pre.classList.add('language-markup');
         pre.appendChild(node);
-    var figure = document.createElement('figure');
+    let figure = document.createElement('figure');
         figure.classList.add('highlight');
         figure.appendChild(pre);
     this.insertAfter(figure, el);

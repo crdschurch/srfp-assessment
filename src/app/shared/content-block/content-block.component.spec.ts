@@ -1,10 +1,11 @@
 /* tslint:disable:no-unused-variable */
-
 import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { UiComponentsComponent } from './ui-components.component';
+import { HttpModule } from '@angular/http';
 
-describe('Component: UiComponents', () => {
+import { ContentBlockComponent } from './content-block.component';
+import { ContentService } from './content.service';
+
+describe('Directive: ContentBlock', () => {
 
   let component;
   let fixture;
@@ -12,13 +13,16 @@ describe('Component: UiComponents', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        UiComponentsComponent
+        ContentBlockComponent
       ],
       imports: [
-        RouterTestingModule.withRoutes([])
+        HttpModule
+      ],
+      providers: [
+        ContentService
       ]
     });
-    this.fixture = TestBed.createComponent(UiComponentsComponent);
+    this.fixture = TestBed.createComponent(ContentBlockComponent);
     this.component = this.fixture.componentInstance;
   });
 
