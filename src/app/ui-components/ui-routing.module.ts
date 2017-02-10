@@ -17,6 +17,8 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 
 /* colors */
 import { ColorsComponent } from './colors/colors.component';
+import { SwatchesComponent } from './colors/swatches/swatches.component';
+import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utility-classes/utilities.component';
@@ -29,6 +31,9 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+
+/* tables */
+import { TablesComponent } from './tables/tables.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
@@ -48,7 +53,22 @@ const uiRoutes: Routes = [
       },
       {
         path: 'colors',
-        component: ColorsComponent
+        component: ColorsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'swatches',
+            pathMatch: 'full'
+          },
+          {
+            path: 'swatches',
+            component: SwatchesComponent
+          },
+          {
+            path: 'overrides',
+            component: ColorOverridesComponent
+          }
+        ]
       },
       {
         path: 'utility-classes',
@@ -146,6 +166,10 @@ const uiRoutes: Routes = [
             component: ListsComponent
           }
         ]
+      },
+      {
+        path: 'tables',
+        component: TablesComponent
       },
       {
         path: 'cards',
