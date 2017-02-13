@@ -57,6 +57,9 @@ import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
+/* sign-in */
+import { SignInComponent } from './sign-in/sign-in.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -118,7 +121,10 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     BasicComponent,
     VariationsComponent,
     NoImageComponent,
-    VideoComponent
+    VideoComponent,
+
+    /* sign in */
+    SignInComponent
   ]
 })
 export class UiComponentsModule { }
