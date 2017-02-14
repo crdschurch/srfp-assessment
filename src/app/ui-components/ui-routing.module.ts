@@ -23,6 +23,9 @@ import { ColorOverridesComponent } from './colors/overrides/overrides.component'
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
 
+/* loaders */
+import { LoadersComponent } from './loaders/loaders.component';
+
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
@@ -93,6 +96,10 @@ const uiRoutes: Routes = [
       {
         path: 'alerts',
         component: AlertsComponent
+      },
+      {
+        path: 'loaders',
+        component: LoadersComponent
       },
       {
         path: 'forms',
