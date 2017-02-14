@@ -42,25 +42,41 @@
     <h3>Borders</h3>
   </div>
 
-  <div class="crds-example" data-processed="true">
-    <p class="no-borders">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-    <br>
-    <p class="border-top">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-    <br>
-    <p class="border-bottom">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <br>
-    <p class="border-ends">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-    <br>
-    <p class="border-sides">Sed posuere consectetur est at lobortis.</p>
-  </div>
-  <figure class="highlight">
-    <pre class="language-markup">
-&lt;p class="no-borders">...&lt;/p>
-&lt;p class="border-top">...&lt;/p>
-&lt;p class="border-bottom">...&lt;/p>
-&lt;p class="border-ends">...&lt;/p>
-&lt;p class="border-sides">...&lt;/p></pre>
-  </figure>
+  <p><strong>Please Note:</strong> These border utility classes rely on a predefined color variable that can be found <a  routerLink="/ui/colors" target="_blank">here</a>.</p>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Group of Classes</th>
+        <th>CSS <code>border-*</code></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>.no-borders</code></td>
+        <td><code>border: none !important;</code></td>
+      </tr>
+      <tr>
+        <td><code>.border-top</code></td>
+        <td><code>border-top: 1px solid $cr-gray-lighter;</code></td>
+      </tr>
+      <tr>
+        <td><code>.border-bottom</code></td>
+        <td><code>border-bottom: 1px solid $cr-gray-lighter;</code></td>
+      </tr>
+      <tr>
+        <td><code>.border-ends</code></td>
+        <td><code>border-top: 1px solid $cr-gray-lighter;</code><br>
+        <code>border-bottom: 1px solid $cr-gray-lighter;</code></td>
+      </tr>
+      <tr>
+        <td><code>.border-sides</code></td>
+        <td><code>border-right: 1px solid $cr-gray-lighter;</code><br>
+        <code>border-left: 1px solid $cr-gray-lighter;</code></td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="page-subheader">
     <h3>Add Margins</h3>
