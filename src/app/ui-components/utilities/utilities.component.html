@@ -11,18 +11,32 @@
   </div>
 
   <div class="page-subheader">
-    <h3>Squared Corners</h3>
+    <h3>Corners</h3>
   </div>
 
-  <p>Adding a class of <code>.square-corners</code> to an element will remove rounded corners.</p>
+  <p>To give an element rounded corners, use the class <code>.round-corners</code>. If you want to remove rounded corners from an element, use a class of <code>.square-corners</code>.</p>
 
-  <pre class="language-markup">
-&lt;div class="square-corners"&gt;...&lt;/div&gt;</pre>
-  <br>
-  <pre class="language-css">
-.square-corners &#123;
-  border-radius: 0;
-&#125;</pre>
+  <p><strong>Please Note:</strong> <code>.round-corners</code> relies on a Bootstrap-defined variable. See documentation for that variable <a href="http://getbootstrap.com/customize/#components" target="_blank">here</a>.</p>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Group of Classes</th>
+        <th>CSS <code>border-radius</code></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><code>.round-corners</code></td>
+        <td><code>border-radius: $border-radius-base;</code></td>
+      </tr>
+      <tr>
+        <td><code>.square-corners</code></td>
+        <td><code>border-radius: 0;</code></td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="page-subheader">
     <h3>Borders</h3>
