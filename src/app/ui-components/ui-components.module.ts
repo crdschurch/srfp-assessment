@@ -40,6 +40,7 @@ import { AlertsComponent } from './alerts/alerts.component';
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
+import { LoaderIconsComponent } from './loaders/icons/icons.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -99,6 +100,7 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
     /* loaders */
     LoadersComponent,
+    LoaderIconsComponent,
 
     /* buttons */
     ButtonsComponent,
