@@ -1,39 +1,71 @@
 <div class="page-header">
-  <h2>Sizes</h2>
+  <h2>Icons</h2>
 </div>
 
 <div class="page-subheader">
-  <h3>Large Buttons</h3>
+  <h3>Initial Load</h3>
 </div>
 
-<div class="crds-example">
-  <a href="#" class="btn btn-primary btn-lg">Link</a>
-  <button class="btn btn-info btn-lg" type="submit">Button</button>
-  <input class="btn btn-gray btn-lg" type="button" value="Input">
-  <button class="btn btn-option btn-lg">Option</button>
-  <input class="btn btn-default btn-lg" type="submit" value="Submit">
-</div>
+<p>The following code should be placed directly within your app's
+<code>index.html</code> file.</p>
 
-<div class="page-subheader">
-  <h3>Medium Buttons</h3>
+<div class="crds-example" data-processed="true">
+  <div class="loader-example">
+    <svg viewBox="0 0 102 101">
+      <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)" stroke-width="2">
+          <ellipse stroke="#eee" cx="50" cy="49.421" rx="50" ry="49.421"></ellipse>
+          <path d="M50 98.842c27.614 0 50-22.127 50-49.42C100 22.125 77.614 0 50 0" stroke-opacity=".631" stroke="#3B6E8F"></path>
+        </g>
+      </g>
+    </svg>
+  </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;style>
+@-webkit-keyframes spinnerRotate &#123;
+  100% &#123;
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin &#123;
+  100% &#123;
+    transform:rotate(360deg);
+  }
+}
+.preloader &#123;
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  background: transparent;
+  margin: 0 auto;
+  -webkit-animation: spin 700ms linear infinite;
+  animation: spin 700ms linear infinite;
+  display: block;
+  top: calc(20% - 37.5px);
+  left: calc(50% - 37.5px);
+}
+.preloader-wrapper &#123;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+&lt;/style>
 
-<div class="crds-example">
-  <a href="#" class="btn btn-primary">Link</a>
-  <button class="btn btn-info" type="submit">Button</button>
-  <input class="btn btn-gray" type="button" value="Input">
-  <button class="btn btn-option">Option</button>
-  <input class="btn btn-default" type="submit" value="Submit">
-</div>
-
-<div class="page-subheader">
-  <h3>Small Buttons</h3>
-</div>
-
-<div class="crds-example">
-  <a href="#" class="btn btn-primary btn-sm">Link</a>
-  <button class="btn btn-info btn-sm" type="submit">Button</button>
-  <input class="btn btn-gray btn-sm" type="button" value="Input">
-  <button class="btn btn-option btn-sm">Option</button>
-  <input class="btn btn-default btn-sm" type="submit" value="Submit">
-</div>
+&lt;app-root>
+  &lt;div class="preloader-wrapper">
+    &lt;svg viewBox="0 0 102 101" class="preloader">
+      &lt;g fill="none" fill-rule="evenodd">
+        &lt;g transform="translate(1 1)" stroke-width="2">
+          &lt;ellipse stroke="#eee" cx="50" cy="49.421" rx="50" ry="49.421">&lt;/ellipse>
+          &lt;path d="M50 98.842c27.614 0 50-22.127 50-49.42C100 22.125 77.614 0 50 0" stroke-opacity=".631" stroke="#3B6E8F">&lt;/path>
+        &lt;/g>
+      &lt;/g>
+    &lt;/svg>
+  &lt;/div>
+&lt;/app-root>
+  </pre>
+</figure>

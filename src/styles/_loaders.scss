@@ -1,0 +1,23 @@
+@-webkit-keyframes spinnerRotate {
+  100% {
+    @include rotate(360deg);
+  }
+}
+
+@keyframes spinnerRotate {
+  100% {
+    @include rotate(360deg);
+  }
+}
+
+.loader-example {
+  position: relative;
+  height: 75px;
+  > svg {
+    position: absolute;
+    display: block;
+    @include square(75px);
+    margin: 0 auto;
+    @include animation(spinnerRotate 700ms linear infinite);
+  }
+}
