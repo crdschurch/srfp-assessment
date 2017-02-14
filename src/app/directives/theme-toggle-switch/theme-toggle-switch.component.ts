@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, Output  } from '@angular/core';
   templateUrl: './theme-toggle-switch.component.html',
   styleUrls: ['./theme-toggle-switch.component.scss']
 })
-export class ThemeToggleSwitch {
+export class ThemeToggleSwitchComponent {
 
   private body;
   private state: String = 'off';
@@ -18,7 +18,7 @@ export class ThemeToggleSwitch {
   }
 
   onSwitch() {
-    this.state = this.state == 'on' ? 'off' : 'on';
+    this.state = this.state === 'on' ? 'off' : 'on';
     this.stateChange.emit({
       value: this.state
     });
@@ -26,10 +26,10 @@ export class ThemeToggleSwitch {
   }
 
   toggleClass() {
-    if(this.state == 'on') {
-      this.body.classList.add(this.selector)
+    if (this.state === 'on') {
+      this.body.classList.add(this.selector);
     } else {
-      this.body.classList.remove(this.selector)
+      this.body.classList.remove(this.selector);
     }
   }
 }
