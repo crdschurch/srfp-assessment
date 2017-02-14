@@ -21,7 +21,7 @@ import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 
 /* utility classes */
-import { UtilitiesComponent } from './utility-classes/utilities.component';
+import { UtilitiesComponent } from './utilities/utilities.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -71,7 +71,7 @@ const uiRoutes: Routes = [
         ]
       },
       {
-        path: 'utility-classes',
+        path: 'utilities',
         component: UtilitiesComponent
       },
       {
