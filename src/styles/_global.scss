@@ -48,20 +48,6 @@ body.crds-dark-theme {
       margin-top: 0;
     }
   }
-
-  h2, h3 {
-    @extend .font-family-base;
-    text-transform: none;
-  }
-  h2 {
-    font-size: 220%;
-    font-weight: 600;
-  }
-  h3 {
-    @extend .font-family-condensed;
-    font-size: 180%;
-    font-weight: 400;
-  }
 }
 
 .page-subheader {
