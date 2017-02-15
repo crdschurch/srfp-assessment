@@ -18,7 +18,9 @@ export class ContentService {
   }
 
   getContentBlocks (categories: Array<string>) {
-    let apiUrl = process.env.CRDS_CMS_ENDPOINT + 'api/contentblock';
+    let cmsEndpoint = <string> process.env.CRDS_CMS_ENDPOINT;
+    let apiUrl = `${cmsEndpoint}api/contentblock`;
+
     if (Array.isArray(categories) && categories.length > 0) {
       for (let i = 0; i < categories.length; i++) {
         let pre = '&';
