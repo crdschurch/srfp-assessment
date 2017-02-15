@@ -6,9 +6,9 @@ import { BootstrapDropdownService } from './bootstrap-dropdown.service';
 })
 export class BootstrapDropdownDirective {
 
-  private klass:string = 'open';
+  private klass: String = 'open';
 
-  @Input('dropdown') id: string;
+  @Input() dropdown: String;
 
   @HostListener('click') onMouseEnter() {
     let id = this.el.nativeElement.getAttribute('dropdown');
@@ -17,7 +17,7 @@ export class BootstrapDropdownDirective {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if(event.keyCode === 27) {
+    if (event.keyCode === 27) {
       this.el.nativeElement.classList.remove(this.klass);
     }
   }
@@ -31,7 +31,7 @@ export class BootstrapDropdownDirective {
   toggleVisibility(active) {
     let isOpen = this.el.nativeElement.classList.contains(this.klass);
     this.el.nativeElement.classList.remove(this.klass);
-    if(!isOpen && active === this.id) {
+    if (!isOpen && active === this.dropdown) {
       this.el.nativeElement.classList.add(this.klass);
     }
   }

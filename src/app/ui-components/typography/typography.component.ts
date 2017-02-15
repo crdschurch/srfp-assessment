@@ -4,11 +4,4 @@ import { Component, OnInit } from '@angular/core';
   selector: 'ddk-typography',
   templateUrl: './typography.component.html'
 })
-export class TypographyComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class TypographyComponent {}

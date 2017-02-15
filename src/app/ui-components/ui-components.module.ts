@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { TabsModule, DatepickerModule, ButtonsModule } from 'ng2-bootstrap';
 
+import { AppModule } from '../app.module';
 import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ComponentListComponent } from './component-list/component-list.component';
+import { ContentBlockModule } from '../shared/content-block/content-block.module';
 
 import { CardsComponent } from './cards/cards.component';
 import { SidebarNavComponent } from './cards/sidebar-nav/sidebar-nav.component';
@@ -31,6 +34,9 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
+
+/* utility classes */
+import { UtilitiesComponent } from './utilities/utilities.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -61,7 +67,8 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     UiRoutingModule,
     TabsModule,
     DatepickerModule.forRoot(),
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    ContentBlockModule
   ],
   exports: [
     UiComponentsComponent
@@ -86,6 +93,9 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     ColorsComponent,
     SwatchesComponent,
     ColorOverridesComponent,
+
+    /* utility classes */
+    UtilitiesComponent,
 
     /* alerts */
     AlertsComponent,
