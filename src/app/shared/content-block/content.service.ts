@@ -18,6 +18,10 @@ export class ContentService {
   }
 
   getContentBlocks (categories: Array<string>) {
+
+    // NOTE: We need to manually cast CRDS_CMS_ENDPOINT as a string
+    // due to a problem with how TeamCity interprets this variable
+    // when building the project for production. -TCM 2/15/17
     let cmsEndpoint = <string> new String(process.env.CRDS_CMS_ENDPOINT);
     let apiUrl = `${cmsEndpoint}api/contentblock`;
 
