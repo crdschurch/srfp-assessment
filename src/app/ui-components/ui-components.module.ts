@@ -34,6 +34,7 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
+import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -90,6 +91,7 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     ColorsComponent,
     SwatchesComponent,
     ColorOverridesComponent,
+    ColorBackgroundsComponent,
 
     /* alerts */
     AlertsComponent,
