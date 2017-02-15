@@ -21,6 +21,9 @@ import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
 
+/* utility classes */
+import { UtilitiesComponent } from './utilities/utilities.component';
+
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
 
@@ -71,6 +74,10 @@ const uiRoutes: Routes = [
             component: ColorBackgroundsComponent
           }
         ]
+      },
+      {
+        path: 'utilities',
+        component: UtilitiesComponent
       },
       {
         path: 'buttons',

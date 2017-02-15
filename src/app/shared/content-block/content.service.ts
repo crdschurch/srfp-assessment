@@ -1,3 +1,5 @@
+/* tslint:disable:no-construct */
+
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
@@ -18,7 +20,13 @@ export class ContentService {
   }
 
   getContentBlocks (categories: Array<string>) {
-    let apiUrl = process.env.CRDS_CMS_ENDPOINT + 'api/contentblock';
+
+    // NOTE: We need to manually cast CRDS_CMS_ENDPOINT as a string
+    // due to a problem with how TeamCity interprets this variable
+    // when building the project for production. -TCM 2/15/17
+    let cmsEndpoint = <string> new String(process.env.CRDS_CMS_ENDPOINT);
+    let apiUrl = `${cmsEndpoint}api/contentblock`;
+
     if (Array.isArray(categories) && categories.length > 0) {
       for (let i = 0; i < categories.length; i++) {
         let pre = '&';
