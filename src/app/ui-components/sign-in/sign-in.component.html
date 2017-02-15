@@ -1,19 +1,23 @@
 <div class="jumbotron">
   <div class="container">
-    <content-block id="UIAlertsSectionHeader"></content-block>
+    <content-block id="UISignInHeader"></content-block>
   </div>
 </div>
 
 <div class="container">
-  <div class="page-header">
-    <h2>Sign in Example</h2>
-  </div>
+  <p>
+    This is the standard sign in form layout to be use on Crossroads. Implementation of form submittion and validation are not include and should be handled by the form's coupled controller
+  </p>
+  <p>
+    For a working example in Angular, look at <a href="https://github.com/crdschurch/crds-embed/blob/development/src/app/authentication/authentication.component.html#L14-L55">crds-embed's</a> authentication component<br>
+    For an example in Angularjs see <a href="https://github.com/crdschurch/crds-angular/blob/development/crossroads.net/core/login/login_form.html#L7-L38">crds-angular</a> login form template and controller<br>
 
+  </p>
   <div class="crds-example">
     <header class="page-header">
       <h2>Sign In</h2>
     </header>
-    <form action="/" novalidate>
+    <form novalidate >
       <div class="form-group">
         <label class="sr-only" for="email">Email</label>
         <input type="email" class="form-control" placeholder="Email" name="email">
