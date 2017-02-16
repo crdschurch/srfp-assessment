@@ -1,12 +1,5 @@
-/* tslint:disable:no-unused-variable */
-
-import { TestBed, async } from '@angular/core/testing';
-import { HttpModule } from '@angular/http';
-import { RouterTestingModule } from '@angular/router/testing';
-
+import { TestBed } from '@angular/core/testing';
 import { LoaderIconsComponent } from './icons.component';
-import { ContentBlockModule } from '../../../shared/content-block/content-block.module';
-
 
 describe('Component: LoaderIconsComponent', () => {
 
@@ -15,14 +8,7 @@ describe('Component: LoaderIconsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        LoaderIconsComponent
-      ],
-      imports: [
-        ContentBlockModule,
-        HttpModule,
-        RouterTestingModule.withRoutes([])
-      ]
+      declarations: [LoaderIconsComponent]
     });
     this.fixture = TestBed.createComponent(LoaderIconsComponent);
     this.component = this.fixture.componentInstance;
