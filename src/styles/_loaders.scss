@@ -1,9 +1,3 @@
-@-webkit-keyframes spinnerRotate {
-  100% {
-    @include rotate(360deg);
-  }
-}
-
 @keyframes spinnerRotate {
   100% {
     @include rotate(360deg);
