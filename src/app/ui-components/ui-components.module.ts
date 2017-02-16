@@ -41,6 +41,11 @@ import { UtilitiesComponent } from './utilities/utilities.component';
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
 
+/* loaders */
+import { LoadersComponent } from './loaders/loaders.component';
+import { LoaderIconsComponent } from './loaders/icons/icons.component';
+import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
+
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.component';
@@ -99,6 +104,11 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
     /* alerts */
     AlertsComponent,
+
+    /* loaders */
+    LoadersComponent,
+    LoaderIconsComponent,
+    SkeletonBlocksComponent,
 
     /* buttons */
     ButtonsComponent,
