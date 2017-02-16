@@ -13,27 +13,21 @@
 </head>
 <body>
   <style>
-  @-webkit-keyframes spinnerRotate {
-    100% {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @keyframes spin {
+  @keyframes rotateInitLoadingSpinner {
     100% {
       transform:rotate(360deg);
     }
   }
   .preloader {
     position: fixed;
-    width: 75px;
-    height: 75px;
-    background: transparent;
-    margin: 0 auto;
-    -webkit-animation: spin 700ms linear infinite;
-    animation: spin 700ms linear infinite;
     display: block;
     top: calc(20% - 37.5px);
     left: calc(50% - 37.5px);
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    background: transparent;
+    animation: rotateInitLoadingSpinner 700ms linear infinite;
   }
   .preloader-wrapper {
     position: fixed;
@@ -46,7 +40,14 @@
 
   <app-root>
     <div class="preloader-wrapper">
-      <svg viewBox="0 0 102 101" class="preloader"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><ellipse stroke="#eee" cx="50" cy="49.421" rx="50" ry="49.421"></ellipse><path d="M50 98.842c27.614 0 50-22.127 50-49.42C100 22.125 77.614 0 50 0" stroke-opacity=".631" stroke="#3B6E8F"></path></g></g></svg>
+      <svg viewBox="0 0 102 101">
+        <g fill="none" fill-rule="evenodd">
+          <g transform="translate(1 1)" stroke-width="2">
+            <ellipse stroke="#eee" cx="50" cy="49.421" rx="50" ry="49.421"></ellipse>
+            <path d="M50 98.842c27.614 0 50-22.127 50-49.42C100 22.125 77.614 0 50 0" stroke-opacity=".631" stroke="#3B6E8F"></path>
+          </g>
+        </g>
+      </svg>
     </div>
   </app-root>
 </body>

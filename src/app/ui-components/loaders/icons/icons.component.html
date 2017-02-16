@@ -24,27 +24,21 @@
 <figure class="highlight">
   <pre class="language-markup">
 &lt;style>
-@-webkit-keyframes spinnerRotate &#123;
-  100% &#123;
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin &#123;
+@keyframes rotateInitLoadingSpinner &#123;
   100% &#123;
     transform:rotate(360deg);
   }
 }
 .preloader &#123;
   position: fixed;
-  width: 75px;
-  height: 75px;
-  background: transparent;
-  margin: 0 auto;
-  -webkit-animation: spin 700ms linear infinite;
-  animation: spin 700ms linear infinite;
   display: block;
   top: calc(20% - 37.5px);
   left: calc(50% - 37.5px);
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  background: transparent;
+  animation: rotateInitLoadingSpinner 700ms linear infinite;
 }
 .preloader-wrapper &#123;
   position: fixed;
