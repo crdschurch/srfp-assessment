@@ -29,6 +29,7 @@ import { AlertsComponent } from './alerts/alerts.component';
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
 import { LoaderIconsComponent } from './loaders/icons/icons.component';
+import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -117,6 +118,10 @@ const uiRoutes: Routes = [
           {
             path: 'icons',
             component: LoaderIconsComponent
+          },
+          {
+            path: 'skeleton-blocks',
+            component: SkeletonBlocksComponent
           }
         ]
       },
