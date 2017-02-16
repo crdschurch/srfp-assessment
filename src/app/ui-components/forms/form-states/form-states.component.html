@@ -2,6 +2,10 @@
   <h2>States</h2>
 </div>
 
+<p>Validation states are a great way to provide visual feedback when filling out a form. Angular can use the <code>ngModel</code> directive to track the state and validity of the form.</p>
+
+<div class="alert alert-info" role="alert">Documentation for Angular 2 form validation can be found <a href="https://angular.io/docs/ts/latest/guide/forms.html" target="_blank" class="alert-link">here</a>.</div>
+
 <div class="page-subheader">
   <h3>Input Field &mdash; Focus</h3>
 </div>
@@ -19,10 +23,12 @@
   <h3>Input Field &mdash; Valid</h3>
 </div>
 
+<p>When an input's value is valid, Angular adds a class of <code>ng-valid</code> to the <code>&lt;input&gt;</code> selector.</p>
+
 <div class="crds-example">
-  <div class="form-group has-success">
+  <div class="form-group">
     <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control" value="joe@dirt.com">
+    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-valid" value="joe@dirt.com">
   </div>
 </div>
 
@@ -30,10 +36,12 @@
   <h3>Input Field &mdash; Invalid</h3>
 </div>
 
+<p>When an input's value is invalid, Angular adds a class of <code>ng-invalid</code> to the <code>&lt;input&gt;</code> selector.</p>
+
 <div class="crds-example">
-  <div class="form-group has-error">
+  <div class="form-group">
     <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control" value="larry@">
+    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-invalid" value="larry@">
   </div>
 </div>
 
@@ -42,10 +50,10 @@
 </div>
 
 <div class="crds-example">
-  <div class="form-group has-error">
+  <div class="form-group">
     <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control" value="larry@">
-    <p class="help-block">Email address required</p>
+    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-invalid" value="larry@">
+    <p class="error help-block">Email address required</p>
   </div>
 </div>
 
