@@ -1,3 +1,10 @@
+h1 {
+  .page-header &,
+  .jumbotron & {
+    @extend .font-family-base-light;
+  }
+}
+
 aside > nav {
   .list-group-item {
     &.active,
