@@ -22,7 +22,7 @@ import { VideoComponent } from './cards/video/video.component';
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
-import { HeadingsComponent } from './typography/headings/headings.component';
+import { FontScalingComponent } from './typography/font-scaling/font-scaling.component';
 import { TypesettingComponent } from './typography/typesetting/typesetting.component';
 import { AddressComponent } from './typography/address/address.component';
 import { TypographyJumbotronComponent } from './typography/jumbotron/jumbotron.component';
@@ -34,12 +34,18 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
+import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
+
+/* loaders */
+import { LoadersComponent } from './loaders/loaders.component';
+import { LoaderIconsComponent } from './loaders/icons/icons.component';
+import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -59,6 +65,9 @@ import { FormControlsComponent } from './forms/form-controls/form-controls.compo
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
+
+/* sign-in */
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   imports: [
@@ -81,7 +90,7 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     /* typography */
     TypographyComponent,
     TypefacesComponent,
-    HeadingsComponent,
+    FontScalingComponent,
     TypographyJumbotronComponent,
     TypesettingComponent,
     AddressComponent,
@@ -93,12 +102,18 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     ColorsComponent,
     SwatchesComponent,
     ColorOverridesComponent,
+    ColorBackgroundsComponent,
 
     /* utility classes */
     UtilitiesComponent,
 
     /* alerts */
     AlertsComponent,
+
+    /* loaders */
+    LoadersComponent,
+    LoaderIconsComponent,
+    SkeletonBlocksComponent,
 
     /* buttons */
     ButtonsComponent,
@@ -124,7 +139,10 @@ import { FormGroupsComponent } from './forms/form-groups/groups.component';
     BasicComponent,
     VariationsComponent,
     NoImageComponent,
-    VideoComponent
+    VideoComponent,
+
+    /* sign in */
+    SignInComponent
   ]
 })
 export class UiComponentsModule { }

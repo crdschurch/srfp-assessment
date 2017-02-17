@@ -1,3 +1,10 @@
+h1 {
+  .page-header &,
+  .jumbotron & {
+    @extend .font-family-base-light;
+  }
+}
+
 aside > nav {
   .list-group-item {
     &.active,
@@ -50,20 +57,6 @@ body.crds-dark-theme {
     &, h2 {
       margin-top: 0;
     }
-  }
-
-  h2, h3 {
-    @extend .font-family-base;
-    text-transform: none;
-  }
-  h2 {
-    font-size: 220%;
-    font-weight: 600;
-  }
-  h3 {
-    @extend .font-family-condensed;
-    font-size: 180%;
-    font-weight: 400;
   }
 }
 

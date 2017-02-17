@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, AfterViewChecked } from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewChecked, ElementRef, Renderer } from '@angular/core';
 
 let Prism = require('prismjs');
 
@@ -9,6 +9,14 @@ let Prism = require('prismjs');
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewChecked {
+
+  constructor(private elementRef: ElementRef, private renderer: Renderer) {
+    this.renderer.listen(this.elementRef.nativeElement, 'click', (event) => {
+      if (event.target.closest('.crds-example')) {
+        return false;
+      }
+    });
+  }
 
   ngAfterViewChecked() {
     let examples = document.getElementsByClassName('crds-example');

@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'ddk-tables',
   templateUrl: './tables.component.html'
 })
-export class TablesComponent {
-
-}
+export class TablesComponent {}
