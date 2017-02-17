@@ -32,4 +32,4 @@ Run the following commands for your environment. The build artifacts will be sto
 
 ## License
 
-This project rocks and uses MIT-LICENSE.
+This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause). 
