@@ -8,7 +8,7 @@ import { ComponentListComponent } from './component-list/component-list.componen
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
-import { HeadingsComponent } from './typography/headings/headings.component';
+import { FontScalingComponent } from './typography/font-scaling/font-scaling.component';
 import { TypesettingComponent } from './typography/typesetting/typesetting.component';
 import { AddressComponent } from './typography/address/address.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
@@ -175,8 +175,8 @@ const uiRoutes: Routes = [
             component: WebFontsComponent
           },
           {
-            path: 'headings',
-            component: HeadingsComponent
+            path: 'font-scaling',
+            component: FontScalingComponent
           },
           {
             path: 'typesetting',
