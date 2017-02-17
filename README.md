@@ -12,6 +12,10 @@ Assuming the `crds-styles` and `crds-styleguide` repos reside in the same local 
     $ npm link ../crds-styles
     $ npm install
 
+Create a local environments files
+
+    $ cp .env.sample .env
+
 Once we officially publish this package, we'll leverage semantic-versioning to ensure new features are rolled out in a sensible manner. For more information on this approach, please review that project's [README](https://github.com/crdschurch/crds-styles/README.md).
 
 ## Develop
