@@ -43,8 +43,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ContentBlockModule
   ],
   exports: [
-    RouterModule,
-    ThemeToggleSwitchComponent
+    RouterModule
   ],
   providers: [
     BootstrapDropdownService
