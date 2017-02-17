@@ -19,12 +19,18 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
+import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
+
+/* loaders */
+import { LoadersComponent } from './loaders/loaders.component';
+import { LoaderIconsComponent } from './loaders/icons/icons.component';
+import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -67,6 +73,10 @@ const uiRoutes: Routes = [
           {
             path: 'overrides',
             component: ColorOverridesComponent
+          },
+          {
+            path: 'backgrounds',
+            component: ColorBackgroundsComponent
           }
         ]
       },
@@ -100,6 +110,25 @@ const uiRoutes: Routes = [
       {
         path: 'alerts',
         component: AlertsComponent
+      },
+      {
+        path: 'loaders',
+        component: LoadersComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'icons',
+            pathMatch: 'full'
+          },
+          {
+            path: 'icons',
+            component: LoaderIconsComponent
+          },
+          {
+            path: 'skeleton-blocks',
+            component: SkeletonBlocksComponent
+          }
+        ]
       },
       {
         path: 'forms',
