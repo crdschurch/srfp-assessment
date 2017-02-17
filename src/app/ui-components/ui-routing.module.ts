@@ -19,6 +19,7 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
+import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
@@ -72,6 +73,10 @@ const uiRoutes: Routes = [
           {
             path: 'overrides',
             component: ColorOverridesComponent
+          },
+          {
+            path: 'backgrounds',
+            component: ColorBackgroundsComponent
           }
         ]
       },
