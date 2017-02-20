@@ -72,12 +72,11 @@ module.exports = {
         to: 'apache_site.conf'
       },
       {
-        context: './node_modules/crds-styles/assets/stylesheets/svg/',
+        context: './node_modules/crds-styles/assets/stylesheets/svg/assets/',
         from: '*.svg',
         to: 'assets',
       }
-    ], { ignore: ['mock-data/*'] }),
-    
+    ], { ignore: ['mock-data/*'] })
 
   ]
 };
