@@ -8,7 +8,7 @@ import { ComponentListComponent } from './component-list/component-list.componen
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
-import { HeadingsComponent } from './typography/headings/headings.component';
+import { FontScalingComponent } from './typography/font-scaling/font-scaling.component';
 import { TypesettingComponent } from './typography/typesetting/typesetting.component';
 import { AddressComponent } from './typography/address/address.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
@@ -47,6 +47,9 @@ import { FormControlsComponent } from './forms/form-controls/form-controls.compo
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
+
+/* sign-in */
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const uiRoutes: Routes = [
   {
@@ -131,6 +134,10 @@ const uiRoutes: Routes = [
         ]
       },
       {
+        path: 'sign-in',
+        component: SignInComponent
+      },
+      {
         path: 'forms',
         component: FormsComponent,
         children: [
@@ -175,8 +182,8 @@ const uiRoutes: Routes = [
             component: WebFontsComponent
           },
           {
-            path: 'headings',
-            component: HeadingsComponent
+            path: 'font-scaling',
+            component: FontScalingComponent
           },
           {
             path: 'typesetting',
