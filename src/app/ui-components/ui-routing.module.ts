@@ -38,6 +38,13 @@ import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 
+/* icons */
+import { IconsComponent } from './icons/icons.component';
+import { IconDirectoryComponent } from './icons/directory/directory.component';
+import { IconInlineComponent } from './icons/inline-svg/inline-svg.component';
+import { IconCssComponent } from './icons/css-svg/css-svg.component';
+import { IconResizeComponent } from './icons/resize-svg/resize-svg.component';
+
 /* tables */
 import { TablesComponent } from './tables/tables.component';
 
@@ -107,6 +114,33 @@ const uiRoutes: Routes = [
           {
             path: 'groups',
             component: ButtonGroupsComponent
+          }
+        ]
+      },
+      {
+        path: 'icons',
+        component: IconsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'directory',
+            pathMatch: 'full'
+          },
+          {
+            path: 'directory',
+            component: IconDirectoryComponent
+          },
+          {
+            path: 'inline-svg',
+            component: IconInlineComponent
+          },
+          {
+            path: 'css-svg',
+            component: IconCssComponent
+          },
+          {
+            path: 'resize-svg',
+            component: IconResizeComponent
           }
         ]
       },
