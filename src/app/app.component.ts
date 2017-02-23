@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewChecked {
   constructor(private elementRef: ElementRef, private renderer: Renderer) {
     this.renderer.listen(this.elementRef.nativeElement, 'click', (event) => {
       if (event.target.closest('.crds-example')) {
-        if (event.target.nodeName === "A" || event.target.classList.contains("btn")) {
+        if (event.target.nodeName === 'A' || event.target.classList.contains('btn')) {
           return false;
         }
       }
