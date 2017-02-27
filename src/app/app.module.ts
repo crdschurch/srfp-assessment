@@ -8,8 +8,8 @@ import { CollapseModule } from 'ng2-bootstrap';
 import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown/bootstrap-dropdown.directive';
 import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootstrap-dropdown.service';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
+import { ContentBlockModule } from 'crds-ng2-content-block';
 
-import { ContentBlockModule } from './shared/content-block/content-block.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DesignersModule } from './designers/designers.module';
@@ -40,7 +40,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     UiComponentsModule,
     AssetsModule,
     AppRoutingModule,
-    ContentBlockModule
+    ContentBlockModule.forRoot({ category: 'ddk' })
   ],
   exports: [
     RouterModule
