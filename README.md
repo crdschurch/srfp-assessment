@@ -10,17 +10,26 @@ Assuming the `crds-styles` and `crds-styleguide` repos reside in the same local 
 
     $ cd crds-styleguide
     $ npm link ../crds-styles
+    $ npm install
+
+Create a local environments files
+
+    $ cp .env.sample .env
 
 Once we officially publish this package, we'll leverage semantic-versioning to ensure new features are rolled out in a sensible manner. For more information on this approach, please review that project's [README](https://github.com/crdschurch/crds-styles/README.md).
 
-## Build &amp; Deploy
+## Develop
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Build
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+Run the following commands for your environment. The build artifacts will be stored in the `dist/` directory.
+
+- Build Dev: `npm run build-dev` (locally build for compile testing)
+- Build for INT: `npm run build-int` (special NON-ugglified [but still cache busted] config for INT builds)
+- Build for PROD: `npm run build` (ugglified & cache busted)
 
 ## License
 
-This project rocks and uses MIT-LICENSE.
+This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause). 

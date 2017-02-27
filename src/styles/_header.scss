@@ -1,0 +1,45 @@
+.nav {
+  &.navbar-nav.pull-right {
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+  > li {
+    position: static;
+  }
+}
+
+.navbar {
+  margin-bottom: 0;
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+.mega-menu {
+  &_title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &_inner {
+    border: none;
+    border-radius: 0;
+    padding: 1em 0 2em;
+    width: 100%;
+  }
+
+  &_list {
+    @include make-xs-column(12);
+
+    @media (min-width: $screen-sm) {
+      @include make-sm-column(4);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

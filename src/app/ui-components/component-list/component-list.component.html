@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <div class="container">
+    <content-block id="UIComponentListSectionHeader"></content-block>
+  </div>
+</div>
+
+<div class="container">
+  <ddk-search-bar></ddk-search-bar>
+  <ul class="media-list">
+    <li class="media" *ngFor="let component of components">
+      <div class="media-image">
+        <img class="media-object"  [src]="component.image" alt="">
+      </div>
+      <div class="media-body">
+        <a routerLink="/ui/cards" routerLinkActive="active" >
+          <h2 class="media-heading">{{ component.heading }}</h2>
+        </a>
+        {{ component.description }}
+      </div>
+    </li>
+  </ul>
+</div>
