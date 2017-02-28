@@ -9,7 +9,7 @@
 <div class="crds-example">
   <div class="form-group">
     <label for="customAmount" class="sr-only">Amount (in dollars)</label>
-    <div class="input-group">
+    <div class="input-group input-group-left">
       <span class="input-group-addon">$</span>
       <input type="customAmount" name="customAmount" value="" placeholder="Enter Amount" class="form-control">
     </div>
@@ -64,22 +64,25 @@
 <div class="crds-example">
   <h3 class="form-header">Frequency:</h3>
   <div class="radio radio-inline">
-    <label>
-      <input type="radio" name="inlineLight" id="inlineLight1" value="option1" checked>
+    <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn1" value="option1" checked>
+    <label for="inlineRadioBtn1">
       Option 1
     </label>
+    <div class="check" tabindex="0"></div>
   </div>
   <div class="radio radio-inline">
-    <label>
-      <input type="radio" name="inlineLight" id="inlineLight2" value="option2">
+    <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn2" value="option2">
+    <label for="inlineRadioBtn2">
       Option 2
     </label>
+    <div class="check" tabindex="0"></div>
   </div>
   <div class="radio radio-inline disabled">
-    <label>
-      <input type="radio" name="darkRadios" id="inlineLight3" value="option3" disabled>
+    <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn3" value="option3" disabled>
+    <label for="inlineRadioBtn3">
       Option 3 (disabled)
     </label>
+    <div class="check" tabindex="0"></div>
   </div>
 </div>
 
@@ -110,13 +113,13 @@
     </button>
 
     <div class="custom-input" *ngIf="customInputSelected">
-        <span class="custom-input-icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+        <span class="custom-input-icon"><i class="icon icon-1 svg-chevron-right"></i></span>
 
         <form class="custom-input-field"
               action="/">
           <div class="form-group">
             <label class="sr-only" for="custom-input">Custom Input</label>
-            <div class="input-group">
+            <div class="input-group input-group-left">
               <span class="input-group-addon">$</span>
               <input type="text"
                     class="form-control"
