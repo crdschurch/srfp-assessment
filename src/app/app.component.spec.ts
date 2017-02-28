@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
-import { ContentBlockModule } from './shared/content-block/content-block.module';
+import { ContentBlockModule } from 'crds-ng2-content-block';
+
 
 describe('App: CrdsDdk', () => {
   beforeEach(() => {
@@ -22,7 +23,7 @@ describe('App: CrdsDdk', () => {
       ],
       imports: [
         CollapseModule,
-        ContentBlockModule,
+        ContentBlockModule.forRoot({ category: 'main' }),
         HttpModule,
         RouterTestingModule.withRoutes([])
       ]
