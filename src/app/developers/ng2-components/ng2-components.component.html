@@ -1,0 +1,39 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Developers / NG2 Components</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <h2>Content Blocks</h2>
+  </div>
+
+  <p>When integrating content blocks from Crossroads' CMS within your Angular 2 application, you can use the <code>crds-ng2-content-block</code> module.</p>
+
+  <p>Install the NPM package like so...</p>
+
+  <pre>npm install crds-ng2-content-block --save</pre><br>
+
+  <p>Update your app module by importing &amp; adding the ContentBlockModule to your imports array...</p>
+
+  <pre class="language-javascript">import {{ '{' }} ContentBlockModule {{ '}' }} from 'crds-ng2-content-block';
+
+@NgModule({{ '{' }}
+  imports: [
+    ContentBlockModule.forRoot({{ '{' }} category: 'main' {{ '}' }})
+  ]
+{{ '}' }})
+export class AppModule {{ '{}' }}</pre><br>
+
+  <p>The argument passed to <code>forRoot()</code> refers to the category associated with the content block in the CMS.</p>
+
+  <p>You only need to call <code>forRoot()</code> once; any child components of your application that need to invoke the component can just import <code>ContentBlockModule</code> which will prevent multiple XHR requests to the CMS.</p><br>
+
+  <p>Once you've imported the module, you can use the component in HTML, like so...</p>
+
+  <pre class="language-markup">&lt;crds-content-block id="ContentBlockTitle">&lt;/crds-content-block></pre><br>
+
+  <p>For more details, checkout the project's <a href="https://github.com/crdschurch/crds-ng2-content-block">Github repository</a>.</p>
+
+</div>

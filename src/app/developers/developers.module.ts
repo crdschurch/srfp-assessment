@@ -3,20 +3,21 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
+import { DeveloperRoutingModule } from './developers-routing.module';
 import { DevelopersComponent } from './developers.component';
-
-const devRoutes: Routes = [
-  { path: 'developers', component: DevelopersComponent}
-]
+import { DevelopersIntroComponent } from './intro/intro.component';
+import { Ng2ComponentsComponent } from './ng2-components/ng2-components.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(devRoutes),
+    DeveloperRoutingModule,
     ContentBlockModule
   ],
   declarations: [
-    DevelopersComponent
+    DevelopersComponent,
+    DevelopersIntroComponent,
+    Ng2ComponentsComponent
   ]
 })
 export class DevelopersModule { }

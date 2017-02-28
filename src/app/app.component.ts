@@ -28,7 +28,8 @@ export class AppComponent implements AfterViewChecked {
       }
     }
 
-    let preformatted = document.getElementsByClassName('language-markup');
+    let preformatted = document.querySelectorAll('.language-markup, .language-javascript');
+
     for (let j = 0; j < preformatted.length; j++) {
       if (!preformatted[j].getAttribute('data-processed')) {
         this.addSyntaxHighlighting(preformatted[j]);
