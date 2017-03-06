@@ -23,12 +23,12 @@
   <h3>Input Field &mdash; Valid</h3>
 </div>
 
-<p>When an input's value is valid, Angular adds a class of <code>ng-valid</code> to the <code>&lt;input&gt;</code> selector.</p>
+<p>A class of <code>ng-valid</code> can only be seen when the input field has the classes of <code>ng-dirty</code> and <code>ng-touched</code>, and the validation criteria is met.</p>
 
 <div class="crds-example">
   <div class="form-group">
     <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-valid" value="joe@dirt.com">
+    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-dirty ng-touched ng-valid" value="joe@dirt.com">
   </div>
 </div>
 
@@ -36,12 +36,23 @@
   <h3>Input Field &mdash; Invalid</h3>
 </div>
 
-<p>By default, Angular adds a class of <code>ng-invalid</code> to all <code>&lt;input&gt;</code> selectors. The invalid state below only appears once a user interacts with a field and clicks out of it - adding a class of <code>ng-touched</code> to that field.</p>
+<p>There are two styles for invalid input states. When the user clicks submit without attempting to enter text in the input field, a class of <code>ng-touched</code> will be added to the input field.</p>
 
 <div class="crds-example">
   <div class="form-group">
     <label for="email" class="sr-only">Email</label>
     <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-invalid" value="larry@">
+  </div>
+</div>
+
+<br>
+
+<p>When a user has attempted to enter text in the input field, a class of <code>ng-dirty</code> is added to the input field. This style comes into play when the entered text doesn't meet the validation criteria.</p>
+
+<div class="crds-example">
+  <div class="form-group">
+    <label for="email" class="sr-only">Email</label>
+    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-dirty ng-touched ng-invalid" value="larry@">
   </div>
 </div>
 
