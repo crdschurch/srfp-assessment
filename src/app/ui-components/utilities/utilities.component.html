@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <div class="container">
-    <content-block id="UIUtilitiesSectionHeader"></content-block>
+    <crds-content-block id="UIUtilitiesSectionHeader"></crds-content-block>
   </div>
 </div>
 
@@ -8,6 +8,42 @@
   <div class="page-header">
     <h2>Utility Classes</h2>
   </div>
+
+  <div class="page-subheader">
+    <h3>Text</h3>
+  </div>
+
+  <p>Bootstrap provides a variety of assorted utility classes <a href="http://getbootstrap.com/css/#helper-classes" target="_blank">here</a>. The following classes are suplemental to those.</p>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="col-sm-3"><code>.underline</code></td>
+        <td class="col-sm-9"><code>text-decoration: underline;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.ellipsis</code></td>
+        <td class="col-sm-9"><code>overflow: hidden;</code><br>
+        <code>text-overflow: ellipsis;</code><br>
+        <code>white-space: nowrap;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.overflow-hidden</code></td>
+        <td class="col-sm-9"><code>overflow: hidden;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.sub</code></td>
+        <td class="col-sm-9"><code>vertical-align: sub;</code></td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="page-subheader">
     <h3>Corners</h3>
@@ -20,19 +56,19 @@
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col-md-3">Group of Classes</th>
-        <th class="col-md-9">CSS <code>border-radius</code></th>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS <code>border-radius</code></th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td class="col-md-3"><code>.round-corners</code></td>
-        <td class="col-md-9"><code>border-radius: $border-radius-base;</code></td>
+        <td class="col-sm-3"><code>.round-corners</code></td>
+        <td class="col-sm-9"><code>border-radius: $border-radius-base;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.square-corners</code></td>
-        <td class="col-md-9"><code>border-radius: 0;</code></td>
+        <td class="col-sm-3"><code>.square-corners</code></td>
+        <td class="col-sm-9"><code>border-radius: 0;</code></td>
       </tr>
     </tbody>
   </table>
@@ -41,38 +77,145 @@
     <h3>Borders</h3>
   </div>
 
-  <p><strong>Please Note:</strong> These border utility classes rely on a predefined color variable that can be found <a  routerLink="/ui/colors" target="_blank">here</a>.</p>
+  <p><strong>Please Note:</strong> These border utility classes rely on a predefined color variable within this styleguide, located <a  routerLink="/ui/colors" target="_blank">here</a>.</p>
 
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col-md-3">Group of Classes</th>
-        <th class="col-md-9">CSS <code>border-*</code></th>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS <code>border-*</code></th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td class="col-md-3"><code>.no-borders</code></td>
-        <td class="col-md-9"><code>border: none !important;</code></td>
+        <td class="col-sm-3"><code>.no-borders</code></td>
+        <td class="col-sm-9"><code>border: none !important;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.border-top</code></td>
-        <td class="col-md-9"><code>border-top: 1px solid $cr-gray-lighter;</code></td>
+        <td class="col-sm-3"><code>.border-top</code></td>
+        <td class="col-sm-9"><code>border-top: 1px solid $cr-gray-lighter;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.border-bottom</code></td>
-        <td class="col-md-9"><code>border-bottom: 1px solid $cr-gray-lighter;</code></td>
+        <td class="col-sm-3"><code>.border-bottom</code></td>
+        <td class="col-sm-9"><code>border-bottom: 1px solid $cr-gray-lighter;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.border-ends</code></td>
-        <td class="col-md-9"><code>border-top: 1px solid $cr-gray-lighter;</code><br>
+        <td class="col-sm-3"><code>.border-ends</code></td>
+        <td class="col-sm-9"><code>border-top: 1px solid $cr-gray-lighter;</code><br>
         <code>border-bottom: 1px solid $cr-gray-lighter;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.border-sides</code></td>
-        <td class="col-md-9"><code>border-right: 1px solid $cr-gray-lighter;</code><br>
+        <td class="col-sm-3"><code>.border-sides</code></td>
+        <td class="col-sm-9"><code>border-right: 1px solid $cr-gray-lighter;</code><br>
         <code>border-left: 1px solid $cr-gray-lighter;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-subheader">
+    <h3>Display</h3>
+  </div>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS <code>display</code></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="col-sm-3"><code>.block</code></td>
+        <td class="col-sm-9"><code>display: block;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.relative</code></td>
+        <td class="col-sm-9"><code>display: relative;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.inline</code></td>
+        <td class="col-sm-9"><code>display: inline;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.inline-block</code></td>
+        <td class="col-sm-9"><code>display: inline-block;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.static</code></td>
+        <td class="col-sm-9"><code>display: static;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-subheader">
+    <h3>Background Images</h3>
+  </div>
+
+  <p>All background utility classes have <code>background-repeat: no-repeat</code>.</p>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="col-sm-3"><code>.img-background</code></td>
+        <td class="col-sm-9"><code>background-size: cover;</code><br>
+        <code>background-position: 50% 50%;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.img-background-100</code></td>
+        <td class="col-sm-9"><code>background-size: 100%;</code><br>
+        <code>background-position: top left;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-subheader">
+    <h3>Images</h3>
+  </div>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="col-sm-3"><code>.img-full-width</code></td>
+        <td class="col-sm-9"><code>width: 100%;</code><br>
+        <code>height: auto;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.img-full-size</code></td>
+        <td class="col-sm-9"><code>width: 100%;</code><br>
+        <code>height: 100%;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.center</code></td>
+        <td class="col-sm-9"><code>display: inline-block;</code><br>
+        <code>left: 50%;</code><br>
+        <code>position: absolute;</code><br>
+        <code>top: 50%;</code><br>
+        <code>transform: translate(-50%, -50%);</code><br>
+        <code>vertical-align: middle;</code></td>
+      </tr>
+      <tr>
+        <td class="col-sm-3"><code>.absolute-cover</code></td>
+        <td class="col-sm-9"><code>position: absolute;</code><br>
+        <code>top: 0;</code><br>
+        <code>bottom: 0;</code><br>
+        <code>left: 0;</code><br>
+        <code>right: 0;</code></td>
       </tr>
     </tbody>
   </table>
@@ -83,80 +226,82 @@
 
   <p>Adding a class of <code>.push-*</code> to an element will increase its desired margin.</p>
 
+  <div class="alert alert-info" role="alert">These classes also have mobile-friendly versions to allow for class stacking. To use, prepend <code>.mobile-</code> to any of the classes below. For example, if you wanted to increase the right margin on small devices only, you'd use the class <code>.mobile-push-right</code> instead of <code>.push-right</code>.</div>
+
   <p><strong>Please Note:</strong> <code>.push-*</code> classes rely on a Bootstrap-defined variable. See documentation for that variable <a href="http://getbootstrap.com/customize/#typography" target="_blank">here</a>.</p>
 
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col-md-3">Group of Classes</th>
-        <th class="col-md-9">CSS <code>margin-*</code></th>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS <code>margin-*</code></th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td class="col-md-3"><code>.push</code></td>
-        <td class="col-md-9"><code>margin: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.push</code></td>
+        <td class="col-sm-9"><code>margin: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-top</code></td>
-        <td class="col-md-9"><code>margin-top: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.push-top</code></td>
+        <td class="col-sm-9"><code>margin-top: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-right</code></td>
-        <td class="col-md-9"><code>margin-right: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.push-right</code></td>
+        <td class="col-sm-9"><code>margin-right: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-bottom</code></td>
-        <td class="col-md-9"><code>margin-bottom: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.push-bottom</code></td>
+        <td class="col-sm-9"><code>margin-bottom: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-left</code></td>
-        <td class="col-md-9"><code>margin-left: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.push-left</code></td>
+        <td class="col-sm-9"><code>margin-left: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-ends</code></td>
-        <td class="col-md-9"><code>margin-top: $line-height-computed;</code><br>
+        <td class="col-sm-3"><code>.push-ends</code></td>
+        <td class="col-sm-9"><code>margin-top: $line-height-computed;</code><br>
         <code>margin-bottom: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-sides</code></td>
-        <td class="col-md-9"><code>margin-right: $line-height-computed;</code><br>
+        <td class="col-sm-3"><code>.push-sides</code></td>
+        <td class="col-sm-9"><code>margin-right: $line-height-computed;</code><br>
         <code>margin-left: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-half</code></td>
-        <td class="col-md-9"><code>margin: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.push-half</code></td>
+        <td class="col-sm-9"><code>margin: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-half-top</code></td>
-        <td class="col-md-9"><code>margin-top: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.push-half-top</code></td>
+        <td class="col-sm-9"><code>margin-top: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-half-right</code></td>
-        <td class="col-md-9"><code>margin-right: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.push-half-right</code></td>
+        <td class="col-sm-9"><code>margin-right: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-half-bottom</code></td>
-        <td class="col-md-9"><code>margin-bottom: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.push-half-bottom</code></td>
+        <td class="col-sm-9"><code>margin-bottom: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-half-left</code></td>
-        <td class="col-md-9"><code>margin-left: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.push-half-left</code></td>
+        <td class="col-sm-9"><code>margin-left: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-half-ends</code></td>
-        <td class="col-md-9"><code>margin-top: $line-height-computed / 2;</code><br>
+        <td class="col-sm-3"><code>.push-half-ends</code></td>
+        <td class="col-sm-9"><code>margin-top: $line-height-computed / 2;</code><br>
         <code>margin-bottom: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-half-sides</code></td>
-        <td class="col-md-9"><code>margin-right: $line-height-computed / 2;</code><br>
+        <td class="col-sm-3"><code>.push-half-sides</code></td>
+        <td class="col-sm-9"><code>margin-right: $line-height-computed / 2;</code><br>
         <code>margin-left: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.push-quarter-bottom</code></td>
-        <td class="col-md-9"><code>margin-bottom: $line-height-computed / 4;</code></td>
+        <td class="col-sm-3"><code>.push-quarter-bottom</code></td>
+        <td class="col-sm-9"><code>margin-bottom: $line-height-computed / 4;</code></td>
       </tr>
     </tbody>
   </table>
@@ -167,43 +312,45 @@
 
   <p>Adding a class of <code>.flush-*</code> to an element will decrease its desired margin.</p>
 
+  <div class="alert alert-info" role="alert">These classes also have mobile-friendly versions to allow for class stacking. To use, prepend <code>.mobile-</code> to any of the classes below. For example, if you wanted to reduce the right margin on small devices only, you'd use the class <code>.mobile-flush-right</code> instead of <code>.flush-right</code>.</div>
+
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col-md-3">Group of Classes</th>
-        <th class="col-md-9">CSS <code>margin-*</code></th>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS <code>margin-*</code></th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td class="col-md-3"><code>.flush</code></td>
-        <td class="col-md-9"><code>margin: 0;</code></td>
+        <td class="col-sm-3"><code>.flush</code></td>
+        <td class="col-sm-9"><code>margin: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.flush-top</code></td>
-        <td class="col-md-9"><code>margin-top: 0;</code></td>
+        <td class="col-sm-3"><code>.flush-top</code></td>
+        <td class="col-sm-9"><code>margin-top: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.flush-right</code></td>
-        <td class="col-md-9"><code>margin-right: 0;</code></td>
+        <td class="col-sm-3"><code>.flush-right</code></td>
+        <td class="col-sm-9"><code>margin-right: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.flush-bottom</code></td>
-        <td class="col-md-9"><code>margin-bottom: 0;</code></td>
+        <td class="col-sm-3"><code>.flush-bottom</code></td>
+        <td class="col-sm-9"><code>margin-bottom: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.flush-left</code></td>
-        <td class="col-md-9"><code>margin-left: 0;</code></td>
+        <td class="col-sm-3"><code>.flush-left</code></td>
+        <td class="col-sm-9"><code>margin-left: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.flush-ends</code></td>
-        <td class="col-md-9"><code>margin-top: 0;</code><br>
+        <td class="col-sm-3"><code>.flush-ends</code></td>
+        <td class="col-sm-9"><code>margin-top: 0;</code><br>
         <code>margin-bottom: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.flush-sides</code></td>
-        <td class="col-md-9"><code>margin-right: 0;</code><br>
+        <td class="col-sm-3"><code>.flush-sides</code></td>
+        <td class="col-sm-9"><code>margin-right: 0;</code><br>
         <code>margin-left: 0;</code></td>
       </tr>
     </tbody>
@@ -215,92 +362,94 @@
 
   <p>Adding a class of <code>.soft-*</code> to an element will increase its desired padding.</p>
 
+  <div class="alert alert-info" role="alert">These classes also have mobile-friendly versions to allow for class stacking. To use, prepend <code>.mobile-</code> to any of the classes below. For example, if you wanted to increase the right padding on small devices only, you'd use the class <code>.mobile-soft-right</code> instead of <code>.soft-right</code>.</div>
+
   <p><strong>Please Note:</strong> <code>.soft-*</code> classes rely on a Bootstrap-defined variable. See documentation for that variable <a href="http://getbootstrap.com/customize/#typography" target="_blank">here</a>.</p>
 
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col-md-3">Group of Classes</th>
-        <th class="col-md-9">CSS <code>padding-*</code></th>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS <code>padding-*</code></th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td class="col-md-3"><code>.soft</code></td>
-        <td class="col-md-9"><code>padding: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.soft</code></td>
+        <td class="col-sm-9"><code>padding: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-top</code></td>
-        <td class="col-md-9"><code>padding-top: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.soft-top</code></td>
+        <td class="col-sm-9"><code>padding-top: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-right</code></td>
-        <td class="col-md-9"><code>padding-right: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.soft-right</code></td>
+        <td class="col-sm-9"><code>padding-right: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-bottom</code></td>
-        <td class="col-md-9"><code>padding-bottom: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.soft-bottom</code></td>
+        <td class="col-sm-9"><code>padding-bottom: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-left</code></td>
-        <td class="col-md-9"><code>padding-left: $line-height-computed;</code></td>
+        <td class="col-sm-3"><code>.soft-left</code></td>
+        <td class="col-sm-9"><code>padding-left: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-ends</code></td>
-        <td class="col-md-9"><code>padding-top: $line-height-computed;</code><br>
+        <td class="col-sm-3"><code>.soft-ends</code></td>
+        <td class="col-sm-9"><code>padding-top: $line-height-computed;</code><br>
         <code>padding-bottom: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-sides</code></td>
-        <td class="col-md-9"><code>padding-right: $line-height-computed;</code><br>
+        <td class="col-sm-3"><code>.soft-sides</code></td>
+        <td class="col-sm-9"><code>padding-right: $line-height-computed;</code><br>
         <code>padding-left: $line-height-computed;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-half</code></td>
-        <td class="col-md-9"><code>padding: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.soft-half</code></td>
+        <td class="col-sm-9"><code>padding: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-half-top</code></td>
-        <td class="col-md-9"><code>padding-top: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.soft-half-top</code></td>
+        <td class="col-sm-9"><code>padding-top: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-half-right</code></td>
-        <td class="col-md-9"><code>padding-right: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.soft-half-right</code></td>
+        <td class="col-sm-9"><code>padding-right: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-half-bottom</code></td>
-        <td class="col-md-9"><code>padding-bottom: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.soft-half-bottom</code></td>
+        <td class="col-sm-9"><code>padding-bottom: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-half-left</code></td>
-        <td class="col-md-9"><code>padding-left: $line-height-computed / 2;</code></td>
+        <td class="col-sm-3"><code>.soft-half-left</code></td>
+        <td class="col-sm-9"><code>padding-left: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-half-ends</code></td>
-        <td class="col-md-9"><code>padding-top: $line-height-computed / 2;</code><br>
+        <td class="col-sm-3"><code>.soft-half-ends</code></td>
+        <td class="col-sm-9"><code>padding-top: $line-height-computed / 2;</code><br>
         <code>padding-bottom: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-half-sides</code></td>
-        <td class="col-md-9"><code>padding-right: $line-height-computed / 2;</code><br>
+        <td class="col-sm-3"><code>.soft-half-sides</code></td>
+        <td class="col-sm-9"><code>padding-right: $line-height-computed / 2;</code><br>
         <code>padding-left: $line-height-computed / 2;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-quarter</code></td>
-        <td class="col-md-9"><code>padding: $line-height-computed / 4;</code></td>
+        <td class="col-sm-3"><code>.soft-quarter</code></td>
+        <td class="col-sm-9"><code>padding: $line-height-computed / 4;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-quarter-right</code></td>
-        <td class="col-md-9"><code>padding-right: $line-height-computed / 4;</code></td>
+        <td class="col-sm-3"><code>.soft-quarter-right</code></td>
+        <td class="col-sm-9"><code>padding-right: $line-height-computed / 4;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-quarter-left</code></td>
-        <td class="col-md-9"><code>padding-left: $line-height-computed / 4;</code></td>
+        <td class="col-sm-3"><code>.soft-quarter-left</code></td>
+        <td class="col-sm-9"><code>padding-left: $line-height-computed / 4;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.soft-quarter-bottom</code></td>
-        <td class="col-md-9"><code>padding-bottom: $line-height-computed / 4;</code></td>
+        <td class="col-sm-3"><code>.soft-quarter-bottom</code></td>
+        <td class="col-sm-9"><code>padding-bottom: $line-height-computed / 4;</code></td>
       </tr>
     </tbody>
   </table>
@@ -311,43 +460,45 @@
 
   <p>Adding a class of <code>.hard-*</code> to an element will decrease its desired padding.</p>
 
+  <div class="alert alert-info" role="alert">These classes also have mobile-friendly versions to allow for class stacking. To use, prepend <code>.mobile-</code> to any of the classes below. For example, if you wanted to decrease the right padding on small devices only, you'd use the class <code>.mobile-hard-right</code> instead of <code>.hard-right</code>.</div>
+
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col-md-3">Group of Classes</th>
-        <th class="col-md-9">CSS <code>padding-*</code></th>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS <code>padding-*</code></th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td class="col-md-3"><code>.hard</code></td>
-        <td class="col-md-9"><code>padding: 0;</code></td>
+        <td class="col-sm-3"><code>.hard</code></td>
+        <td class="col-sm-9"><code>padding: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.hard-top</code></td>
-        <td class="col-md-9"><code>padding-top: 0;</code></td>
+        <td class="col-sm-3"><code>.hard-top</code></td>
+        <td class="col-sm-9"><code>padding-top: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.hard-right</code></td>
-        <td class="col-md-9"><code>padding-right: 0;</code></td>
+        <td class="col-sm-3"><code>.hard-right</code></td>
+        <td class="col-sm-9"><code>padding-right: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.hard-bottom</code></td>
-        <td class="col-md-9"><code>padding-bottom: 0;</code></td>
+        <td class="col-sm-3"><code>.hard-bottom</code></td>
+        <td class="col-sm-9"><code>padding-bottom: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.hard-left</code></td>
-        <td class="col-md-9"><code>padding-left: 0;</code></td>
+        <td class="col-sm-3"><code>.hard-left</code></td>
+        <td class="col-sm-9"><code>padding-left: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.hard-ends</code></td>
-        <td class="col-md-9"><code>padding-top: 0;</code><br>
+        <td class="col-sm-3"><code>.hard-ends</code></td>
+        <td class="col-sm-9"><code>padding-top: 0;</code><br>
         <code>padding-bottom: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.hard-sides</code></td>
-        <td class="col-md-9"><code>padding-right: 0;</code><br>
+        <td class="col-sm-3"><code>.hard-sides</code></td>
+        <td class="col-sm-9"><code>padding-right: 0;</code><br>
         <code>padding-left: 0;</code></td>
       </tr>
     </tbody>
@@ -364,42 +515,41 @@
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th class="col-md-3">Group of Classes</th>
-        <th class="col-md-9">CSS</th>
+        <th class="col-sm-3">Group of Classes</th>
+        <th class="col-sm-9">CSS</th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td class="col-md-3"><code>.vertical-center</code></td>
-        <td class="col-md-9"><code>left: 50%;</code><br>
+        <td class="col-sm-3"><code>.vertical-center</code></td>
+        <td class="col-sm-9"><code>left: 50%;</code><br>
         <code>top: 50%;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.vertical-bottom</code></td>
-        <td class="col-md-9"><code>left: 50%;</code><br>
+        <td class="col-sm-3"><code>.vertical-bottom</code></td>
+        <td class="col-sm-9"><code>left: 50%;</code><br>
         <code>top: 0;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.vertical-10</code></td>
-        <td class="col-md-9"><code>left: 50%;</code><br>
+        <td class="col-sm-3"><code>.vertical-10</code></td>
+        <td class="col-sm-9"><code>left: 50%;</code><br>
         <code>top: 10%;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.vertical-20</code></td>
-        <td class="col-md-9"><code>left: 50%;</code><br>
+        <td class="col-sm-3"><code>.vertical-20</code></td>
+        <td class="col-sm-9"><code>left: 50%;</code><br>
         <code>top: 20%;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.vertical-70</code></td>
-        <td class="col-md-9"><code>left: 50%;</code><br>
+        <td class="col-sm-3"><code>.vertical-70</code></td>
+        <td class="col-sm-9"><code>left: 50%;</code><br>
         <code>top: 70%;</code></td>
       </tr>
       <tr>
-        <td class="col-md-3"><code>.vertical-80</code></td>
-        <td class="col-md-9"><code>left: 50%;</code><br>
+        <td class="col-sm-3"><code>.vertical-80</code></td>
+        <td class="col-sm-9"><code>left: 50%;</code><br>
         <code>top: 80%;</code></td>
       </tr>
     </tbody>
   </table>
-</div>

@@ -10,7 +10,7 @@ import { UiComponentsComponent } from './ui-components.component';
 import { UiRoutingModule } from './ui-routing.module';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ComponentListComponent } from './component-list/component-list.component';
-import { ContentBlockModule } from '../shared/content-block/content-block.module';
+import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { CardsComponent } from './cards/cards.component';
 import { SidebarNavComponent } from './cards/sidebar-nav/sidebar-nav.component';
