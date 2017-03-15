@@ -1,35 +1,28 @@
-# crds-styleguide
+# GroupLeaderApplication
 
-This repository contains the application code that powers the Crossroads' Digital Design Kit (aka living styleguide). It is intended to provide developers with quick reference to all common patterns and/or components, including any implementation details and other fun facts.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
-## Dependencies
+## Development server
 
-This project requires [crds-styles](https://github.com/crdschurch/crds-styles) in order to function properly. Until that project has been published to NPM, you'll have to clone `crds-styles` locally, symlink it into this project prior to installing the dependencies defined within `package.json`.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Assuming the `crds-styles` and `crds-styleguide` repos reside in the same local directory, you can do the following to setup the symlink...
+## Code scaffolding
 
-    $ cd crds-styleguide
-    $ npm link ../crds-styles
-    $ npm install
-
-Create a local environments files
-
-    $ cp .env.sample .env
-
-Once we officially publish this package, we'll leverage semantic-versioning to ensure new features are rolled out in a sensible manner. For more information on this approach, please review that project's [README](https://github.com/crdschurch/crds-styles/README.md).
-
-## Develop
-
-Run `npm run start` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
 ## Build
 
-Run the following commands for your environment. The build artifacts will be stored in the `dist/` directory.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-- Build Dev: `npm run build-dev` (locally build for compile testing)
-- Build for INT: `npm run build-int` (special NON-ugglified [but still cache busted] config for INT builds)
-- Build for PROD: `npm run build` (ugglified & cache busted)
+## Running unit tests
 
-## License
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause). 
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

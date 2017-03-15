@@ -1,14 +1,14 @@
-import { CrdsDdkPage } from './app.po';
+import { GroupLeaderApplicationPage } from './app.po';
 
-describe('crds-styleguide App', function() {
-  let page: CrdsDdkPage;
+describe('group-leader-application App', () => {
+  let page: GroupLeaderApplicationPage;
 
   beforeEach(() => {
-    page = new CrdsDdkPage();
+    page = new GroupLeaderApplicationPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toContain('DDK (Digital Design Kit)');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
