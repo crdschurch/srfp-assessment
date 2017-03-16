@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const postcssUrl = require('postcss-url');
+const webpack = require('webpack');
 
 const { NoEmitOnErrorsPlugin, LoaderOptionsPlugin } = require('webpack');
 const { GlobCopyWebpackPlugin, BaseHrefWebpackPlugin } = require('@angular/cli/plugins/webpack');
@@ -15,6 +16,9 @@ const nodeModules = path.join(process.cwd(), 'node_modules');
 const entryPoints = ["inline","polyfills","sw-register","styles","vendor","main"];
 const baseHref = "";
 const deployUrl = "";
+
+const environment = require('./environment.config');
+const definePlugin = new webpack.DefinePlugin(environment.get());
 
 module.exports = {
   "devtool": "source-map",
@@ -135,6 +139,7 @@ module.exports = {
     ]
   },
   "plugins": [
+    definePlugin,
     new CopyWebpackPlugin([
       {
           context: './node_modules/crds-styles/assets/svgs/',

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  constructor(){
+    console.log(__API_ENDPOINT__);
+  }
 }
