@@ -1,6 +1,7 @@
 const path = require('path');
 const ProgressPlugin = require('webpack/lib/ProgressPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const postcssUrl = require('postcss-url');
@@ -15,15 +16,14 @@ const entryPoints = ["inline","polyfills","sw-register","styles","vendor","main"
 const baseHref = "";
 const deployUrl = "";
 
-
-
-
 module.exports = {
   "devtool": "source-map",
   "resolve": {
     "extensions": [
       ".ts",
-      ".js"
+      ".js",
+      ".scss",
+      ".sass"
     ],
     "modules": [
       "./node_modules"
@@ -70,7 +70,7 @@ module.exports = {
       },
       {
         "test": /\.(eot|svg)$/,
-        "loader": "file-loader?name=[name].[hash:20].[ext]"
+        "loader": "file-loader?name=assets/[name].[hash:20].[ext]"
       },
       {
         "test": /\.(jpg|png|gif|otf|ttf|woff|woff2|cur|ani)$/,
@@ -100,42 +100,18 @@ module.exports = {
         ]
       },
       {
-        "exclude": [
-          path.join(process.cwd(), "src/styles.css")
-        ],
-        "test": /\.less$/,
-        "loaders": [
-          "exports-loader?module.exports.toString()",
-          "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-          "postcss-loader",
-          "less-loader"
-        ]
-      },
-      {
-        "exclude": [
-          path.join(process.cwd(), "src/styles.css")
-        ],
-        "test": /\.styl$/,
-        "loaders": [
-          "exports-loader?module.exports.toString()",
-          "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-          "postcss-loader",
-          "stylus-loader?{\"sourceMap\":false,\"paths\":[]}"
-        ]
-      },
-      {
         "include": [
           path.join(process.cwd(), "src/styles.css")
         ],
         "test": /\.css$/,
         "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-    "postcss-loader"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
+          "use": [
+            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
+            "postcss-loader"
+          ],
+          "fallback": "style-loader",
+          "publicPath": ""
+        })
       },
       {
         "include": [
@@ -143,44 +119,14 @@ module.exports = {
         ],
         "test": /\.scss$|\.sass$/,
         "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-    "postcss-loader",
-    "sass-loader"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
-      },
-      {
-        "include": [
-          path.join(process.cwd(), "src/styles.css")
+        "use": [
+          "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
+          "postcss-loader",
+          "sass-loader"
         ],
-        "test": /\.less$/,
-        "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-    "postcss-loader",
-    "less-loader"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
-      },
-      {
-        "include": [
-          path.join(process.cwd(), "src/styles.css")
-        ],
-        "test": /\.styl$/,
-        "loaders": ExtractTextPlugin.extract({
-  "use": [
-    "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-    "postcss-loader",
-    "stylus-loader?{\"sourceMap\":false,\"paths\":[]}"
-  ],
-  "fallback": "style-loader",
-  "publicPath": ""
-})
+        "fallback": "style-loader",
+        "publicPath": ""
+      })
       },
       {
         "test": /\.ts$/,
@@ -189,6 +135,15 @@ module.exports = {
     ]
   },
   "plugins": [
+    new CopyWebpackPlugin([
+      {
+          context: './node_modules/crds-styles/assets/svgs/',
+          from: '*.svg',
+          to: 'assets/svgs'
+      }
+    ], {
+      debug: 'debug'
+    }),
     new NoEmitOnErrorsPlugin(),
     new GlobCopyWebpackPlugin({
       "patterns": [
