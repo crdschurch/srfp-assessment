@@ -1,10 +1,10 @@
-import { GroupLeaderApplicationPage } from './app.po';
+import { CrdsAngularBoilerplatePage } from './app.po';
 
-describe('group-leader-application App', () => {
-  let page: GroupLeaderApplicationPage;
+describe('crds-angular-boilerplate App', () => {
+  let page: CrdsAngularBoilerplatePage;
 
   beforeEach(() => {
-    page = new GroupLeaderApplicationPage();
+    page = new CrdsAngularBoilerplatePage();
   });
 
   it('should display message saying app works', () => {

@@ -4,5 +4,11 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  crdsEnv: 'dev',
+  cookieDomain: '',
+  apiEndpoint: 'https://gatewayint.crossroads.net/gateway/',
+  crdsEndpoint: 'https://contentint.crossroads.net/',
+  googleApiKey: 'AIzaSyArKsBK97N0Wi-69x10OL7Sx57Fwlmu6Cs',
+  crossroadsApiKey: ""
 };
