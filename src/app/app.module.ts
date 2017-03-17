@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ContentBlockModule } from 'crds-ng2-content-block';
+//import { ContentBlockModule } from 'crds-ng2-content-block';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })
+    //ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })
   ],
   providers: [],
   bootstrap: [AppComponent]

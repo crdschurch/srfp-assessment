@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
-import { ContentBlockModule } from 'crds-ng2-content-block';
+//import { ContentBlockModule } from 'crds-ng2-content-block';
 import { HttpModule, Http, BaseRequestOptions, XHRBackend } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 import { environment } from '../../environments/environment';
@@ -13,11 +13,11 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent ],
       imports: [
-        ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint }),
-        HttpModule
+        //ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint }),
+        //HttpModule
       ],
       providers: [
-        { provide: XHRBackend, useClass: MockBackend }
+        //{ provide: XHRBackend, useClass: MockBackend }
       ]
     })
     .compileComponents();
