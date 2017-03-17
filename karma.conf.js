@@ -36,7 +36,7 @@ module.exports = function (config) {
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
               ? ['progress', 'coverage-istanbul']
-              : ['mocha'], //kjthml to launch in chrome support
+              : ['mocha'], //kjhtml to launch in chrome support
     mochaReporter: {
       output: 'full',
       ignoreSkipped: true
