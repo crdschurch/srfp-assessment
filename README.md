@@ -1,14 +1,20 @@
 # CrdsAngularBoilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
+This is a starting point for developing an Angular microclient. It uses the [Angular CLI](https://github.com/angular/angular-cli/wiki) ( [installation instructions](https://github.com/angular/angular-cli#installation) )with a few additions specific to Crossroads.
 
-## Development server
+
+* Includes the [crds-styles](https://github.com/crdschurch/crds-styles)
+* Includes [crds-ng2-content-block](https://github.com/crdschurch/crds-ng2-content-block) for retrieving content blocks from the CMS
+* Includes some [default variables](./src/environments/environment.ts) used in the Crossroads environment
+* Unit tests use the [Mocha reporter](https://www.npmjs.com/package/karma-mocha-reporter) by default
+
+## Development
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Run `ng generate component component-name` to generate a new component.
 
 ## Build
 
@@ -17,6 +23,16 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+If you prefer to run the tests with Chrome istead of PhantomJS, just pass the `--browser` flag 
+```
+ng test --browser Chrome --reporter kjthml
+```
+
+To see code coverage:
+```
+ng test --code-coverage
+```
+and open [the coverage report](./coverage/index.html)
 
 ## Running end-to-end tests
 
