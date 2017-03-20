@@ -4,7 +4,7 @@ This is a starting point for developing an Angular microclient. It uses the [Ang
 
 
 * Includes the [crds-styles](https://github.com/crdschurch/crds-styles)
-* Includes [crds-ng2-content-block](https://github.com/crdschurch/crds-ng2-content-block) for retrieving content blocks from the CMS
+* ~~Includes [crds-ng2-content-block](https://github.com/crdschurch/crds-ng2-content-block) for retrieving content blocks from the CMS~~
 * Includes some [default variables](./src/environments/environment.ts) used in the Crossroads environment
 * Unit tests use the [Mocha reporter](https://www.npmjs.com/package/karma-mocha-reporter) by default
 
