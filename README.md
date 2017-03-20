@@ -25,7 +25,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 If you prefer to run the tests with Chrome istead of PhantomJS, just pass the `--browser` flag 
 ```
-ng test --browser Chrome --reporter kjthml
+ng test --browser Chrome --reporter kjhtml
 ```
 
 To see code coverage:
