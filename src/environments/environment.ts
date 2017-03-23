@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  crdsEnv: 'dev',
+  crdsEnv: 'local',
   cookieDomain: '',
   apiEndpoint: 'https://gatewayint.crossroads.net/gateway/',
   crdsEndpoint: 'https://contentint.crossroads.net/',

@@ -23,6 +23,7 @@
     "core-js": "^2.4.1",
     "crds-ng2-content-block": "^0.1.0",
     "crds-styles": "crdschurch/crds-styles#development",
+    "crds-reactive-auth": "crdschurch/crds-reactive-auth#feature/US7410-authentication-library",
     "intl": "^1.2.5",
     "rxjs": "^5.1.0",
     "zone.js": "^0.7.6"
