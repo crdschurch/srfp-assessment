@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  homeTitle = "Hello World!";
+  homeTitle = 'Hello World!';
   apiEndpoint = environment.apiEndpoint;
   constructor() { }
 
