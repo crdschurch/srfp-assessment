@@ -10,12 +10,13 @@ export class AuthService {
   sessionId: string;
   isAuthenticated: boolean;
 
-  constructor() {
-    this.reactiveAuth = new ReactiveAuth(`${environment.crdsEnv}sessionId`);
+  constructor(reactiveAuth: ReactiveAuth) {
+    this.reactiveAuth = reactiveAuth;
     if (this.reactiveAuth.cookieVal === '' || this.reactiveAuth.cookieVal === undefined) {
       this.isAuthenticated = false;
+    } else {
+      this.isAuthenticated = true;
     }
-    this.isAuthenticated = true;
   };
 
   watch(): Observable<any> {
