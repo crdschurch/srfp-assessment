@@ -57,4 +57,5 @@ constructor(private toast: ToastsManager) {}
 yeahToast() {
     this.toast.success('content', 'title' 'options(optional)');
     this.toast.warning('this is warning' 'WARN!');
-}```
+}
+```
