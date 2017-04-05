@@ -13,7 +13,7 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent ],
       imports: [
-        ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint }),
+        ContentBlockModule.forRoot(new Object({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })),
         HttpModule
       ],
       providers: [
