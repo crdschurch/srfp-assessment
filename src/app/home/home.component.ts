@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../environments/environment';
+import { ToastsManager } from 'ng2-toastr';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,13 @@ import { environment } from '../../environments/environment';
 export class HomeComponent implements OnInit {
   homeTitle = 'Hello World!';
   apiEndpoint = environment.apiEndpoint;
-  constructor() { }
+  constructor(private toast: ToastsManager) { }
 
   ngOnInit() {
+  }
+
+  showMessage() {
+    this.toast.success('a message', 'title');
   }
 
 }
