@@ -7,6 +7,7 @@ This is a starting point for developing an Angular microclient. It uses the [Ang
 * ~~Includes [crds-ng2-content-block](https://github.com/crdschurch/crds-ng2-content-block) for retrieving content blocks from the CMS~~
 * Includes some [default variables](./src/environments/environment.ts) used in the Crossroads environment
 * Unit tests use the [Mocha reporter](https://www.npmjs.com/package/karma-mocha-reporter) by default
+* Includes [ng2-toastr](https://www.npmjs.com/package/ng2-toastr) for great toasting.
 
 ## Development
 
@@ -42,3 +43,18 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## ng2-toastr example
+
+We default the options to allow html so content blocks can be passed in. Methods you can use are success, warning, info, and error.
+
+```javascript
+
+import { ToastsManager } from 'ng2-toastr';
+...
+constructor(private toast: ToastsManager) {}
+
+yeahToast() {
+    this.toast.success('content', 'title' 'options(optional)');
+    this.toast.warning('this is warning' 'WARN!');
+}```
