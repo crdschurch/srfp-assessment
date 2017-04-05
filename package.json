@@ -2,13 +2,16 @@
   "name": "crds-angular-boilerplate",
   "version": "0.0.0",
   "license": "MIT",
+  "bin": {
+    "ng": "./node_modules/@angular/cli/bin/ng"
+  },
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "./node_modules/.bin/ng",
+    "start": "./node_modules/.bin/ng serve",
+    "build": "./node_modules/.bin/ng build",
+    "test": "./node_modules/.bin/ng test",
+    "lint": "./node_modules/.bin/ng lint",
+    "e2e": "./node_modules/.bin/ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +24,7 @@
     "@angular/platform-browser-dynamic": ">=4.0.0-beta <5.0.0",
     "@angular/router": ">=4.0.0-beta <5.0.0",
     "core-js": "^2.4.1",
-    "crds-ng2-content-block": "^0.1.0",
+    "crds-ng2-content-block": ">=0.1.0",
     "crds-styles": "crdschurch/crds-styles#development",
     "crds-reactive-auth": "crdschurch/crds-reactive-auth#development",
     "intl": "^1.2.5",
