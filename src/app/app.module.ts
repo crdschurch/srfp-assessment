@@ -24,7 +24,7 @@ import { AuthComponent } from './auth/auth.component';
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    ContentBlockModule.forRoot(new Object({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint }))
+    ContentBlockModule.forRoot({ endpoint: environment.crdsEndpoint, categories: Array('main', 'common') })
   ],
   providers: [ {
     provide: AuthService,
