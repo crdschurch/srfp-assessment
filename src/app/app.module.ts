@@ -6,7 +6,7 @@ import { Router, NavigationExtras } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-// import { ContentBlockModule } from 'crds-ng2-content-block';
+import { ContentBlockModule } from 'crds-ng2-content-block';
 import { AuthService } from './services/auth/auth.service';
 import authServiceFactory from './services/auth/auth.service.provider';
 import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
@@ -24,7 +24,7 @@ import { AuthComponent } from './auth/auth.component';
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    // ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })
+    ContentBlockModule.forRoot({ endpoint: environment.crdsEndpoint, categories: Array('main', 'common') })
   ],
   providers: [ {
     provide: AuthService,
