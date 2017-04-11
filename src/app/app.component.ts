@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
 import { environment } from '../environments/environment';
+import { ToastModule, ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,7 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
   title = 'app works!';
+  constructor(private vRef: ViewContainerRef, private toastr: ToastsManager) {
+    toastr.setRootViewContainerRef(vRef);
+  }
 }

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -12,6 +13,8 @@ import authServiceFactory from './services/auth/auth.service.provider';
 import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
 import { environment } from '../environments/environment';
 import { AuthComponent } from './auth/auth.component';
+import { ToastModule, ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
+import { CustomOptions } from './app.toast.options';
 
 @NgModule({
   declarations: [
@@ -21,16 +24,19 @@ import { AuthComponent } from './auth/auth.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
+    ToastModule.forRoot(),
     ContentBlockModule.forRoot({ endpoint: environment.crdsEndpoint, categories: Array('main', 'common') })
   ],
   providers: [ {
     provide: AuthService,
     useFactory: authServiceFactory,
-    deps: []}
-    , CanActivateViaAuth],
+    deps: []},
+    CanActivateViaAuth,
+    { provide: ToastOptions, useClass: CustomOptions }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
