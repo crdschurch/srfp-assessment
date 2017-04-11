@@ -55,7 +55,7 @@ import { ToastsManager } from 'ng2-toastr';
 constructor(private toast: ToastsManager) {}
 
 yeahToast() {
-    this.toast.success('content', 'title' 'options(optional)');
-    this.toast.warning('this is warning' 'WARN!');
+    this.toast.success('content', 'title', 'options(optional)');
+    this.toast.warning('this is warning', 'WARN!');
 }
 ```
