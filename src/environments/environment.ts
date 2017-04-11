@@ -10,5 +10,5 @@ export const environment = {
   apiEndpoint: 'https://gatewayint.crossroads.net/gateway/',
   crdsEndpoint: 'https://contentint.crossroads.net/',
   googleApiKey: 'AIzaSyArKsBK97N0Wi-69x10OL7Sx57Fwlmu6Cs',
-  crossroadsApiKey: ""
+  crossroadsApiKey: ''
 };

@@ -24,7 +24,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-If you prefer to run the tests with Chrome istead of PhantomJS, just pass the `--browser` flag 
+If you prefer to run the tests with Chrome istead of PhantomJS, just pass the `--browser` flag
 ```
 ng test --browser Chrome --reporter kjhtml
 ```
@@ -39,6 +39,32 @@ and open [the coverage report](./coverage/index.html)
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+
+## Other Topics
+
+### Adding Content Blocks
+
+Make sure you have installed the [crds-ng2-content-block](https://github.com/crdschurch/crds-ng2-content-block) module.
+> If you don't have it run `npm i crds-ng2-content-block`
+
+Import the `ContentBlockModule` in your module file. Ex:
+
+```ts
+@NgModule({
+  imports: [
+    ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })
+  ]
+})
+```
+> Note: the `categories` property determines what content block categories will be available to your module.
+
+
+Now you can use the `crds-content-block` component in your templates. Ex:
+```html
+<crds-content-block id="{name_of_content_block}"></crds-content-block>
+```
+
+For more info check out the [crds-ng2-content-block repo](https://github.com/crdschurch/crds-ng2-content-block)
 
 ## Further help
 
