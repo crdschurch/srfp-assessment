@@ -10,9 +10,13 @@ import { ToastsManager } from 'ng2-toastr';
 export class HomeComponent implements OnInit {
   homeTitle = 'Hello World!';
   apiEndpoint = environment.apiEndpoint;
+
+  viewReady = false;
+
   constructor(private toast: ToastsManager) { }
 
   ngOnInit() {
+    this.viewReady = true;
   }
 
   showMessage() {

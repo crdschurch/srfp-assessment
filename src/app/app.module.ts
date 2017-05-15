@@ -15,12 +15,14 @@ import { environment } from '../environments/environment';
 import { AuthComponent } from './auth/auth.component';
 import { ToastModule, ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
 import { CustomOptions } from './app.toast.options';
+import { PreloaderComponent } from './preloader/preloader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
