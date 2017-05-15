@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PreloaderComponent implements OnInit {
 
   @Input()
-  fullscreen: boolean = true;
+  fullscreen = true;
 
   constructor() { }
 
