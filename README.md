@@ -66,6 +66,16 @@ Now you can use the `crds-content-block` component in your templates. Ex:
 
 For more info check out the [crds-ng2-content-block repo](https://github.com/crdschurch/crds-ng2-content-block)
 
+### Using the Preloader Spinner
+
+This repo contains an implementation of the preloader directive used in `crds-angular`. Ex:
+
+```html
+<app-preloader fullscreen="<boolean>" [hidden]="<boolean>"></app-preloader>
+```
+
+The `fullscreen` attribute will default to `true`.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
