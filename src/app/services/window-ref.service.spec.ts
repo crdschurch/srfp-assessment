@@ -9,7 +9,7 @@ describe('WindowRefService', () => {
     });
   });
 
-  it('should ...', inject([WindowRefService], (service: WindowRefService) => {
+  it('should create service', inject([WindowRefService], (service: WindowRefService) => {
     expect(service).toBeTruthy();
   }));
 });
