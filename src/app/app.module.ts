@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 import { AuthService } from './services/auth/auth.service';
 import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
+import { WindowRefService } from './services/window-ref.service';
 import { AuthComponent } from './auth/auth.component';
 import { ToastModule, ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
 import { CustomOptions } from './app.toast.options';
@@ -33,12 +34,12 @@ import { environment } from '../environments/environment';
     ToastModule.forRoot(),
     ContentBlockModule.forRoot({ endpoint: environment.crdsEndpoint, categories: Array('main', 'common') })
   ],
-  providers: [ {
-    provide: AuthService,
-    useFactory: authServiceFactory,
-    deps: []},
+  providers: [
+    { provide: AuthService, useFactory: authServiceFactory, deps: []},
+    { provide: ToastOptions, useClass: CustomOptions },
     CanActivateViaAuth,
-    { provide: ToastOptions, useClass: CustomOptions }],
+    WindowRefService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
