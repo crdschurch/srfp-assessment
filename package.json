@@ -26,7 +26,7 @@
     "@angular/platform-browser-dynamic": ">=4.0.0-beta <5.0.0",
     "@angular/router": ">=4.0.0-beta <5.0.0",
     "core-js": "^2.4.1",
-    "crds-ng2-content-block": "^1.0.0",
+    "crds-ng2-content-block": "^1.0.4",
     "crds-styles": "crdschurch/crds-styles#development",
     "crds-reactive-auth": "crdschurch/crds-reactive-auth#development",
     "intl": "^1.2.5",

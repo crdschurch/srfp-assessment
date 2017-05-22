@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import authServiceFactory from './services/auth/auth.service.provider';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -9,18 +10,20 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 import { AuthService } from './services/auth/auth.service';
-import authServiceFactory from './services/auth/auth.service.provider';
 import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
-import { environment } from '../environments/environment';
+import { WindowRefService } from './services/window-ref.service';
 import { AuthComponent } from './auth/auth.component';
 import { ToastModule, ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
 import { CustomOptions } from './app.toast.options';
+import { PreloaderComponent } from './preloader/preloader.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
@@ -31,12 +34,12 @@ import { CustomOptions } from './app.toast.options';
     ToastModule.forRoot(),
     ContentBlockModule.forRoot({ endpoint: environment.crdsEndpoint, categories: Array('main', 'common') })
   ],
-  providers: [ {
-    provide: AuthService,
-    useFactory: authServiceFactory,
-    deps: []},
+  providers: [
+    { provide: AuthService, useFactory: authServiceFactory, deps: []},
+    { provide: ToastOptions, useClass: CustomOptions },
     CanActivateViaAuth,
-    { provide: ToastOptions, useClass: CustomOptions }],
+    WindowRefService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

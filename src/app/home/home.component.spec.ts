@@ -3,21 +3,29 @@ import { HomeComponent } from './home.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 import { HttpModule, Http, BaseRequestOptions, XHRBackend } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { environment } from '../../environments/environment';
 
+import { PreloaderComponent } from '../preloader/preloader.component';
+
 describe('HomeComponent', () => {
+  let mockToastsManager: ToastsManager;
+
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async(() => {
+    mockToastsManager = jasmine.createSpyObj<ToastsManager>('toastr', ['error', 'success']);
+
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
+      declarations: [ HomeComponent, PreloaderComponent ],
       imports: [
         ContentBlockModule.forRoot(new Object({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })),
         HttpModule
       ],
       providers: [
-        { provide: XHRBackend, useClass: MockBackend }
+        { provide: XHRBackend, useClass: MockBackend },
+        { provide: ToastsManager, useValue: mockToastsManager }
       ]
     })
     .compileComponents();

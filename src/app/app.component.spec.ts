@@ -1,10 +1,18 @@
 import { TestBed, async } from '@angular/core/testing';
+import { Component, ViewContainerRef } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let mockToastsManager: ToastsManager;
+  let mockViewContainerRef: ViewContainerRef;
+
   beforeEach(async(() => {
+    mockToastsManager = jasmine.createSpyObj<ToastsManager>('toastr', ['setRootViewContainerRef']);
+    mockViewContainerRef = jasmine.createSpyObj<ViewContainerRef>('vRef', ['insert']);
+
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
@@ -12,6 +20,10 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        { provide: ToastsManager, useValue: mockToastsManager },
+        { provide: ViewContainerRef, useValue: mockViewContainerRef }
+      ]
     }).compileComponents();
   }));
 
