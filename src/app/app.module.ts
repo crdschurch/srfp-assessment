@@ -17,6 +17,9 @@ import { ToastModule, ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr'
 import { CustomOptions } from './app.toast.options';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { environment } from '../environments/environment';
+import { AnalyticsService } from './services/analytics.service'; 
+
+import { Angulartics2Module, Angulartics2Segment, Angulartics2GoogleTagManager, Angulartics2GoogleAnalytics} from 'angulartics2';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    Angulartics2Module.forRoot([Angulartics2GoogleTagManager, Angulartics2GoogleAnalytics, Angulartics2Segment]),
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
@@ -38,7 +42,10 @@ import { environment } from '../environments/environment';
     { provide: AuthService, useFactory: authServiceFactory, deps: []},
     { provide: ToastOptions, useClass: CustomOptions },
     CanActivateViaAuth,
-    WindowRefService
+    WindowRefService,
+    AnalyticsService,
+    Angulartics2GoogleAnalytics,
+    Angulartics2Segment,
   ],
   bootstrap: [AppComponent]
 })
