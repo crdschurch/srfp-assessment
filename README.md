@@ -42,6 +42,11 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Other Topics
 
+### Making Analytics Calls
+
+To make analytics calls to astronomer & google analytics, use 
+> analytics.service.ts
+
 ### Adding Content Blocks
 
 Make sure you have installed the [crds-ng2-content-block](https://github.com/crdschurch/crds-ng2-content-block) module.

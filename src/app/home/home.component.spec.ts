@@ -20,7 +20,7 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent, PreloaderComponent ],
       imports: [
-        ContentBlockModule.forRoot(new Object({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })),
+        ContentBlockModule.forRoot({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint }),
         HttpModule
       ],
       providers: [
