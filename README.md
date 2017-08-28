@@ -44,7 +44,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Editor Config
 
-This repo uses an [Editor Config](http://editorconfig.org/) to enforce some code sytles, know that some editors require a plugin to utilize this functionality. 
+This repo uses an [Editor Config](http://editorconfig.org/) to enforce some code styles, know that some editors require a plugin to utilize this functionality. 
 - [VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [Atom](https://github.com/sindresorhus/atom-editorconfig#readme)
 - [Emacs](https://github.com/editorconfig/editorconfig-emacs#readme)
