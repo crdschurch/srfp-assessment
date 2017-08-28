@@ -49,7 +49,7 @@ This repo uses an [Editor Config](http://editorconfig.org/) to enforce some code
 - [Atom](https://github.com/sindresorhus/atom-editorconfig#readme)
 - [Emacs](https://github.com/editorconfig/editorconfig-emacs#readme)
 
-It is your responsibility as a developer of this project to make sure your editor reads this configuration and enforces it. 
+It is **your responsibility** as a developer of this project to make sure your editor reads this configuration and enforces it. 
 
 ### Making Analytics Calls
 
