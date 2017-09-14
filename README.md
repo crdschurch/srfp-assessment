@@ -42,6 +42,15 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Other Topics
 
+## Editor Config
+
+This repo uses an [Editor Config](http://editorconfig.org/) to enforce some code styles, know that some editors require a plugin to utilize this functionality. 
+- [VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [Atom](https://github.com/sindresorhus/atom-editorconfig#readme)
+- [Emacs](https://github.com/editorconfig/editorconfig-emacs#readme)
+
+It is **your responsibility** as a developer of this project to make sure your editor reads this configuration and enforces it. 
+
 ### Making Analytics Calls
 
 To make analytics calls to astronomer & google analytics, use 
