@@ -10,7 +10,9 @@
     "start": "./node_modules/.bin/ng serve",
     "build-local": "./node_modules/.bin/ng build -aot",
     "build": "./node_modules/.bin/ng build",
-    "test": "./node_modules/.bin/ng test",
+    "test": "./node_modules/.bin/ng test --reporters teamcity --single-run --code-coverage",
+    "test-watch": "./node_modules/.bin/ng test",
+    "test-coverage": "./node_modules/.bin/ng test --code-coverage --single-run",
     "lint": "./node_modules/.bin/ng lint",
     "e2e": "./node_modules/.bin/ng e2e"
   },
