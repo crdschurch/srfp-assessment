@@ -17,17 +17,17 @@ import { ToastModule, ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr'
 import { CustomOptions } from './app.toast.options';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { environment } from '../environments/environment';
-import { AnalyticsService } from './services/analytics.service'; 
+import { AnalyticsService } from './services/analytics.service';
 
-import { Angulartics2Module, Angulartics2Segment, Angulartics2GoogleTagManager, Angulartics2GoogleAnalytics} from 'angulartics2';
+import {
+  Angulartics2Module,
+  Angulartics2Segment,
+  Angulartics2GoogleTagManager,
+  Angulartics2GoogleAnalytics
+} from 'angulartics2';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AuthComponent,
-    PreloaderComponent
-  ],
+  declarations: [AppComponent, HomeComponent, AuthComponent, PreloaderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -39,26 +39,29 @@ import { Angulartics2Module, Angulartics2Segment, Angulartics2GoogleTagManager, 
     ContentBlockModule.forRoot({ endpoint: environment.crdsEndpoint, categories: Array('main', 'common') })
   ],
   providers: [
-    { provide: AuthService, useFactory: authServiceFactory, deps: []},
+    { provide: AuthService, useFactory: authServiceFactory, deps: [] },
     { provide: ToastOptions, useClass: CustomOptions },
     CanActivateViaAuth,
     WindowRefService,
     AnalyticsService,
     Angulartics2GoogleAnalytics,
-    Angulartics2Segment,
+    Angulartics2Segment
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(private authService: AuthService, private router: Router) {
-    authService.watch().subscribe( (evt) => {
-      console.log(evt);
-      if (evt.detail.currentValue === '' || evt.detail.currentValue === undefined) {
-        // set the route we are currently at in a service/cookie?
+    authService.watch().subscribe(
+      evt => {
+        console.log(evt);
+        if (evt.detail.currentValue === '' || evt.detail.currentValue === undefined) {
+          // set the route we are currently at in a service/cookie?
+          router.navigate(['/']);
+        }
+      },
+      err => {
         router.navigate(['/']);
       }
-    }, (err) => {
-      router.navigate(['/']);
-    });
+    );
   }
 }

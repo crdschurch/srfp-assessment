@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   viewReady = false;
 
-  constructor(private toast: ToastsManager) { }
+  constructor(private toast: ToastsManager) {}
 
   ngOnInit() {
     this.viewReady = true;
@@ -22,5 +22,4 @@ export class HomeComponent implements OnInit {
   showMessage() {
     this.toast.success('a message', 'title');
   }
-
 }

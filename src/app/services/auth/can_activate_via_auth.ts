@@ -9,5 +9,4 @@ export class CanActivateViaAuth implements CanActivate {
   canActivate() {
     return this.authService.isAuthenticated;
   }
-
 }

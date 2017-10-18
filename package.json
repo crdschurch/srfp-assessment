@@ -1,6 +1,6 @@
 {
-  "name": "crds-angular-boilerplate",
-  "version": "0.0.0",
+  "name": "srfp-assessment",
+  "version": "0.0.1",
   "license": "MIT",
   "bin": {
     "ng": "./node_modules/@angular/cli/bin/ng"
@@ -46,15 +46,16 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-mocha-reporter": "^2.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-teamcity-reporter": "^1.0.0",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
+    "tslint-config-prettier": "^1.6.0",
     "typescript": "~2.2.0"
   }
 }

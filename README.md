@@ -1,4 +1,6 @@
-# CrdsAngularBoilerplate
+# SRFP Assessment 
+
+This microclient holds the formio iframe and custom success page for the SRFP Assessment. 
 
 This is a starting point for developing an Angular microclient. It uses the [Angular CLI](https://github.com/angular/angular-cli/wiki) ( [installation instructions](https://github.com/angular/angular-cli#installation) )with a few additions specific to Crossroads.
 
