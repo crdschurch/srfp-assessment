@@ -11,8 +11,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'app works!';
@@ -24,5 +23,6 @@ export class AppComponent {
     private angulartics2Segment: Angulartics2Segment
   ) {
     toastr.setRootViewContainerRef(vRef);
+    console.log('yay');
   }
 }
