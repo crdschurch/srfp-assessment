@@ -1,31 +1,30 @@
-import { AppContentBlockConfig } from './app.contentblock.config';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { authServiceFactory } from './services/auth/auth.service.provider';
-import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { Router, NavigationExtras } from '@angular/router';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ContentBlockModule, ContentBlockConfig } from 'crds-ng2-content-block';
-import { AuthService } from './services/auth/auth.service';
-import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
-import { WindowRefService } from './services/window-ref.service';
-import { AuthComponent } from './auth/auth.component';
-import { ToastModule, ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
-import { CustomOptions } from './app.toast.options';
-import { PreloaderComponent } from './preloader/preloader.component';
-import { environment } from '../environments/environment';
 import { AnalyticsService } from './services/analytics.service';
-
 import {
-  Angulartics2Module,
-  Angulartics2Segment,
+  Angulartics2GoogleAnalytics,
   Angulartics2GoogleTagManager,
-  Angulartics2GoogleAnalytics
+  Angulartics2Module,
+  Angulartics2Segment
 } from 'angulartics2';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthComponent } from './auth/auth.component';
+import { AuthService } from './services/auth/auth.service';
+import { authServiceFactory } from './services/auth/auth.service.provider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
+import { ContentBlockConfig, ContentBlockModule } from 'crds-ng2-content-block';
+import { CustomOptions } from './app.toast.options';
+import { environment } from '../environments/environment';
+import { HomeComponent } from './home/home.component';
+import { HttpModule } from '@angular/http';
+import { LocalContentBlockConfig } from './app.contentblock.config';
+import { NavigationExtras, Router } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { PreloaderComponent } from './preloader/preloader.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastModule, ToastOptions, ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { WindowRefService } from './services/window-ref.service';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AuthComponent, PreloaderComponent],
@@ -42,7 +41,7 @@ import {
   providers: [
     { provide: AuthService, useFactory: authServiceFactory, deps: [] },
     { provide: ToastOptions, useClass: CustomOptions },
-    { provide: ContentBlockConfig, useValue: AppContentBlockConfig },
+    { provide: ContentBlockConfig, useValue: LocalContentBlockConfig },
     CanActivateViaAuth,
     WindowRefService,
     AnalyticsService,
