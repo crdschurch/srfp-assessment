@@ -35,7 +35,7 @@
     "crds-styles": "crdschurch/crds-styles#development",
     "intl": "^1.2.5",
     "ng2-toastr": "^4.1.2",
-    "rxjs": "^5.5.0",
+    "rxjs": "^5.4.3",
     "zone.js": "^0.8.16"
   },
   "devDependencies": {
