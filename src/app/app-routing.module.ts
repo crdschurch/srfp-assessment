@@ -12,9 +12,7 @@ const routes: Routes = [
   {
     path: 'auth',
     component: AuthComponent,
-    canActivate: [
-      CanActivateViaAuth
-    ]
+    canActivate: [CanActivateViaAuth]
   },
   {
     path: '',
@@ -26,4 +24,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,4 +1,6 @@
-# CrdsAngularBoilerplate
+# SRFP Assessment 
+
+This microclient holds the formio iframe and custom success page for the SRFP Assessment. 
 
 This is a starting point for developing an Angular microclient. It uses the [Angular CLI](https://github.com/angular/angular-cli/wiki) ( [installation instructions](https://github.com/angular/angular-cli#installation) )with a few additions specific to Crossroads.
 
@@ -42,6 +44,20 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Other Topics
 
+## Editor Config
+
+This repo uses an [Editor Config](http://editorconfig.org/) to enforce some code styles, know that some editors require a plugin to utilize this functionality. 
+- [VSCode](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [Atom](https://github.com/sindresorhus/atom-editorconfig#readme)
+- [Emacs](https://github.com/editorconfig/editorconfig-emacs#readme)
+
+It is **your responsibility** as a developer of this project to make sure your editor reads this configuration and enforces it. 
+
+### Making Analytics Calls
+
+To make analytics calls to astronomer & google analytics, use 
+> analytics.service.ts
+
 ### Adding Content Blocks
 
 Make sure you have installed the [crds-ng2-content-block](https://github.com/crdschurch/crds-ng2-content-block) module.
@@ -65,6 +81,16 @@ Now you can use the `crds-content-block` component in your templates. Ex:
 ```
 
 For more info check out the [crds-ng2-content-block repo](https://github.com/crdschurch/crds-ng2-content-block)
+
+### Using the Preloader Spinner
+
+This repo contains an implementation of the preloader directive used in `crds-angular`. Ex:
+
+```html
+<app-preloader fullscreen="<boolean>" [hidden]="<boolean>"></app-preloader>
+```
+
+The `fullscreen` attribute will default to `true`.
 
 ## Further help
 

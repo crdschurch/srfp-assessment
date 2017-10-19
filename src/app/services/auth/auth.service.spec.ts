@@ -1,6 +1,6 @@
 import { AuthService } from './auth.service';
-import {Observable} from 'rxjs/Observable';
-import { TestBed, async, inject} from '@angular/core/testing';
+import { Observable } from 'rxjs/Observable';
+import { TestBed, async, inject } from '@angular/core/testing';
 import { ReactiveAuth } from 'crds-reactive-auth';
 
 class FakeReactiveAuth {
@@ -13,15 +13,15 @@ class FakeReactiveAuth {
   }
 
   subscribe = (timeout: number, onUpdate, onExpired) => {
-    setInterval( () => {
+    setInterval(() => {
       onUpdate({
         detail: {
           currentValue: 'validToken',
           oldValue: ''
         }
       });
-    } , 100);
-  }
+    }, 100);
+  };
 }
 
 class FakeReactiveAuthExpire {
@@ -34,22 +34,21 @@ class FakeReactiveAuthExpire {
   }
 
   subscribe = (timeout: number, onUpdate, onExpired) => {
-    setInterval( () => {
+    setInterval(() => {
       onUpdate({
         detail: {
           currentValue: '',
           oldValue: 'validToken'
         }
       });
-    } , 100);
-  }
+    }, 100);
+  };
 }
 
 const fakeReactiveAuth = new FakeReactiveAuth('sessionId');
 const fakeReactiveAuthExpired = new FakeReactiveAuthExpire('sessionId');
 
 describe('AuthService', () => {
-
   describe('Validate cookie', () => {
     const fakeAuthServiceFactory = () => {
       const reactiveAuth = fakeReactiveAuth;
@@ -58,16 +57,15 @@ describe('AuthService', () => {
 
     let fixture: AuthService;
 
-    beforeEach(async(() => {
-      TestBed.configureTestingModule({
-        providers: [
-          { provide: AuthService, useFactory: fakeAuthServiceFactory, deps: [] }
-        ]
-      });
+    beforeEach(
+      async(() => {
+        TestBed.configureTestingModule({
+          providers: [{ provide: AuthService, useFactory: fakeAuthServiceFactory, deps: [] }]
+        });
 
-      fixture = TestBed.get(AuthService);
-    }));
-
+        fixture = TestBed.get(AuthService);
+      })
+    );
 
     it('should set authenticated to false when there is no cookieVal', () => {
       expect(fixture.isAuthenticated).toBe(false);
@@ -75,7 +73,7 @@ describe('AuthService', () => {
 
     it('should start watching and then authenticate', (done: Function) => {
       expect(fixture.isAuthenticated).toBe(false);
-      fixture.watch().subscribe( (evt) => {
+      fixture.watch().subscribe(evt => {
         expect(evt.detail.currentValue).toBe('validToken');
         expect(fixture.isAuthenticated).toBeTruthy();
         done();
@@ -91,15 +89,15 @@ describe('AuthService', () => {
 
     let fixture: AuthService;
 
-    beforeEach(async(() => {
-      TestBed.configureTestingModule({
-        providers: [
-          { provide: AuthService, useFactory: fakeAuthServiceFactory, deps: [] }
-        ]
-      });
+    beforeEach(
+      async(() => {
+        TestBed.configureTestingModule({
+          providers: [{ provide: AuthService, useFactory: fakeAuthServiceFactory, deps: [] }]
+        });
 
-      fixture = TestBed.get(AuthService);
-    }));
+        fixture = TestBed.get(AuthService);
+      })
+    );
 
     it('should set authenticated to true when there is a valid cookie', () => {
       expect(fixture.isAuthenticated).toBe(true);
@@ -107,7 +105,7 @@ describe('AuthService', () => {
 
     it('should start watching and then unauthenticate when the cookie is an empty string', (done: Function) => {
       expect(fixture.isAuthenticated).toBe(true);
-      fixture.watch().subscribe( (evt) => {
+      fixture.watch().subscribe(evt => {
         expect(evt.detail.currentValue).toBe('');
         expect(fixture.isAuthenticated).toBeFalsy();
         done();

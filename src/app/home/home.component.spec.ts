@@ -1,27 +1,37 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { BaseRequestOptions, Http, HttpModule, XHRBackend } from '@angular/http';
 import { ContentBlockModule } from 'crds-ng2-content-block';
-import { HttpModule, Http, BaseRequestOptions, XHRBackend } from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
 import { environment } from '../../environments/environment';
+import { HomeComponent } from './home.component';
+import { MockBackend } from '@angular/http/testing';
+import { MockComponent } from 'ng2-mock-component';
+import { PreloaderComponent } from '../preloader/preloader.component';
+import { ToastsManager } from 'ng2-toastr';
 
 describe('HomeComponent', () => {
+  let mockToastsManager: ToastsManager;
+
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
-      imports: [
-        ContentBlockModule.forRoot(new Object({ categories: Array('main', 'common'), endpoint: environment.crdsEndpoint })),
-        HttpModule
-      ],
-      providers: [
-        { provide: XHRBackend, useClass: MockBackend }
-      ]
+  beforeEach(
+    async(() => {
+      mockToastsManager = jasmine.createSpyObj<ToastsManager>('toastr', ['error', 'success']);
+
+      TestBed.configureTestingModule({
+        declarations: [
+          MockComponent({ selector: 'crds-content-block', inputs: ['id'] }),
+          HomeComponent,
+          PreloaderComponent
+        ],
+        imports: [HttpModule],
+        providers: [
+          { provide: XHRBackend, useClass: MockBackend },
+          { provide: ToastsManager, useValue: mockToastsManager }
+        ]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
@@ -36,5 +46,4 @@ describe('HomeComponent', () => {
   it('should say hello', () => {
     expect(component.homeTitle).toBe('Hello World!');
   });
-
 });
