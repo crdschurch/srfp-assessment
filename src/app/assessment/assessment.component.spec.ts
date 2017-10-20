@@ -1,7 +1,6 @@
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AssessmentComponent } from './assessment.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DomSanitizer } from '@angular/platform-browser';
 
 describe('AssessmentComponent', () => {
   let component: AssessmentComponent;

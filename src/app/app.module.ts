@@ -1,3 +1,4 @@
+import { LoggedInGuard } from './guards/logged-in-guard.guard';
 import { AnalyticsService } from './services/analytics.service';
 import {
   Angulartics2GoogleAnalytics,
@@ -13,6 +14,7 @@ import { authServiceFactory } from './services/auth/auth.service.provider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
+import { CookieModule } from 'ngx-cookie';
 import { ContentBlockConfig, ContentBlockModule } from 'crds-ng2-content-block';
 import { CustomOptions } from './app.toast.options';
 import { environment } from '../environments/environment';
@@ -37,13 +39,15 @@ import { AssessmentComponent } from './assessment/assessment.component';
     HttpModule,
     AppRoutingModule,
     ToastModule.forRoot(),
-    ContentBlockModule
+    ContentBlockModule,
+    CookieModule.forRoot()
   ],
   providers: [
     { provide: AuthService, useFactory: authServiceFactory, deps: [] },
     { provide: ToastOptions, useClass: CustomOptions },
     { provide: ContentBlockConfig, useValue: LocalContentBlockConfig },
     CanActivateViaAuth,
+    LoggedInGuard,
     WindowRefService,
     AnalyticsService,
     Angulartics2GoogleAnalytics,

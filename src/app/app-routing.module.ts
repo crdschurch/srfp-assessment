@@ -1,3 +1,4 @@
+import { LoggedInGuard } from './guards/logged-in-guard.guard';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,7 +9,8 @@ import { AuthComponent } from './auth/auth.component';
 const routes: Routes = [
   {
     path: '',
-    component: AssessmentComponent
+    component: AssessmentComponent,
+    canActivate: [LoggedInGuard]
   },
   {
     path: 'auth',

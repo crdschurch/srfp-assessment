@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./assessment.component.scss']
 })
 export class AssessmentComponent implements OnInit {
-  public url: SafeResourceUrl;
+  public url: string;
   constructor(public sanitizer: DomSanitizer) {}
 
   ngOnInit() {
