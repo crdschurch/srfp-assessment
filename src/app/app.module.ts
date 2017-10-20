@@ -25,9 +25,10 @@ import { PreloaderComponent } from './preloader/preloader.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastModule, ToastOptions, ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { WindowRefService } from './services/window-ref.service';
+import { AssessmentComponent } from './assessment/assessment.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AuthComponent, PreloaderComponent],
+  declarations: [AppComponent, HomeComponent, AuthComponent, PreloaderComponent, AssessmentComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

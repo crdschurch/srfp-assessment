@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  crdsEnv: 'local',
+  crdsEnv: 'int',
   authRedirectUrl: 'http://localhost:4000/signin',
   cookieDomain: 'localhost',
   apiEndpoint: 'http://localhost:49380/',

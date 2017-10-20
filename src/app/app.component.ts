@@ -23,6 +23,5 @@ export class AppComponent {
     private angulartics2Segment: Angulartics2Segment
   ) {
     toastr.setRootViewContainerRef(vRef);
-    console.log('yay');
   }
 }
