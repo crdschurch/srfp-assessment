@@ -1,6 +1,7 @@
 import { AssessmentComponent } from './assessment.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from 'environments/environment';
 
 describe('AssessmentComponent', () => {
   let component: AssessmentComponent;
@@ -28,6 +29,6 @@ describe('AssessmentComponent', () => {
   it('should init and construct url', () => {
     component.ngOnInit();
     console.log(component.url);
-    expect(component.url).toBe('https://embedint.crossroads.net/fred/100questionsforjoe');
+    expect(component.url).toBe(`https://embed${environment.crdsEnv}.crossroads.net/fred/100questionsforjoe`);
   });
 });
