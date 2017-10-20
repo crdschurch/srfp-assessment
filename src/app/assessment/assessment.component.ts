@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -8,10 +8,12 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./assessment.component.scss']
 })
 export class AssessmentComponent implements OnInit {
-  public url: string;
+  public url: SafeResourceUrl;
   constructor(public sanitizer: DomSanitizer) {}
 
   ngOnInit() {
-    this.url = `https://embed${environment.crdsEnv}.crossroads.net/fred/100questionsforjoe`;
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/100questionsforjoe`
+    );
   }
 }
