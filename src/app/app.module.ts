@@ -15,12 +15,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
 import { CookieModule } from 'ngx-cookie';
-import { ContentBlockConfig, ContentBlockModule } from 'crds-ng2-content-block';
+import { ContentBlockConfig, ContentBlockModule, IContentBlockConfig } from 'crds-ng2-content-block';
 import { CustomOptions } from './app.toast.options';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
-import { LocalContentBlockConfig } from './app.contentblock.config';
+import { contentBlockFactory } from './app.contentblock.config';
 import { NavigationExtras, Router } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PreloaderComponent } from './preloader/preloader.component';
@@ -45,7 +45,7 @@ import { AssessmentComponent } from './assessment/assessment.component';
   providers: [
     { provide: AuthService, useFactory: authServiceFactory, deps: [] },
     { provide: ToastOptions, useClass: CustomOptions },
-    { provide: ContentBlockConfig, useValue: LocalContentBlockConfig },
+    { provide: ContentBlockConfig, useFactory: contentBlockFactory, deps: [] },
     CanActivateViaAuth,
     LoggedInGuard,
     WindowRefService,
