@@ -27,8 +27,13 @@ describe('AssessmentComponent', () => {
   });
 
   it('should init and construct url', () => {
+    spyOn(component.sanitizer, 'bypassSecurityTrustResourceUrl').and.returnValue(
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/100questionsforjoe`
+    );
     component.ngOnInit();
-    console.log(component.url);
+    expect(component.sanitizer.bypassSecurityTrustResourceUrl).toHaveBeenCalledWith(
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/100questionsforjoe`
+    );
     expect(component.url).toBe(`https://embed${environment.crdsEnv}.crossroads.net/fred/100questionsforjoe`);
   });
 });
