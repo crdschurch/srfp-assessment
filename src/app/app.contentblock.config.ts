@@ -1,7 +1,7 @@
 import { environment } from '../environments/environment';
+import { IContentBlockConfig, ContentBlockConfig } from 'crds-ng2-content-block';
 
-export class LocalContentBlockConfig {
-  public endpoint: string = environment.crdsEndpoint;
-  public categories: Array<string> = ['common', 'main'];
-  constructor() {}
+export function contentBlockFactory() {
+  const contentBlockConfig: ContentBlockConfig = new ContentBlockConfig(environment.crdsEndpoint, ['common', 'main']);
+  return contentBlockConfig;
 }
