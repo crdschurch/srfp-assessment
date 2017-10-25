@@ -28,9 +28,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastModule, ToastOptions, ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { WindowRefService } from './services/window-ref.service';
 import { AssessmentComponent } from './assessment/assessment.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AuthComponent, PreloaderComponent, AssessmentComponent],
+  declarations: [AppComponent, HomeComponent, AuthComponent, PreloaderComponent, AssessmentComponent, ThankYouComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
