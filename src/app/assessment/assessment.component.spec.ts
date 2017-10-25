@@ -32,7 +32,7 @@ describe('AssessmentComponent', () => {
     );
     component.ngOnInit();
     expect(component.sanitizer.bypassSecurityTrustResourceUrl).toHaveBeenCalledWith(
-      `https://embed${environment.crdsEnv}.crossroads.net/fred/100questionsforjoe`
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment`
     );
     expect(component.url).toBe(`https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment`);
   });
