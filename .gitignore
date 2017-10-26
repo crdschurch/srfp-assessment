@@ -33,3 +33,8 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+#generated scripts
+/srfp_scripts/form.json
+/srfp_scripts/questions.sql
+/srfp_scripts/questions.csv

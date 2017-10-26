@@ -1,0 +1,8 @@
+{
+	"title" : "{{title}}",
+	"display" : "wizard",
+	"settings" : {},
+	"type" : "form",
+	"name" : "{{nstitle}}",
+	"path" : "{{nstitle}}",
+	"components" : [
