@@ -13,7 +13,7 @@ export class AssessmentComponent implements OnInit {
 
   ngOnInit() {
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/groups`
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`
     );
   }
 }
