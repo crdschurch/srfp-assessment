@@ -18,7 +18,6 @@ import { CookieModule } from 'ngx-cookie';
 import { ContentBlockConfig, ContentBlockModule, IContentBlockConfig } from 'crds-ng2-content-block';
 import { CustomOptions } from './app.toast.options';
 import { environment } from '../environments/environment';
-import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
 import { contentBlockFactory } from './app.contentblock.config';
 import { NavigationExtras, Router } from '@angular/router';
@@ -28,9 +27,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastModule, ToastOptions, ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { WindowRefService } from './services/window-ref.service';
 import { AssessmentComponent } from './assessment/assessment.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AuthComponent, PreloaderComponent, AssessmentComponent],
+  declarations: [AppComponent, AuthComponent, PreloaderComponent, AssessmentComponent, ThankYouComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

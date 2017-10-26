@@ -28,12 +28,14 @@ describe('AssessmentComponent', () => {
 
   it('should init and construct url', () => {
     spyOn(component.sanitizer, 'bypassSecurityTrustResourceUrl').and.returnValue(
-      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment`
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`
     );
     component.ngOnInit();
     expect(component.sanitizer.bypassSecurityTrustResourceUrl).toHaveBeenCalledWith(
-      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment`
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`
     );
-    expect(component.url).toBe(`https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment`);
+    expect(component.url).toBe(
+      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`
+    );
   });
 });
