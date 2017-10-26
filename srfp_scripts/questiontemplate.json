@@ -1,0 +1,86 @@
+{
+      "components": [
+        {
+          "components": [
+            {
+              "source": "59d4f34dcf473300096d4bb1",
+              "lockKey": true,
+              "inline": true,
+              "properties": {
+                "data_lookup_value_field": "Answer_Value",
+                "data_lookup_label_field": "Answer_Label",
+                "data_lookup_table": "cr_SRFP_Answer_Lookup"
+              },
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "tags": [
+                
+              ],
+              "style": {
+                "margin-left": "0px"
+              },
+              "type": "radio",
+              "validate": {
+                "customPrivate": false,
+                "custom": "",
+                "required": true
+              },
+              "clearOnHide": true,
+              "hidden": false,
+              "persistent": true,
+              "protected": false,
+              "defaultValue": "",
+              "values": [
+                {
+                  "label": "",
+                  "value": ""
+                }
+              ],
+              "key": "tableQuestion{{count}}",
+              "label": "{{question}}",
+              "inputType": "radio",
+              "tableView": true,
+              "input": true
+            }
+          ],
+          "clearOnHide": false,
+          "key": "page{{count}}Well",
+          "input": false,
+          "tableView": false,
+          "type": "well",
+          "tags": [
+            
+          ],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "properties": {
+            "": ""
+          }
+        }
+      ],
+      "tableView": false,
+      "theme": "default",
+      "clearOnHide": false,
+      "key": "page{{count}}",
+      "input": false,
+      "title": "",
+      "type": "panel",
+      "breadcrumb": "none",
+      "tags": [
+        
+      ],
+      "conditional": {
+        "show": "",
+        "when": null,
+        "eq": ""
+      },
+      "properties": {
+        "": ""
+      }
+    },
