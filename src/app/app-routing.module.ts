@@ -1,15 +1,25 @@
+import { LoggedInGuard } from './guards/logged-in-guard.guard';
+import { AssessmentComponent } from './assessment/assessment.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { CanActivateViaAuth } from './services/auth/can_activate_via_auth';
+import { AuthComponent } from './auth/auth.component';
+import { ThankYouComponent } from 'app/thank-you/thank-you.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
+    path: '',
+    component: AssessmentComponent,
+    canActivate: [LoggedInGuard]
   },
   {
-    path: '',
-    children: []
+    path: 'auth',
+    component: AuthComponent,
+    canActivate: [CanActivateViaAuth]
+  },
+  {
+    path: 'thanks',
+    component: ThankYouComponent
   }
 ];
 
@@ -17,4 +27,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
