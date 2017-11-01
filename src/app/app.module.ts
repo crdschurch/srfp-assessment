@@ -28,6 +28,7 @@ import { ToastModule, ToastOptions, ToastsManager } from 'ng2-toastr/ng2-toastr'
 import { WindowRefService } from './services/window-ref.service';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { HttpSessionService } from './services/http-session.service';
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, PreloaderComponent, AssessmentComponent, ThankYouComponent],
@@ -51,6 +52,7 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     WindowRefService,
     AnalyticsService,
     Angulartics2GoogleAnalytics,
+    HttpSessionService,
     Angulartics2Segment
   ],
   bootstrap: [AppComponent]

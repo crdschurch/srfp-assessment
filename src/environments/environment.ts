@@ -8,7 +8,7 @@ export const environment = {
   crdsEnv: 'int',
   authRedirectUrl: 'http://localhost:4000/signin',
   cookieDomain: 'int',
-  apiEndpoint: 'http://localhost:49380/',
+  apiEndpoint: 'http://localhost:49999/',
   apiVersion: 'v1.0.0',
   crdsEndpoint: 'https://contentint.crossroads.net/',
   googleApiKey: 'AIzaSyArKsBK97N0Wi-69x10OL7Sx57Fwlmu6Cs',
