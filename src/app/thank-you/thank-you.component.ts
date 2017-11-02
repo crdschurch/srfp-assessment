@@ -13,9 +13,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class ThankYouComponent implements OnInit {
   public responseId: string;
-  public jsonstuff = '123';
-  public theperson: Person = new Person(1, 'phil', 'pl', new Srfp(1, 2, 3, 4, 5));
-  public srfp: Srfp = new Srfp(1, 2, 3, 4, 5);
+  public srfp: Srfp = new Srfp(0, 0, 0, 0, 0);
 
   constructor(private activatedRoute: ActivatedRoute, private http: HttpSessionService) {}
 
@@ -24,17 +22,9 @@ export class ThankYouComponent implements OnInit {
       this.responseId = params['response_id'];
     });
     this.getResults();
-    this.getResults2();
   }
 
   private getResults() {
-    const url = '/Person/1';
-
-    this.http.get(url).subscribe(result => (this.theperson = result.json()));
-  }
-
-  private getResults2() {
-    const url = '/Person/srfp';
-    return this.http.get(url).subscribe(result => (this.srfp = result.json()));
+    return this.http.get('/Person/srfp').subscribe(result => (this.srfp = result.json()));
   }
 }

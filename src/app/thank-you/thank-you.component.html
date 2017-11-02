@@ -1,28 +1,24 @@
-<div>
-  Thanks for completing the SRFP Assessment!
-  <br>
-  <p>
-    Here are your results:
-    <br> Financial: S
-    <br> Spiritual: S
-    <br> Relational: S
-    <br> Physical: S
-    <br> Intellectual: S
-    <br>
-  </p>
-</div>
-
-<div>
-  Assessment response id: {{responseId}}
-</div>
-<div>
-  JSON Returned:
-  <br> {{jsonstuff}}
+<div class="text-center">
+  <h2>Congratulations! You did it!</h2>
 </div>
 <br>
-<div>
-  Person
-  <br> {{theperson.contactId}}
-  <br> {{theperson.firstName}}
-  <br> {{theperson.lastName}}
+
+<div class="text-center">
+  <crds-content-block id="srfpOutputIntroduction"></crds-content-block>
+</div>
+
+
+<div class="card">
+  <div class="card-block text-center">
+    <h4 class="card-title">Financial</h4>
+    <h5 class="card-subtitle">Seeker {{srfp.financialScore}}</h5>
+    <p class="card-text">
+      <crds-content-block id="srfpOutputSeekerFinancial"></crds-content-block>
+    </p>
+    <a class="card-link" href="#">Learn More</a>
+  </div>
+</div>
+
+<div class="text-center">
+  <crds-content-block id="srfpOutputFinal"></crds-content-block>
 </div>
