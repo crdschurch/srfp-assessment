@@ -29,9 +29,10 @@ import { WindowRefService } from './services/window-ref.service';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { HttpSessionService } from './services/http-session.service';
+import { ResultsCardComponent } from './thank-you/results-card/results-card/results-card.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, PreloaderComponent, AssessmentComponent, ThankYouComponent],
+  declarations: [AppComponent, AuthComponent, PreloaderComponent, AssessmentComponent, ThankYouComponent, ResultsCardComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
