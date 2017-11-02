@@ -6,13 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./preloader.component.scss']
 })
 export class PreloaderComponent implements OnInit {
+  @Input() fullscreen = true;
 
-  @Input()
-  fullscreen = true;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
