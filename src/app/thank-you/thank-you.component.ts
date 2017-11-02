@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 import { Person } from '../models/person';
 import { Http, Response } from '@angular/http';
 import { HttpSessionService } from '../services/http-session.service';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-thank-you',
   templateUrl: './thank-you.component.html',
@@ -21,10 +21,17 @@ export class ThankYouComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       this.responseId = params['response_id'];
     });
+
+    console.log(this.http.get('123'));
+
     this.getResults();
   }
 
   private getResults() {
-    return this.http.get('/Person/srfp').subscribe(result => (this.srfp = result.json()));
+    return this.http.get('/Person/srfp').subscribe(result => this.ss(result.json()));
+  }
+
+  private ss(newsrfp: Srfp) {
+    this.srfp = newsrfp;
   }
 }
