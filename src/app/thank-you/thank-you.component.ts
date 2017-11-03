@@ -14,24 +14,33 @@ import { Observable } from 'rxjs/Observable';
 export class ThankYouComponent implements OnInit {
   public responseId: string;
   public srfp: Srfp = new Srfp(0, 0, 0, 0, 0);
+  public demo: number = 0;
 
   constructor(private activatedRoute: ActivatedRoute, private http: HttpSessionService) {}
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       this.responseId = params['response_id'];
+
+      if (params['demo'] !== undefined) {
+        this.demo = Number(params['demo']);
+      }
+      this.srfp.spiritualScore = params['spiritual'];
+      this.srfp.physicalScore = params['physical'];
+      this.srfp.intellectualScore = params['intellectual'];
+      this.srfp.financialScore = params['financial'];
+      this.srfp.relationalScore = params['relational'];
     });
-
-    console.log(this.http.get('123'));
-
     this.getResults();
   }
 
   private getResults() {
-    return this.http.get('/Person/srfp').subscribe(result => this.ss(result.json()));
-  }
-
-  private ss(newsrfp: Srfp) {
-    this.srfp = newsrfp;
+    if (this.demo === 0) {
+      return this.http.get('/Person/srfp').subscribe(result => {
+        console.log(result);
+        this.srfp = result.json();
+        console.log('--' + this.srfp);
+      });
+    }
   }
 }

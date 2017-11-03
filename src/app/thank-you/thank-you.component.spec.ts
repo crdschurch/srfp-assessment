@@ -20,8 +20,20 @@ class ActivatedRouteStub {
   queryParams = Observable.of({ response_id: '3' });
 }
 
+export function mockSrfp() {
+  return Observable.of(
+    new Response(
+      new ResponseOptions({
+        body: JSON.stringify(new Srfp(1, 2, 3, 4, 5))
+      })
+    )
+  );
+}
+
+const mockHttpSessionService = jasmine.createSpyObj<HttpSessionService>('http', ['get']);
+
 describe('ThankYouComponent', () => {
-  let mockActivatedRoute, mockHttpSessionService;
+  let mockActivatedRoute;
 
   let component: ThankYouComponent;
   let fixture: ComponentFixture<ThankYouComponent>;
@@ -31,7 +43,6 @@ describe('ThankYouComponent', () => {
   beforeEach(
     async(() => {
       mockActivatedRoute = new ActivatedRouteStub();
-      mockHttpSessionService = jasmine.createSpyObj<HttpSessionService>('http', ['get']);
 
       TestBed.configureTestingModule({
         imports: [ContentBlockModule, HttpModule, CookieModule.forRoot()],
@@ -59,13 +70,16 @@ describe('ThankYouComponent', () => {
   });
 
   xit('should get queryParam', () => {
-    mockHttpSessionService.get.and.returnValue(Observable.of(new Srfp(1, 2, 3, 4, 5)));
+    (<jasmine.Spy>mockHttpSessionService.get).and.returnValue(mockSrfp());
 
+    console.log('mock' + mockSrfp());
+
+    component.ngOnInit();
     expect(component.responseId).toBe('3');
   });
 
   xit('get should get called on init', () => {
-    mockHttpSessionService.get.and.returnValue(Observable.of(new Srfp(1, 2, 3, 4, 5)));
+    (<jasmine.Spy>mockHttpSessionService.get).and.returnValue(Observable.of(new Srfp(1, 2, 3, 4, 5)));
 
     component.ngOnInit();
     expect(mockHttpSessionService.get).toHaveBeenCalled();
