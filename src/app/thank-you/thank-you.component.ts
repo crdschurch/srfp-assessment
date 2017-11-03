@@ -39,6 +39,7 @@ export class ThankYouComponent implements OnInit {
       const url = `${environment.personServiceEndpoint}api/Person/srfp`;
       return this.http.get(url).subscribe(result => {
         this.srfp = result.json();
+        console.log(this.srfp);
       });
     }
   }
