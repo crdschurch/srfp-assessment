@@ -7,7 +7,6 @@ import * as moment from 'moment';
 
 @Injectable()
 export class HttpSessionService {
-  private baseUrl: string = `${environment.apiEndpoint}api`;
   private cookieOptions: CookieOptions = { domain: environment.cookieDomain };
   private readonly authToken: string = `${environment.crdsEnv}sessionId`;
   private readonly refreshToken: string = `${environment.crdsEnv}refreshToken`;
@@ -19,13 +18,13 @@ export class HttpSessionService {
     const t2 = this.cookieService.get(this.refreshToken);
     this.options.headers.set('Authorization', this.cookieService.get(this.authToken));
     this.options.headers.set('RefreshToken', this.cookieService.get(this.refreshToken));
-    return this.http.get(`${this.baseUrl}${url}`, this.options).do(this.extractTokens);
+    return this.http.get(`${url}`, this.options).do(this.extractTokens);
   }
 
   post(url, data): Observable<Response> {
     this.options.headers.set('Authorization', this.cookieService.get(this.authToken));
     this.options.headers.set('RefreshToken', this.cookieService.get(this.refreshToken));
-    return this.http.post(`${this.baseUrl}${url}`, data, this.options).map(this.extractTokens);
+    return this.http.post(`${url}`, data, this.options).map(this.extractTokens);
   }
 
   private extractTokens = (res: Response): Response => {
