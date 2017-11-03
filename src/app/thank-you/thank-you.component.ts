@@ -36,10 +36,9 @@ export class ThankYouComponent implements OnInit {
 
   private getResults() {
     if (this.demo === 0) {
-      return this.http.get('/Person/srfp').subscribe(result => {
-        console.log(result);
+      const url = `${environment.personServiceEndpoint}api/Person/srfp`;
+      return this.http.get(url).subscribe(result => {
         this.srfp = result.json();
-        console.log('--' + this.srfp);
       });
     }
   }

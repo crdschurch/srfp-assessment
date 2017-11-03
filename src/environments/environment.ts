@@ -9,6 +9,7 @@ export const environment = {
   authRedirectUrl: 'http://localhost:4000/signin',
   cookieDomain: 'int',
   apiEndpoint: 'http://localhost:49380/',
+  personServiceEndpoint: 'http://localhost:49380/',
   apiVersion: 'v1.0.0',
   crdsEndpoint: 'https://contentint.crossroads.net/',
   googleApiKey: 'AIzaSyArKsBK97N0Wi-69x10OL7Sx57Fwlmu6Cs',
