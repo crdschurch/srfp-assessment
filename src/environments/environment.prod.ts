@@ -5,7 +5,7 @@ export const environment = {
   crdsEnv: '',
   cookieDomain: 'crossroads.net',
   apiEndpoint: '/proxy/gateway/',
-  personServiceEndpoint: '/proxy/person/',
+  personServiceEndpoint: '/proxy/services/person/',
   crdsEndpoint: '/proxy/content/',
   crossroadsApiKey: ''
 };
