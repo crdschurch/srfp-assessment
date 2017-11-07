@@ -17,7 +17,7 @@
                 "show": ""
               },
               "tags": [
-                
+
               ],
               "style": {
                 "margin-left": "0px"
@@ -52,7 +52,7 @@
           "tableView": false,
           "type": "well",
           "tags": [
-            
+
           ],
           "conditional": {
             "show": "",
@@ -73,7 +73,7 @@
       "type": "panel",
       "breadcrumb": "none",
       "tags": [
-        
+
       ],
       "conditional": {
         "show": "",
