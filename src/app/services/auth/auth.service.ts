@@ -1,4 +1,4 @@
-import ReactiveAuth from 'crds-reactive-auth/src';
+import ReactiveAuth from 'crds-reactive-auth';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
