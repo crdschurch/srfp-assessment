@@ -1,17 +1,30 @@
-import { AssessmentComponent } from './assessment.component';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DomSanitizer } from '@angular/platform-browser';
-import { environment } from 'environments/environment';
+import { AssessmentComponent } from "./assessment.component";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
+import { environment } from "environments/environment";
+import { MockComponent } from "ng2-mock-component";
 
-describe('AssessmentComponent', () => {
+describe("AssessmentComponent", () => {
   let component: AssessmentComponent;
   let fixture: ComponentFixture<AssessmentComponent>;
+  let mockDomSanitizer: DomSanitizer;
 
   beforeEach(
     async(() => {
+      mockDomSanitizer = jasmine.createSpyObj<DomSanitizer>("sanitizer", [
+        "bypassSecurityTrustResourceUrl"
+      ]);
       TestBed.configureTestingModule({
-        declarations: [AssessmentComponent],
-        providers: [DomSanitizer]
+        declarations: [
+          AssessmentComponent,
+          MockComponent({ selector: "iframe", inputs: ["src"] })
+        ],
+        providers: [
+          {
+            provide: DomSanitizer,
+            useValue: mockDomSanitizer
+          }
+        ]
       }).compileComponents();
     })
   );
@@ -22,20 +35,19 @@ describe('AssessmentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should init and construct url', () => {
-    spyOn(component.sanitizer, 'bypassSecurityTrustResourceUrl').and.returnValue(
-      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`
+  it("should init and construct url", () => {
+    const url: SafeResourceUrl = `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`;
+    (<jasmine.Spy>mockDomSanitizer.bypassSecurityTrustResourceUrl).and.returnValue(
+      url
     );
     component.ngOnInit();
-    expect(component.sanitizer.bypassSecurityTrustResourceUrl).toHaveBeenCalledWith(
-      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`
-    );
-    expect(component.url).toBe(
-      `https://embed${environment.crdsEnv}.crossroads.net/fred/srfpassessment?redirecturl=/srfp/thanks`
-    );
+    expect(
+      mockDomSanitizer.bypassSecurityTrustResourceUrl
+    ).toHaveBeenCalledWith(url);
+    expect(component.url).toBe(url);
   });
 });

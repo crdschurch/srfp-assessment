@@ -1,4 +1,4 @@
-import ReactiveAuth from 'crds-reactive-auth/src';
+import ReactiveAuth from 'crds-reactive-auth';
 import { environment } from '../../../environments/environment';
 import { AuthService } from './auth.service';
 
